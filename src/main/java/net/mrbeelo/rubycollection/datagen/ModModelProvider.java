@@ -24,6 +24,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_RUBY_ORE);
         blockStateModelGenerator.registerCrop(ModBlocks.KOKAINA_CROP, KokainaCropBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PACKED_IRON_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMOOTH_QUARTZ_RUBY_UPGRADER);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMOOTH_QUARTZ_RUBY_DOWNGRADER);
     }
 
     @Override

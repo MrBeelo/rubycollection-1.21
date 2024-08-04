@@ -7,6 +7,7 @@ import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.item.ModArmorMaterials;
 import net.mrbeelo.rubycollection.item.ModItemGroups;
 import net.mrbeelo.rubycollection.item.ModItems;
+import net.mrbeelo.rubycollection.potion.ModPotionRecipes;
 import net.mrbeelo.rubycollection.potion.ModPotions;
 import net.mrbeelo.rubycollection.sound.ModSounds;
 import net.mrbeelo.rubycollection.util.ModModelPredicates;
@@ -35,6 +36,7 @@ public class Rubycollection implements ModInitializer {
 		ModVillagers.registerModVillagers();
 		ModCustomTrades.registerModCustomTrades();
 		ModPotions.registerModPotions();
+		ModPotionRecipes.registerModPotionRecipes();
 
 	}
 	public static Identifier id(String path) {

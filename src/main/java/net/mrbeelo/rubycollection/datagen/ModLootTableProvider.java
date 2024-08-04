@@ -24,6 +24,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.RUBY_BLOCK);
         addDrop(ModBlocks.PACKED_IRON_BLOCK);
+        addDrop(ModBlocks.SMOOTH_QUARTZ_RUBY_UPGRADER);
+        addDrop(ModBlocks.SMOOTH_QUARTZ_RUBY_DOWNGRADER);
 
         LootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.KOKAINA_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(CropBlock.AGE, 3));

@@ -191,9 +191,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.PACKED_IRON_BLOCK), conditionsFromItem(ModBlocks.PACKED_IRON_BLOCK))
                 .offerTo(exporter, Rubycollection.id("death_axe"));
 
-        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
-            builder.registerPotionRecipe(Potions.AWKWARD, ModItems.KOKAINA, KOKAINA);
-        });
+
 
     }
 }

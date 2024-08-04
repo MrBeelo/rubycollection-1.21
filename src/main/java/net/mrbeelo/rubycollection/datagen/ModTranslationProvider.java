@@ -101,6 +101,9 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.PACKED_IRON_BLOCK, "Packed Iron Block");
         translationBuilder.add(ModItems.DEATH_AXE, "Death Axe");
         translationBuilder.add(ModItems.NUKE_BUTTON, "핵 버튼");
+        translationBuilder.add(ModItems.MASTER_BEELO_STAFF, "Master Beelo Staff");
+        translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_RUBY_UPGRADER, "Smooth Quartz Ruby Upgrader");
+        translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_RUBY_DOWNGRADER, "Smooth Quartz Ruby Downgrader");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_HIT, "Ruby Block Hit");

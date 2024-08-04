@@ -8,6 +8,8 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.mrbeelo.rubycollection.Rubycollection;
+import net.mrbeelo.rubycollection.block.custom.SMRDBlock;
+import net.mrbeelo.rubycollection.block.custom.SMRUBlock;
 import net.mrbeelo.rubycollection.item.ModItems;
 import net.mrbeelo.rubycollection.sound.ModSounds;
 import net.mrbeelo.rubycollection.block.custom.KokainaCropBlock;
@@ -23,6 +25,8 @@ public class ModBlocks {
     public static final Block END_RUBY_ORE = registerWithItem("end_ruby_ore", new Block(AbstractBlock.Settings.copy(Blocks.EMERALD_ORE)));
     public static final Block KOKAINA_CROP = Registry.register(Registries.BLOCK, Rubycollection.id("kokaina_crop"), new KokainaCropBlock(AbstractBlock.Settings.copy(Blocks.WHEAT)));
     public static final Block PACKED_IRON_BLOCK = registerWithItem("packed_iron_block", new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+    public static final SMRUBlock SMOOTH_QUARTZ_RUBY_UPGRADER = registerWithItem("smooth_quartz_ruby_upgrader", new SMRUBlock(AbstractBlock.Settings.copy(Blocks.SMOOTH_QUARTZ)));
+    public static final SMRDBlock SMOOTH_QUARTZ_RUBY_DOWNGRADER = registerWithItem("smooth_quartz_ruby_downgrader", new SMRDBlock(AbstractBlock.Settings.copy(Blocks.SMOOTH_QUARTZ)));
 
 
     //METHODS

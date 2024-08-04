@@ -38,6 +38,7 @@ public class ModItems {
     public static final Item BULLET = register("bullet", new Item(new Item.Settings()));
     public static final DeathAxeItem DEATH_AXE = register("death_axe", new DeathAxeItem(new Item.Settings().attributeModifiers(DeathAxeItem.createAttributeModifiers(ToolMaterials.IRON, 997, -3.5f))));
     public static final NukeButtonItem NUKE_BUTTON = register("nuke_button", new NukeButtonItem(new Item.Settings().maxCount(1)));
+    public static final Item MASTER_BEELO_STAFF = register("master_beelo_staff", new Item(new Item.Settings().maxCount(1)));
 
 
     //METHODS

@@ -13,6 +13,7 @@ import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.mrbeelo.rubycollection.Rubycollection;
+import net.mrbeelo.rubycollection.RubycollectionClient;
 import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.potion.ModPotions;
 
@@ -22,7 +23,7 @@ public class ModItemGroups {
     //REGISTERING
 
     public static final ItemGroup RUBY_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Rubycollection.MOD_ID, "ruby"),
+            Rubycollection.id("ruby"),
             FabricItemGroup.builder().displayName(Text.translatable("itemGroup.rubycollection.ruby_item_group"))
                     .icon(() -> new ItemStack(ModItems.RUBY)).entries((displayContext, entries) -> {
                         entries.add(ModItems.RUBY);
@@ -48,11 +49,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEEPSLATE_RUBY_ORE);
                         entries.add(ModBlocks.NETHER_RUBY_ORE);
                         entries.add(ModBlocks.END_RUBY_ORE);
-
+                        entries.add(ModBlocks.SMOOTH_QUARTZ_RUBY_UPGRADER);
+                        entries.add(ModBlocks.SMOOTH_QUARTZ_RUBY_DOWNGRADER);
                     }).build());
 
     public static final ItemGroup BSMPS3_ARTIFACTS = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Rubycollection.MOD_ID, "bsmps3_artifacts"),
+            Rubycollection.id("bsmps3_artifacts"),
             FabricItemGroup.builder().displayName(Text.translatable("itemGroup.rubycollection.bsmps3_artifacts"))
                     .icon(() -> new ItemStack(ModItems.PISTOL)).entries((displayContext, entries) -> {
                         entries.add(ModItems.DEATH_AXE);
@@ -68,6 +70,8 @@ public class ModItemGroups {
                         entries.add(ModItems.KOKAINA);
                         entries.add(ModItems.KOKAINA_LEAF);
                         entries.add(ModItems.KOKAINA_SEED);
+
+                        entries.add(ModItems.MASTER_BEELO_STAFF);
                     }).build());
 
 
