@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "rubycollection",
+	"version": "${version}",
+	"name": "The Ruby Collection",
+	"description": "A mod that adds the Ruby along with many other things! Made for BSMP.",
+	"authors": [
+		"MrBeelo"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rubycollection/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.mrbeelo.rubycollection.Rubycollection"
+		],
+		"fabric-datagen": [
+			"net.mrbeelo.rubycollection.RubycollectionDataGenerator"
+		],
+		"client": [
+			"net.mrbeelo.rubycollection.RubycollectionClient"
+		]
+	},
+	"mixins": [
+		"rubycollection.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

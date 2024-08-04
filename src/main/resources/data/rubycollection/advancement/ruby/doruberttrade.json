@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:villager_spawn_egg",
+      "count": 1
+    },
+    "title": "Rubert's Back!",
+    "description": "Trade with Rubert.",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rubycollection:ruby/root",
+  "criteria": {
+    "requirementdoruberttrade": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "nbt": "{VillagerData:{profession:\"rubycollection:rubert\"}}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirementdoruberttrade"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "values": [
+    "rubycollection:ruby_shard",
+    "rubycollection:ruby",
+    "rubycollection:ruby_ingot",
+    "rubycollection:ruby_cluster"
+  ]
+}

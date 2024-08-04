@@ -1,0 +1,6 @@
+{
+  "parent": "rubycollection:item/ruby_bow",
+  "textures": {
+    "layer0": "rubycollection:item/ruby_bow_pulling_2"
+  }
+}

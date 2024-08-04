@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "id": "rubycollection:kokaina_seed",
+      "count": 1
+    },
+    "title": "Don't mind, just farming",
+    "description": "Plant a Kokaina Seed",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rubycollection:ruby/doruberttrade",
+  "criteria": {
+    "requirementplantkokaseed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "rubycollection:kokaina_crop",
+            "properties": {
+              "age": "0"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirementplantkokaseed"
+    ]
+  ],
+  "rewards": {
+    "experience": 1500
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "rubycollection:ruby_ingot"
+    }
+  },
+  "pattern": [
+    " E ",
+    "EEE",
+    " E "
+  ],
+  "result": {
+    "count": 1,
+    "id": "rubycollection:ruby_cluster"
+  }
+}

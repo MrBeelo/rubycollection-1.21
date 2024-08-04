@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "rubycollection:block/kokaina_crop_stage0"
+  }
+}

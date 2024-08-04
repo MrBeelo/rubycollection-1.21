@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "rubycollection:ruby_block",
+      "count": 1
+    },
+    "title": "I can step on Rubies!",
+    "description": "Obtain a Ruby Block",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rubycollection:ruby/obt15",
+  "criteria": {
+    "requirementblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player"
+        },
+        "items": [
+          {
+            "items": "rubycollection:ruby_block",
+            "count": 1
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirementblock"
+    ]
+  ],
+  "rewards": {
+    "experience": 2000
+  }
+}

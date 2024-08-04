@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "rubycollection:block/packed_iron_block"
+    }
+  }
+}

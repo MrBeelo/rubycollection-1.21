@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "rubycollection:ruby",
+      "count": 1
+    },
+    "title": "The Ruby",
+    "description": "Obtain your first Ruby.",
+    "background": "rubycollection:textures/block/ruby_block.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player"
+        },
+        "items": [
+          {
+            "items": "rubycollection:ruby",
+            "count": 1
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  }
+}

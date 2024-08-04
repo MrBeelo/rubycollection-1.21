@@ -1,0 +1,14 @@
+{
+  "ruby_block_break": {"subtitle": "sounds.rubycollection.ruby_block_break", "sounds": ["rubycollection:ruby_block_break"]},
+  "ruby_block_fall": {"subtitle": "sounds.rubycollection.ruby_block_fall", "sounds": ["rubycollection:ruby_block_fall"]},
+  "ruby_block_hit": {"subtitle": "sounds.rubycollection.ruby_block_hit", "sounds": ["rubycollection:ruby_block_hit"]},
+  "ruby_block_place": {"subtitle": "sounds.rubycollection.ruby_block_place", "sounds": ["rubycollection:ruby_block_place"]},
+  "ruby_block_step": {"subtitle": "sounds.rubycollection.ruby_block_step", "sounds": ["rubycollection:ruby_block_step"]},
+  "high": {"subtitle": "sounds.rubycollection.high", "sounds": ["rubycollection:high"]},
+  "pew": {"subtitle": "sounds.rubycollection.pew", "sounds": ["rubycollection:pew"]},
+  "beep": {"subtitle": "sounds.rubycollection.beep", "sounds": ["rubycollection:beep"]},
+  "magempty": {"subtitle": "sounds.rubycollection.magempty", "sounds": ["rubycollection:magempty"]},
+  "gnome": {"category": "master", "sounds": ["rubycollection:custom/gnome"]},
+  "correct": {"category": "master", "sounds": ["rubycollection:custom/correct"]},
+  "incorrect": {"category": "master", "sounds": ["rubycollection:custom/incorrect"]}
+}

@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "id": "rubycollection:ruby",
+      "count": 1
+    },
+    "title": "ok you DON'T know what this means to me...",
+    "description": "86",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "rubycollection:ruby/obtstack",
+  "criteria": {
+    "requirement86": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player"
+        },
+        "items": [
+          {
+            "items": "rubycollection:ruby",
+            "count": 86
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement86"
+    ]
+  ],
+  "rewards": {
+    "function": "rubycollection:gnome",
+    "experience": 3000
+  }
+}
+  

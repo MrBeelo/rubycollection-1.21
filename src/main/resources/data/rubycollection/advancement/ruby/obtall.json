@@ -1,0 +1,93 @@
+{
+  "display": {
+    "icon": {
+      "id": "rubycollection:ruby_ore",
+      "count": 1
+    },
+    "title": "Completely Rubied Up",
+    "description": "Obtain ALL Ruby and Kokaina items.",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "rubycollection:ruby/obtingot",
+  "criteria": {
+    "requirementall": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player"
+        },
+        "items": [
+          {
+            "items": "rubycollection:ruby_knocker"
+          },
+          {
+            "items": "rubycollection:ruby_hoe"
+          },
+          {
+            "items": "rubycollection:ruby_shovel"
+          },
+          {
+            "items": "rubycollection:ruby_axe"
+          },
+          {
+            "items": "rubycollection:ruby_pickaxe"
+          },
+          {
+            "items": "rubycollection:ruby_sword"
+          },
+          {
+            "items": "rubycollection:ruby_boots"
+          },
+          {
+            "items": "rubycollection:ruby_leggings"
+          },
+          {
+            "items": "rubycollection:ruby_chestplate"
+          },
+          {
+            "items": "rubycollection:ruby_helmet"
+          },
+          {
+            "items": "rubycollection:end_ruby_ore"
+          },
+          {
+            "items": "rubycollection:nether_ruby_ore"
+          },
+          {
+            "items": "rubycollection:deepslate_ruby_ore"
+          },
+          {
+            "items": "rubycollection:ruby_ore"
+          },
+          {
+            "items": "rubycollection:ruby_block"
+          },
+          {
+            "items": "rubycollection:ruby_shard"
+          },
+          {
+            "items": "rubycollection:ruby_ingot"
+          },
+          {
+            "items": "rubycollection:ruby"
+          },
+          {
+            "items": "rubycollection:ruby_cluster"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirementall"
+    ]
+  ],
+  "rewards": {
+    "function": "rubycollection:gnome",
+    "experience": 7000
+  }
+}
