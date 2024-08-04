@@ -42,4 +42,4 @@ public class Rubycollection implements ModInitializer {
 	}
 }
 
-//UPDATE CHECK 10
+//UPDATE CHECK 11
