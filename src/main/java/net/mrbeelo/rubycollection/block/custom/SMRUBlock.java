@@ -2,6 +2,7 @@ package net.mrbeelo.rubycollection.block.custom;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -46,7 +47,7 @@ public class SMRUBlock extends Block {
                     item.setStack(new ItemStack(ModItems.RUBY, rubiesToDrop));
                     if (remainingShards > 0) {
                         // Recreate the ItemEntity with the remaining rubies
-                        ItemStack remainingStack = new ItemStack(ModItems.RUBY, remainingShards);
+                        ItemStack remainingStack = new ItemStack(ModItems.RUBY_SHARD, remainingShards);
                         ItemEntity newItemEntity = new ItemEntity(world, entity.getX(), entity.getY(), entity.getZ(), remainingStack);
                         world.spawnEntity(newItemEntity);
                     }
@@ -87,5 +88,16 @@ public class SMRUBlock extends Block {
         }
 
         super.onSteppedOn(world, pos, state, entity);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+        if(!Screen.hasShiftDown()) {
+            tooltip.add(Text.literal("Press §eShift§r to learn more!"));
+        } else {
+            tooltip.add(Text.literal("A block that upgrades any 5 Ruby items to its superior item."));
+        }
+
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

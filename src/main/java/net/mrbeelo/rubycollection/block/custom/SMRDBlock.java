@@ -2,6 +2,7 @@ package net.mrbeelo.rubycollection.block.custom;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -83,5 +84,16 @@ public class SMRDBlock extends Block {
             }
         }
         super.onSteppedOn(world, pos, state, entity);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+        if(!Screen.hasShiftDown()) {
+            tooltip.add(Text.literal("Press §eShift§r to learn more!"));
+        } else {
+            tooltip.add(Text.literal("A block that downgrades any Ruby item to 5 of its predecessor item."));
+        }
+
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

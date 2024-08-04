@@ -1,16 +1,21 @@
 package net.mrbeelo.rubycollection.item.custom;
 
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.mrbeelo.rubycollection.sound.ModSounds;
+
+import java.util.List;
 
 public class NukeButtonItem extends Item {
     public NukeButtonItem(Settings settings) {
@@ -32,5 +37,16 @@ public class NukeButtonItem extends Item {
         world.spawnEntity(tntbomb);
 
         return TypedActionResult.success(user.getStackInHand(hand));
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+        if(!Screen.hasShiftDown()) {
+            tooltip.add(Text.literal("Press §eShift§r to learn more!"));
+        } else {
+            tooltip.add(Text.literal("A nuke button that summons a nuke 10 blocks in front of the player."));
+        }
+
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

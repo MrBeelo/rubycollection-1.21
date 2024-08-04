@@ -1,16 +1,20 @@
 package net.mrbeelo.rubycollection.item.custom;
 
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.mrbeelo.rubycollection.item.ModItems;
 import net.mrbeelo.rubycollection.sound.ModSounds;
+
+import java.util.List;
 
 public class PistolItem extends Item {
     public PistolItem(Settings settings) {
@@ -56,5 +60,16 @@ public class PistolItem extends Item {
 
         // Return the gun item stack wrapped in TypedActionResult.success
         return TypedActionResult.success(gunStack);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+        if(!Screen.hasShiftDown()) {
+            tooltip.add(Text.literal("Press §eShift§r to learn more!"));
+        } else {
+            tooltip.add(Text.literal("An item that when right clicked, fires a bullet, if the player has one."));
+        }
+
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

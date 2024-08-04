@@ -94,6 +94,10 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.DEEPSLATE_RUBY_ORE, "Deepslate Ruby Ore");
         translationBuilder.add(ModBlocks.NETHER_RUBY_ORE, "Nether Ruby Ore");
         translationBuilder.add(ModBlocks.END_RUBY_ORE, "End Ruby Ore");
+        translationBuilder.add(ModBlocks.RUBY_STAIRS, "Ruby Stairs");
+        translationBuilder.add(ModBlocks.RUBY_SLAB, "Ruby Slab");
+        translationBuilder.add(ModBlocks.RUBY_BUTTON, "Ruby Button");
+        translationBuilder.add(ModBlocks.RUBY_PRESSURE_PLATE, "Ruby Pressure Plate");
         translationBuilder.add(ModEffects.HIGH.value(), "High");
         translationBuilder.add(ModItems.PURIFY, "Purify Soul Card");
         translationBuilder.add(ModItems.PISTOL, "Tactical Pistol");
@@ -104,6 +108,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.MASTER_BEELO_STAFF, "Master Beelo Staff");
         translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_RUBY_UPGRADER, "Smooth Quartz Ruby Upgrader");
         translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_RUBY_DOWNGRADER, "Smooth Quartz Ruby Downgrader");
+        translationBuilder.add(ModBlocks.PEDESTAL, "Pedestal");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_HIT, "Ruby Block Hit");

@@ -35,12 +35,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern("EEE")
                 .criterion(hasItem(ModItems.RUBY), conditionsFromItem(ModItems.RUBY))
-                .offerTo(exporter, Rubycollection.id("ruby_block_from_rubies"));
+                .offerTo(exporter, Rubycollection.id("ruby_block"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUBY, 9)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_STAIRS, 4)
+                .input('E', ModBlocks.RUBY_BLOCK)
+                .pattern("E  ")
+                .pattern("EE ")
+                .pattern("EEE")
+                .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
+                .offerTo(exporter, Rubycollection.id("ruby_stairs"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_SLAB, 6)
+                .input('E', ModBlocks.RUBY_BLOCK)
+                .pattern("EEE")
+                .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
+                .offerTo(exporter, Rubycollection.id("ruby_slab"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_BUTTON, 5)
                 .input(ModBlocks.RUBY_BLOCK)
                 .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
-                .offerTo(exporter, Rubycollection.id("rubies_from_ruby_block"));
+                .offerTo(exporter, Rubycollection.id("ruby_button"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_PRESSURE_PLATE, 6)
+                .input('E', ModBlocks.RUBY_BLOCK)
+                .pattern("EE")
+                .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
+                .offerTo(exporter, Rubycollection.id("ruby_pressure_plate"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUBY_INGOT, 1)
                 .input('E', ModItems.RUBY)
