@@ -51,7 +51,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
                 .offerTo(exporter, Rubycollection.id("ruby_slab"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_BUTTON, 5)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_BUTTON, 1)
                 .input(ModBlocks.RUBY_BLOCK)
                 .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
                 .offerTo(exporter, Rubycollection.id("ruby_button"));
@@ -61,6 +61,45 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EE")
                 .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
                 .offerTo(exporter, Rubycollection.id("ruby_pressure_plate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_FENCE, 3)
+                .input('E', ModBlocks.RUBY_BLOCK)
+                .input('F', ModItems.RUBY)
+                .pattern("EFE")
+                .pattern("EFE")
+                .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
+                .offerTo(exporter, Rubycollection.id("ruby_fence"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_FENCE_GATE, 1)
+                .input('E', ModBlocks.RUBY_BLOCK)
+                .input('F', ModItems.RUBY)
+                .pattern("FEF")
+                .pattern("FEF")
+                .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
+                .offerTo(exporter, Rubycollection.id("ruby_fence_gate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_WALL, 6)
+                .input('E', ModBlocks.RUBY_BLOCK)
+                .pattern("EEE")
+                .pattern("EEE")
+                .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
+                .offerTo(exporter, Rubycollection.id("ruby_wall"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_DOOR, 3)
+                .input('E', ModBlocks.RUBY_BLOCK)
+                .pattern("EE")
+                .pattern("EE")
+                .pattern("EE")
+                .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
+                .offerTo(exporter, Rubycollection.id("ruby_door"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_TRAPDOOR, 3)
+                .input('E', ModBlocks.RUBY_BLOCK)
+                .pattern("EEE")
+                .pattern("E E")
+                .pattern("EEE")
+                .criterion(hasItem(ModBlocks.RUBY_BLOCK), conditionsFromItem(ModBlocks.RUBY_BLOCK))
+                .offerTo(exporter, Rubycollection.id("ruby_trapdoor"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUBY_INGOT, 1)
                 .input('E', ModItems.RUBY)

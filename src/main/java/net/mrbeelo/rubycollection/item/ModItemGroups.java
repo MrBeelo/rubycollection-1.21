@@ -55,6 +55,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RUBY_SLAB);
                         entries.add(ModBlocks.RUBY_BUTTON);
                         entries.add(ModBlocks.RUBY_PRESSURE_PLATE);
+                        entries.add(ModBlocks.RUBY_FENCE);
+                        entries.add(ModBlocks.RUBY_FENCE_GATE);
+                        entries.add(ModBlocks.RUBY_WALL);
+                        entries.add(ModBlocks.RUBY_DOOR);
+                        entries.add(ModBlocks.RUBY_TRAPDOOR);
                     }).build());
 
     public static final ItemGroup BSMPS3_ARTIFACTS = Registry.register(Registries.ITEM_GROUP,
@@ -78,6 +83,10 @@ public class ModItemGroups {
                         entries.add(ModItems.MASTER_BEELO_STAFF);
 
                         entries.add(ModBlocks.PEDESTAL);
+
+                        entries.add(ModItems.SNEK_SPAWN_EGG);
+
+                        entries.add(ModItems.XO_MUSIC_DISC);
                     }).build());
 
 

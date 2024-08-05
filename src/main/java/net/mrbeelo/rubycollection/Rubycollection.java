@@ -2,11 +2,14 @@ package net.mrbeelo.rubycollection;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.util.Identifier;
 import net.mrbeelo.rubycollection.block.ModBlocks;
-import net.mrbeelo.rubycollection.item.ModArmorMaterials;
-import net.mrbeelo.rubycollection.item.ModItemGroups;
-import net.mrbeelo.rubycollection.item.ModItems;
+import net.mrbeelo.rubycollection.block.entity.ModBlockEntities;
+import net.mrbeelo.rubycollection.components.ModDataComponentTypes;
+import net.mrbeelo.rubycollection.entity.ModAttributes;
+import net.mrbeelo.rubycollection.entity.ModEntities;
+import net.mrbeelo.rubycollection.item.*;
 import net.mrbeelo.rubycollection.potion.ModPotionRecipes;
 import net.mrbeelo.rubycollection.potion.ModPotions;
 import net.mrbeelo.rubycollection.sound.ModSounds;
@@ -37,6 +40,12 @@ public class Rubycollection implements ModInitializer {
 		ModCustomTrades.registerModCustomTrades();
 		ModPotions.registerModPotions();
 		ModPotionRecipes.registerModPotionRecipes();
+		ModFuelItems.registerModFuelItems();
+		ModComposterItems.registerModComposterItems();
+		ModBlockEntities.registerModBlockEntities();
+		ModDataComponentTypes.registerModDataComponentTypes();
+		ModEntities.registerModEntities();
+		ModAttributes.registerModAttributes();
 
 	}
 	public static Identifier id(String path) {

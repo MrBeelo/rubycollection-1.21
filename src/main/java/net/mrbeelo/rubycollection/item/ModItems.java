@@ -9,7 +9,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.mrbeelo.rubycollection.Rubycollection;
 import net.mrbeelo.rubycollection.block.ModBlocks;
+import net.mrbeelo.rubycollection.entity.ModEntities;
 import net.mrbeelo.rubycollection.item.custom.*;
+import net.mrbeelo.rubycollection.sound.ModSounds;
 
 public class ModItems {
 
@@ -21,7 +23,7 @@ public class ModItems {
     public static final Item RUBY_SHARD = register("ruby_shard", new Item(new Item.Settings()));
     public static final Item KOKAINA_LEAF = register("kokaina_leaf", new Item(new Item.Settings()));
     public static final Item KOKAINA_SEED = register("kokaina_seed", new AliasedBlockItem(ModBlocks.KOKAINA_CROP, new Item.Settings()));
-    public static final KokainaItem KOKAINA = register("kokaina", new KokainaItem(new Item.Settings().maxCount(16).food(ModFoods.KOKAINA_COMPONENT)));
+    public static final KokainaItem KOKAINA = register("kokaina", new KokainaItem(new Item.Settings().maxCount(16).food(ModFoodItems.KOKAINA_COMPONENT)));
     public static final SwordItem RUBY_SWORD = register("ruby_sword", new SwordItem(ModToolMaterials.RUBY, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY, 3, -2.4f)))); //2 BONUS DMG INSTEAD OF 1
     public static final PickaxeItem RUBY_PICKAXE = register("ruby_pickaxe", new PickaxeItem(ModToolMaterials.RUBY, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.RUBY, 0, -2.8f))));
     public static final AxeItem RUBY_AXE = register("ruby_axe", new AxeItem(ModToolMaterials.RUBY, new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.RUBY, 5, -2.9f)))); //2 BONUS DMG INSTEAD OF 1
@@ -39,6 +41,8 @@ public class ModItems {
     public static final DeathAxeItem DEATH_AXE = register("death_axe", new DeathAxeItem(new Item.Settings().attributeModifiers(DeathAxeItem.createAttributeModifiers(ToolMaterials.IRON, 997, -3.5f))));
     public static final NukeButtonItem NUKE_BUTTON = register("nuke_button", new NukeButtonItem(new Item.Settings().maxCount(1)));
     public static final Item MASTER_BEELO_STAFF = register("master_beelo_staff", new Item(new Item.Settings().maxCount(1)));
+    public static final Item SNEK_SPAWN_EGG = register("snek_spawn_egg", new SpawnEggItem(ModEntities.SNEK, 0x78fa40, 0x5ed32b, new Item.Settings()));
+    public static final Item XO_MUSIC_DISC = register("xo_music_disc", new Item(new Item.Settings().jukeboxPlayable(ModSounds.XO_KEY)));
 
 
     //METHODS

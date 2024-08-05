@@ -30,6 +30,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RUBY_SLAB, slabDrops(ModBlocks.RUBY_SLAB));
         addDrop(ModBlocks.RUBY_BUTTON);
         addDrop(ModBlocks.RUBY_PRESSURE_PLATE);
+        addDrop(ModBlocks.RUBY_FENCE);
+        addDrop(ModBlocks.RUBY_FENCE_GATE);
+        addDrop(ModBlocks.RUBY_WALL);
+        addDrop(ModBlocks.RUBY_DOOR, doorDrops(ModBlocks.RUBY_DOOR));
+        addDrop(ModBlocks.RUBY_TRAPDOOR);
+        addDrop(ModBlocks.PEDESTAL);
 
         LootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.KOKAINA_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(CropBlock.AGE, 3));

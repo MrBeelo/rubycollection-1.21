@@ -68,6 +68,20 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         }
     }
 
+    private static void addPainting(@NotNull TranslationBuilder builder, @NotNull String paintingId, @NotNull String paintingName, @NotNull String paintingAuthor) {
+        String paintingKey = "painting.rubycollection." + paintingId + ".title";
+        String paintingAuthorKey = "painting.rubycollection." + paintingId + ".author";
+        builder.add(paintingKey, paintingName);
+        builder.add(paintingAuthorKey, paintingAuthor);
+    }
+
+    private static void addMusicDisc(@NotNull TranslationBuilder builder, @NotNull String discId, @NotNull String discName, @NotNull String discDescription) {
+        String discKey = "item.rubycollection." + discId;
+        String discDescriptionKey = "item.rubycollection." + discId + ".desc";
+        builder.add(discKey, discName);
+        builder.add(discDescriptionKey, discDescription);
+    }
+
 
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
@@ -98,6 +112,11 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.RUBY_SLAB, "Ruby Slab");
         translationBuilder.add(ModBlocks.RUBY_BUTTON, "Ruby Button");
         translationBuilder.add(ModBlocks.RUBY_PRESSURE_PLATE, "Ruby Pressure Plate");
+        translationBuilder.add(ModBlocks.RUBY_FENCE, "Ruby Fence");
+        translationBuilder.add(ModBlocks.RUBY_FENCE_GATE, "Ruby Fence Gate");
+        translationBuilder.add(ModBlocks.RUBY_WALL, "Ruby Wall");
+        translationBuilder.add(ModBlocks.RUBY_DOOR, "Ruby Door");
+        translationBuilder.add(ModBlocks.RUBY_TRAPDOOR, "Ruby Trapdoor");
         translationBuilder.add(ModEffects.HIGH.value(), "High");
         translationBuilder.add(ModItems.PURIFY, "Purify Soul Card");
         translationBuilder.add(ModItems.PISTOL, "Tactical Pistol");
@@ -109,6 +128,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_RUBY_UPGRADER, "Smooth Quartz Ruby Upgrader");
         translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_RUBY_DOWNGRADER, "Smooth Quartz Ruby Downgrader");
         translationBuilder.add(ModBlocks.PEDESTAL, "Pedestal");
+        translationBuilder.add(ModItems.SNEK_SPAWN_EGG, "Snek Spawn Egg");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_HIT, "Ruby Block Hit");
@@ -120,6 +140,8 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         addText(translationBuilder, ModItemGroups.BSMPS3_ARTIFACTS.getDisplayName(), "BSMPS3 Artifacts");
         addVillager(translationBuilder, ModVillagers.RUBERT, "Rubert");
         addPotionTranslations(translationBuilder, ModPotions.KOKAINA, "Kokaina");
+        addPainting(translationBuilder, "world", "The World Of Errors", "MrBeelo");
+        addMusicDisc(translationBuilder, "xo_music_disc", "XO Music Disc", "XO (eden cover and remake)");
     }
 }
 

@@ -30,7 +30,12 @@ public class ModBlocks {
     public static final StairsBlock RUBY_STAIRS = registerWithItem("ruby_stairs", new StairsBlock(ModBlocks.RUBY_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(ModBlocks.RUBY_BLOCK)));
     public static final SlabBlock RUBY_SLAB = registerWithItem("ruby_slab", new SlabBlock(AbstractBlock.Settings.copy(ModBlocks.RUBY_BLOCK)));
     public static final ButtonBlock RUBY_BUTTON = registerWithItem("ruby_button", new ButtonBlock(BlockSetType.IRON ,30, AbstractBlock.Settings.copy(Blocks.STONE_BUTTON)));
-    public static final PressurePlateBlock RUBY_PRESSURE_PLATE = registerWithItem("ruby_pressure_plate", new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.STONE_BUTTON)));
+    public static final PressurePlateBlock RUBY_PRESSURE_PLATE = registerWithItem("ruby_pressure_plate", new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.LIGHT_WEIGHTED_PRESSURE_PLATE)));
+    public static final FenceBlock RUBY_FENCE = registerWithItem("ruby_fence", new FenceBlock(AbstractBlock.Settings.copy(Blocks.NETHER_BRICK_FENCE)));
+    public static final FenceGateBlock RUBY_FENCE_GATE = registerWithItem("ruby_fence_gate", new FenceGateBlock(WoodType.OAK ,AbstractBlock.Settings.copy(Blocks.NETHER_BRICK_FENCE)));
+    public static final WallBlock RUBY_WALL = registerWithItem("ruby_wall", new WallBlock(AbstractBlock.Settings.copy(Blocks.NETHER_BRICK_FENCE)));
+    public static final DoorBlock RUBY_DOOR = registerWithItem("ruby_door", new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
+    public static final TrapdoorBlock RUBY_TRAPDOOR = registerWithItem("ruby_trapdoor", new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
 
 
     //METHODS
