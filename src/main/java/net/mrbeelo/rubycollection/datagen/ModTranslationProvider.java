@@ -15,6 +15,7 @@ import net.minecraft.village.VillagerProfession;
 import net.mrbeelo.rubycollection.Rubycollection;
 import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.effect.ModEffects;
+import net.mrbeelo.rubycollection.fluid.ModFluids;
 import net.mrbeelo.rubycollection.item.ModItemGroups;
 import net.mrbeelo.rubycollection.item.ModItems;
 import net.mrbeelo.rubycollection.potion.ModPotions;
@@ -129,6 +130,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_RUBY_DOWNGRADER, "Smooth Quartz Ruby Downgrader");
         translationBuilder.add(ModBlocks.PEDESTAL, "Pedestal");
         translationBuilder.add(ModItems.SNEK_SPAWN_EGG, "Snek Spawn Egg");
+        translationBuilder.add(ModFluids.CAM_WATER_BUCKET, "Bucket of Cam");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_HIT, "Ruby Block Hit");

@@ -17,7 +17,7 @@ public class ModBlocks {
 
     //REGISTERING
 
-    public static final Block RUBY_BLOCK = registerWithItem("ruby_block", new Block(AbstractBlock.Settings.copy(Blocks.EMERALD_BLOCK).sounds(ModSounds.RUBY_BLOCK_SOUNDS)));
+    public static final Block RUBY_BLOCK = registerWithRubyBlockItem("ruby_block", new Block(AbstractBlock.Settings.copy(Blocks.EMERALD_BLOCK).sounds(ModSounds.RUBY_BLOCK_SOUNDS)));
     public static final Block RUBY_ORE = registerWithItem("ruby_ore", new Block(AbstractBlock.Settings.copy(Blocks.EMERALD_ORE)));
     public static final Block DEEPSLATE_RUBY_ORE = registerWithItem("deepslate_ruby_ore", new Block(AbstractBlock.Settings.copy(Blocks.DEEPSLATE_EMERALD_ORE)));
     public static final Block NETHER_RUBY_ORE = registerWithItem("nether_ruby_ore", new Block(AbstractBlock.Settings.copy(Blocks.EMERALD_ORE)));
@@ -46,7 +46,13 @@ public class ModBlocks {
 
     public static <T extends Block> T registerWithItem(String name, T block, Item.Settings settings) {
         T registered = register(name, block);
-        Item.Settings updatedSettings = settings.maxCount(99);
+        ModItems.register(name, new BlockItem(registered, settings));
+        return registered;
+    }
+
+    public static <T extends Block> T registerWithRubyBlockItem(String name, T block) {
+        T registered = register(name, block);
+        Item.Settings updatedSettings = new Item.Settings().maxCount(65);
         ModItems.register(name, new BlockItem(registered, updatedSettings));
         return registered;
     }

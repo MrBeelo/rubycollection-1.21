@@ -2,6 +2,8 @@ package net.mrbeelo.rubycollection;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
@@ -13,6 +15,7 @@ import net.mrbeelo.rubycollection.entity.ModEntities;
 import net.mrbeelo.rubycollection.entity.client.ModEntityModelLayers;
 import net.mrbeelo.rubycollection.entity.client.SnekModel;
 import net.mrbeelo.rubycollection.entity.client.SnekRenderer;
+import net.mrbeelo.rubycollection.fluid.ModFluids;
 import net.mrbeelo.rubycollection.util.ModModelPredicates;
 
 public class RubycollectionClient implements ClientModInitializer {
@@ -28,5 +31,10 @@ public class RubycollectionClient implements ClientModInitializer {
 
 		EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SNEK, SnekModel::getTexturedModelData);
 		EntityRendererRegistry.register(ModEntities.SNEK, SnekRenderer::new);
+
+		FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_CAM_WATER, ModFluids.FLOWING_CAM_WATER,
+				SimpleFluidRenderHandler.coloredWater(0xF5E2ECCC));
+		BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
+				ModFluids.STILL_CAM_WATER, ModFluids.FLOWING_CAM_WATER);
 	}
 }

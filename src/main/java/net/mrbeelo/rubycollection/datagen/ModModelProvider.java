@@ -10,6 +10,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.block.custom.KokainaCropBlock;
+import net.mrbeelo.rubycollection.fluid.ModFluids;
 import net.mrbeelo.rubycollection.item.ModItems;
 
 import java.util.Optional;
@@ -66,5 +67,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.NUKE_BUTTON, Models.GENERATED);
         itemModelGenerator.register(ModItems.SNEK_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.XO_MUSIC_DISC, Models.GENERATED);
+        itemModelGenerator.register(ModFluids.CAM_WATER_BUCKET, Models.GENERATED);
     }
 }

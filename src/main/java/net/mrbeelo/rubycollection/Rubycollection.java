@@ -9,6 +9,7 @@ import net.mrbeelo.rubycollection.block.entity.ModBlockEntities;
 import net.mrbeelo.rubycollection.components.ModDataComponentTypes;
 import net.mrbeelo.rubycollection.entity.ModAttributes;
 import net.mrbeelo.rubycollection.entity.ModEntities;
+import net.mrbeelo.rubycollection.fluid.ModFluids;
 import net.mrbeelo.rubycollection.item.*;
 import net.mrbeelo.rubycollection.potion.ModPotionRecipes;
 import net.mrbeelo.rubycollection.potion.ModPotions;
@@ -46,6 +47,7 @@ public class Rubycollection implements ModInitializer {
 		ModDataComponentTypes.registerModDataComponentTypes();
 		ModEntities.registerModEntities();
 		ModAttributes.registerModAttributes();
+		ModFluids.registerFluids();
 
 	}
 	public static Identifier id(String path) {

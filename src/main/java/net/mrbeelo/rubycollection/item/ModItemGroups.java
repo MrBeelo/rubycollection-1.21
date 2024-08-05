@@ -15,6 +15,7 @@ import net.minecraft.util.Identifier;
 import net.mrbeelo.rubycollection.Rubycollection;
 import net.mrbeelo.rubycollection.RubycollectionClient;
 import net.mrbeelo.rubycollection.block.ModBlocks;
+import net.mrbeelo.rubycollection.fluid.ModFluids;
 import net.mrbeelo.rubycollection.potion.ModPotions;
 
 
@@ -87,6 +88,8 @@ public class ModItemGroups {
                         entries.add(ModItems.SNEK_SPAWN_EGG);
 
                         entries.add(ModItems.XO_MUSIC_DISC);
+
+                        entries.add(ModFluids.CAM_WATER_BUCKET);
                     }).build());
 
 

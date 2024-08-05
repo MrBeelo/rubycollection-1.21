@@ -4,14 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
-import net.mrbeelo.rubycollection.datagen.ModBlockTagProvider;
-import net.mrbeelo.rubycollection.datagen.ModLootTableProvider;
-import net.mrbeelo.rubycollection.datagen.ModItemTagProvider;
-import net.mrbeelo.rubycollection.datagen.ModWorldGeneratorProvider;
-import net.mrbeelo.rubycollection.datagen.ModTranslationProvider;
-import net.mrbeelo.rubycollection.datagen.ModModelProvider;
-import net.mrbeelo.rubycollection.datagen.ModRecipeProvider;
-import net.mrbeelo.rubycollection.datagen.ModPoiTagProvider;
+import net.mrbeelo.rubycollection.datagen.*;
 import net.mrbeelo.rubycollection.world.ConfiguredFeature;
 import net.mrbeelo.rubycollection.world.PlacedFeature;
 
@@ -28,6 +21,7 @@ public class RubycollectionDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModWorldGeneratorProvider::new);
 		pack.addProvider(ModPoiTagProvider::new);
+		pack.addProvider(ModFluidTagProvider::new);
 	}
 
 	@Override
