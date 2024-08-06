@@ -2,13 +2,17 @@ package net.mrbeelo.rubycollection;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.block.entity.ModBlockEntities;
 import net.mrbeelo.rubycollection.components.ModDataComponentTypes;
 import net.mrbeelo.rubycollection.entity.ModAttributes;
 import net.mrbeelo.rubycollection.entity.ModEntities;
+import net.mrbeelo.rubycollection.event.CooldownManager;
 import net.mrbeelo.rubycollection.fluid.ModFluids;
 import net.mrbeelo.rubycollection.item.*;
 import net.mrbeelo.rubycollection.potion.ModPotionRecipes;
@@ -48,6 +52,8 @@ public class Rubycollection implements ModInitializer {
 		ModEntities.registerModEntities();
 		ModAttributes.registerModAttributes();
 		ModFluids.registerFluids();
+
+		ServerTickEvents.START_WORLD_TICK.register(world -> {if (world instanceof ServerWorld) {CooldownManager.updateCooldowns((ServerWorld) world);}});
 
 	}
 	public static Identifier id(String path) {
