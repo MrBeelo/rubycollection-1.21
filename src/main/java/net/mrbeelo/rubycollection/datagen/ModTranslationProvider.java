@@ -130,7 +130,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.SMOOTH_QUARTZ_RUBY_DOWNGRADER, "Smooth Quartz Ruby Downgrader");
         translationBuilder.add(ModBlocks.PEDESTAL, "Pedestal");
         translationBuilder.add(ModItems.SNEK_SPAWN_EGG, "Snek Spawn Egg");
-        translationBuilder.add(ModFluids.CAM_WATER_BUCKET, "Bucket of Cam");
+        translationBuilder.add(ModFluids.FROOTOP_BUCKET, "Bucket of Frootop");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_HIT, "Ruby Block Hit");

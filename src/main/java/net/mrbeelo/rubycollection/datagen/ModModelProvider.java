@@ -67,6 +67,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.NUKE_BUTTON, Models.GENERATED);
         itemModelGenerator.register(ModItems.SNEK_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.XO_MUSIC_DISC, Models.GENERATED);
-        itemModelGenerator.register(ModFluids.CAM_WATER_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModFluids.FROOTOP_BUCKET, Models.GENERATED);
     }
 }

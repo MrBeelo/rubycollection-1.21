@@ -10,17 +10,17 @@ import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.mrbeelo.rubycollection.Rubycollection;
-import net.mrbeelo.rubycollection.fluid.custom.CamWaterFluid;
+import net.mrbeelo.rubycollection.fluid.custom.FrootopFluid;
 
 public class ModFluids {
-    public static final FlowableFluid STILL_CAM_WATER = Registry.register(Registries.FLUID,
-            Rubycollection.id("cam_water"), new CamWaterFluid.Still());
-    public static final FlowableFluid FLOWING_CAM_WATER = Registry.register(Registries.FLUID,
-            Rubycollection.id("flowing_cam_water"), new CamWaterFluid.Flowing());
+    public static final FlowableFluid STILL_FROOTOP = Registry.register(Registries.FLUID,
+            Rubycollection.id("frootop"), new FrootopFluid.Still());
+    public static final FlowableFluid FLOWING_FROOTOP = Registry.register(Registries.FLUID,
+            Rubycollection.id("flowing_frootop"), new FrootopFluid.Flowing());
 
-    public static final Block CAM_WATER_BLOCK = Registry.register(Registries.BLOCK, Rubycollection.id("cam_water_block"), new FluidBlock(net.mrbeelo.rubycollection.fluid.ModFluids.STILL_CAM_WATER, Block.Settings.copy(Blocks.WATER)
+    public static final Block FROOTOP_BLOCK = Registry.register(Registries.BLOCK, Rubycollection.id("frootop_block"), new FluidBlock(net.mrbeelo.rubycollection.fluid.ModFluids.STILL_FROOTOP, Block.Settings.copy(Blocks.WATER)
             .replaceable().liquid()));
-    public static final Item CAM_WATER_BUCKET = Registry.register(Registries.ITEM, Rubycollection.id("cam_water_bucket"), new BucketItem(net.mrbeelo.rubycollection.fluid.ModFluids.STILL_CAM_WATER,
+    public static final Item FROOTOP_BUCKET = Registry.register(Registries.ITEM, Rubycollection.id("frootop_bucket"), new BucketItem(net.mrbeelo.rubycollection.fluid.ModFluids.STILL_FROOTOP,
             new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
     public static void registerFluids() {}

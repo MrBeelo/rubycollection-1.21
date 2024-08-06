@@ -17,15 +17,15 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.mrbeelo.rubycollection.fluid.ModFluids;
 
-public abstract class CamWaterFluid extends FlowableFluid {
+public abstract class FrootopFluid extends FlowableFluid {
     @Override
     public Fluid getFlowing() {
-        return ModFluids.FLOWING_CAM_WATER;
+        return ModFluids.FLOWING_FROOTOP;
     }
 
     @Override
     public Fluid getStill() {
-        return ModFluids.STILL_CAM_WATER;
+        return ModFluids.STILL_FROOTOP;
     }
 
     @Override
@@ -46,7 +46,7 @@ public abstract class CamWaterFluid extends FlowableFluid {
 
     @Override
     public Item getBucketItem() {
-        return ModFluids.CAM_WATER_BUCKET;
+        return ModFluids.FROOTOP_BUCKET;
     }
 
     @Override
@@ -66,7 +66,7 @@ public abstract class CamWaterFluid extends FlowableFluid {
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModFluids.CAM_WATER_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
+        return ModFluids.FROOTOP_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
     }
 
     @Override
@@ -84,7 +84,7 @@ public abstract class CamWaterFluid extends FlowableFluid {
         return fluid == getStill() || fluid == getFlowing();
     }
 
-    public static class Flowing extends CamWaterFluid {
+    public static class Flowing extends FrootopFluid {
         @Override
         protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {
             super.appendProperties(builder);
@@ -102,7 +102,7 @@ public abstract class CamWaterFluid extends FlowableFluid {
         }
     }
 
-    public static class Still extends CamWaterFluid {
+    public static class Still extends FrootopFluid {
         @Override
         protected int getMaxFlowDistance(WorldView world) {
             return 4;

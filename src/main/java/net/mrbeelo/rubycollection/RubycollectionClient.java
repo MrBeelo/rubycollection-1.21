@@ -32,9 +32,9 @@ public class RubycollectionClient implements ClientModInitializer {
 		EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SNEK, SnekModel::getTexturedModelData);
 		EntityRendererRegistry.register(ModEntities.SNEK, SnekRenderer::new);
 
-		FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_CAM_WATER, ModFluids.FLOWING_CAM_WATER,
-				SimpleFluidRenderHandler.coloredWater(0xF5E2ECCC));
+		FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_FROOTOP, ModFluids.FLOWING_FROOTOP,
+				SimpleFluidRenderHandler.coloredWater(0xFFFFA500));
 		BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
-				ModFluids.STILL_CAM_WATER, ModFluids.FLOWING_CAM_WATER);
+				ModFluids.STILL_FROOTOP, ModFluids.FLOWING_FROOTOP);
 	}
 }

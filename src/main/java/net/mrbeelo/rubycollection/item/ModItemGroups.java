@@ -89,7 +89,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.XO_MUSIC_DISC);
 
-                        entries.add(ModFluids.CAM_WATER_BUCKET);
+                        entries.add(ModFluids.FROOTOP_BUCKET);
                     }).build());
 
 
