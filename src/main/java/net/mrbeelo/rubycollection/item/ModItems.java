@@ -9,6 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.mrbeelo.rubycollection.Rubycollection;
 import net.mrbeelo.rubycollection.block.ModBlocks;
+import net.mrbeelo.rubycollection.components.ModDataComponentTypes;
 import net.mrbeelo.rubycollection.entity.ModEntities;
 import net.mrbeelo.rubycollection.item.custom.*;
 import net.mrbeelo.rubycollection.sound.ModSounds;
@@ -40,7 +41,7 @@ public class ModItems {
     public static final Item BULLET = register("bullet", new Item(new Item.Settings()));
     public static final DeathAxeItem DEATH_AXE = register("death_axe", new DeathAxeItem(new Item.Settings().attributeModifiers(DeathAxeItem.createAttributeModifiers(ToolMaterials.IRON, 997, -3.5f))));
     public static final NukeButtonItem NUKE_BUTTON = register("nuke_button", new NukeButtonItem(new Item.Settings().maxCount(1)));
-    public static final Item MASTER_BEELO_STAFF = register("master_beelo_staff", new Item(new Item.Settings().maxCount(1)));
+    public static final MBSItem MASTER_BEELO_STAFF = register("master_beelo_staff", new MBSItem(new Item.Settings().maxCount(1).component(ModDataComponentTypes.MBS_STAGE, 0)));
     public static final Item SNEK_SPAWN_EGG = register("snek_spawn_egg", new SpawnEggItem(ModEntities.SNEK, 0x78fa40, 0x5ed32b, new Item.Settings()));
     public static final Item XO_MUSIC_DISC = register("xo_music_disc", new Item(new Item.Settings().jukeboxPlayable(ModSounds.XO_KEY)));
 

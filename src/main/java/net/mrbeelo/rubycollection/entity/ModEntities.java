@@ -12,6 +12,5 @@ public class ModEntities {
     public static final EntityType<SnekEntity> SNEK = Registry.register(Registries.ENTITY_TYPE,
             Rubycollection.id("snek"),
             EntityType.Builder.create(SnekEntity::new, SpawnGroup.CREATURE).dimensions(2f, 6f).build());
-
     public static void registerModEntities() {}
 }
