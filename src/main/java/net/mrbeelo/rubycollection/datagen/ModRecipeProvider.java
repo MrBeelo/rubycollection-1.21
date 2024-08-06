@@ -215,42 +215,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.RUBY_INGOT), conditionsFromItem(ModItems.RUBY_INGOT))
                 .offerTo(exporter, Rubycollection.id("ruby_boots"));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PISTOL, 1)
-                .input('E', Items.IRON_INGOT)
-                .pattern("EEE")
-                .pattern("E  ")
-                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
-                .offerTo(exporter, Rubycollection.id("pistol"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BULLET, 5)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BULLET, 2)
                 .input(Items.IRON_NUGGET)
                 .input(Items.GUNPOWDER)
                 .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.GUNPOWDER))
                 .offerTo(exporter, Rubycollection.id("bullet"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PACKED_IRON_BLOCK, 1)
-                .input('E', Blocks.IRON_BLOCK)
-                .pattern("EEE")
-                .pattern("EEE")
-                .pattern("EEE")
-                .criterion(hasItem(Blocks.IRON_BLOCK), conditionsFromItem(Blocks.IRON_BLOCK))
-                .offerTo(exporter, Rubycollection.id("packed_iron_block_from_iron_blocks"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.IRON_BLOCK, 9)
-                .input(ModBlocks.PACKED_IRON_BLOCK)
-                .criterion(hasItem(ModBlocks.PACKED_IRON_BLOCK), conditionsFromItem(ModBlocks.PACKED_IRON_BLOCK))
-                .offerTo(exporter, Rubycollection.id("iron_blocks_from_packed_iron_block"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DEATH_AXE, 1)
-                .input('E', ModBlocks.PACKED_IRON_BLOCK)
-                .input('S', Items.STICK)
-                .pattern("ESE")
-                .pattern(" S ")
-                .pattern(" S ")
-                .criterion(hasItem(ModBlocks.PACKED_IRON_BLOCK), conditionsFromItem(ModBlocks.PACKED_IRON_BLOCK))
-                .offerTo(exporter, Rubycollection.id("death_axe"));
-
-
-
     }
 }
