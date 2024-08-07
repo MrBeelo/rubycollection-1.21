@@ -8,8 +8,8 @@
   "pew": {"subtitle": "sounds.rubycollection.pew", "sounds": ["rubycollection:pew"]},
   "beep": {"subtitle": "sounds.rubycollection.beep", "sounds": ["rubycollection:beep"]},
   "magempty": {"subtitle": "sounds.rubycollection.magempty", "sounds": ["rubycollection:magempty"]},
-  "xo": {"subtitle": "sounds.rubycollection.xo", "sounds": [{"name": "rubycollection:xo", "stream":  true}]},
-  "gnome": {"category": "master", "sounds": ["rubycollection:custom/gnome"]},
-  "correct": {"category": "master", "sounds": ["rubycollection:custom/correct"]},
-  "incorrect": {"category": "master", "sounds": ["rubycollection:custom/incorrect"]}
+  "gnome": {"subtitle": "sounds.rubycollection.gnome", "sounds": ["rubycollection:gnome"]},
+  "correct": {"subtitle": "sounds.rubycollection.correct", "sounds": ["rubycollection:correct"]},
+  "incorrect": {"subtitle": "sounds.rubycollection.incorrect", "sounds": ["rubycollection:incorrect"]},
+  "xo": {"subtitle": "sounds.rubycollection.xo", "sounds": [{"name": "rubycollection:xo", "stream":  true}]}
 }

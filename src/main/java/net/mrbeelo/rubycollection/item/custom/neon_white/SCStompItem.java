@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class SCStompItem extends Item {
-    private static final double FALL_VELOCITY = -1.0; // Adjust this value to increase/decrease falling speed
+    private static final double FALL_VELOCITY = -2.0; // Adjust this value to increase/decrease falling speed
 
     public SCStompItem(Settings settings) {
         super(settings);

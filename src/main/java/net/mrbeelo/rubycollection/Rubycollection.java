@@ -9,7 +9,9 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.block.entity.ModBlockEntities;
+import net.mrbeelo.rubycollection.command.ModCommands;
 import net.mrbeelo.rubycollection.components.ModDataComponentTypes;
+import net.mrbeelo.rubycollection.effect.ModEffects;
 import net.mrbeelo.rubycollection.entity.ModAttributes;
 import net.mrbeelo.rubycollection.entity.ModEntities;
 import net.mrbeelo.rubycollection.event.CooldownManager;
@@ -19,6 +21,7 @@ import net.mrbeelo.rubycollection.potion.ModPotionRecipes;
 import net.mrbeelo.rubycollection.potion.ModPotions;
 import net.mrbeelo.rubycollection.sound.ModSounds;
 import net.mrbeelo.rubycollection.util.ModModelPredicates;
+import net.mrbeelo.rubycollection.util.ModServerHandling;
 import net.mrbeelo.rubycollection.villager.ModCustomTrades;
 import net.mrbeelo.rubycollection.villager.ModVillagers;
 import net.mrbeelo.rubycollection.world.gen.ModOreGeneration;
@@ -52,9 +55,9 @@ public class Rubycollection implements ModInitializer {
 		ModEntities.registerModEntities();
 		ModAttributes.registerModAttributes();
 		ModFluids.registerFluids();
-
-		ServerTickEvents.START_WORLD_TICK.register(world -> {if (world instanceof ServerWorld) {CooldownManager.updateCooldowns((ServerWorld) world);}});
-
+		ModEffects.registerModEffects();
+		ModCommands.registerModCommands();
+		ModServerHandling.registerModServerHandling();
 	}
 	public static Identifier id(String path) {
 		return Identifier.of(MOD_ID, path);

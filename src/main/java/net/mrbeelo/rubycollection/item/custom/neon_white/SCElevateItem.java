@@ -29,7 +29,7 @@ public class SCElevateItem extends Item {
         ItemStack heldStack = user.getStackInHand(hand);
 
         if (user != null && world != null) {
-            user.addVelocity(user.getVelocity().x, 1, user.getVelocity().z);
+            user.addVelocity(user.getVelocity().x, 0.7, user.getVelocity().z);
             user.velocityModified = true;
             heldStack.decrement(1);
             user.getInventory().markDirty();

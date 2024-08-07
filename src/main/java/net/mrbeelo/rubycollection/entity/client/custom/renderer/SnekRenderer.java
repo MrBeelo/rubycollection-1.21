@@ -1,4 +1,4 @@
-package net.mrbeelo.rubycollection.entity.client;
+package net.mrbeelo.rubycollection.entity.client.custom.renderer;
 
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
@@ -6,6 +6,8 @@ import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.mrbeelo.rubycollection.Rubycollection;
+import net.mrbeelo.rubycollection.entity.client.ModEntityModelLayers;
+import net.mrbeelo.rubycollection.entity.client.custom.model.SnekModel;
 import net.mrbeelo.rubycollection.entity.custom.SnekEntity;
 
 public class SnekRenderer extends MobEntityRenderer<SnekEntity, SnekModel> {

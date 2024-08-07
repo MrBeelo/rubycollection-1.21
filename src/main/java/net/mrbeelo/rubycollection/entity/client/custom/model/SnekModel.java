@@ -1,4 +1,4 @@
-package net.mrbeelo.rubycollection.entity.client;
+package net.mrbeelo.rubycollection.entity.client.custom.model;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;

@@ -43,7 +43,7 @@ public class SCFireballItem extends Item {
             Vec3d forward = new Vec3d(x, y, z).normalize();
 
             // Apply velocity to the player in the forward direction with a slower speed
-            user.addVelocity(forward.x * 2, forward.y * 2, forward.z * 2); // Adjust multiplier for desired speed
+            user.addVelocity(forward.x * 2, forward.y * 1.2, forward.z * 2); // Adjust multiplier for desired speed
             user.velocityModified = true;
 
             // Decrement the item stack

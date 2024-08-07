@@ -13,8 +13,8 @@ import net.mrbeelo.rubycollection.block.entity.ModBlockEntities;
 import net.mrbeelo.rubycollection.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.mrbeelo.rubycollection.entity.ModEntities;
 import net.mrbeelo.rubycollection.entity.client.ModEntityModelLayers;
-import net.mrbeelo.rubycollection.entity.client.SnekModel;
-import net.mrbeelo.rubycollection.entity.client.SnekRenderer;
+import net.mrbeelo.rubycollection.entity.client.custom.model.SnekModel;
+import net.mrbeelo.rubycollection.entity.client.custom.renderer.SnekRenderer;
 import net.mrbeelo.rubycollection.fluid.ModFluids;
 import net.mrbeelo.rubycollection.util.ModModelPredicates;
 

@@ -24,6 +24,9 @@ public class ModSounds {
     public static final SoundEvent PEW = register("pew");
     public static final SoundEvent MAGEMPTY = register("magempty");
     public static final SoundEvent BEEP = register("beep");
+    public static final SoundEvent GNOME = register("gnome");
+    public static final SoundEvent CORRECT = register("correct");
+    public static final SoundEvent INCORRECT = register("incorrect");
     public static final SoundEvent XO = register("xo");
     public static final RegistryKey<JukeboxSong> XO_KEY = of("xo");
 

@@ -26,5 +26,5 @@ public class ModEffects {
         return Registry.registerReference(Registries.STATUS_EFFECT, Rubycollection.id(id), statusEffect);
     }
 
-    public static void load() {}
+    public static void registerModEffects() {}
 }

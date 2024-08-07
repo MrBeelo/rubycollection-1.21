@@ -4,7 +4,6 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 import net.mrbeelo.rubycollection.Rubycollection;
 import net.mrbeelo.rubycollection.entity.custom.SnekEntity;
 
