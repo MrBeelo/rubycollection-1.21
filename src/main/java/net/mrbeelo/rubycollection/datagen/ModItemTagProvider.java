@@ -60,5 +60,18 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
                 .addTag(ModTags.Items.RUBY_VARIANTS);
+
+        getOrCreateTagBuilder(ModTags.Items.SOUL_CARDS)
+                .add(ModItems.SC_AMMO)
+                .add(ModItems.SC_BOOK_OF_LIFE)
+                .add(ModItems.SC_DOMINION)
+                .add(ModItems.SC_ELEVATE)
+                .add(ModItems.SC_FIREBALL)
+                .add(ModItems.SC_FIST)
+                .add(ModItems.SC_GODSPEED)
+                .add(ModItems.SC_HEALTH)
+                .add(ModItems.SC_KATANA)
+                .add(ModItems.SC_PURIFY)
+                .add(ModItems.SC_STOMP);
     }
 }

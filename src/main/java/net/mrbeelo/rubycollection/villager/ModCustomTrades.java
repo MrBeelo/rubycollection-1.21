@@ -116,7 +116,6 @@ public class ModCustomTrades {
                         ModItems.SNEK_SPAWN_EGG,
                         ModItems.XO_MUSIC_DISC,
                         ModItems.NUKE_BUTTON,
-                        ModItems.PURIFY,
                         ModBlocks.PEDESTAL.asItem(),
                         ModBlocks.PACKED_IRON_BLOCK.asItem(),
                         ModFluids.FROOTOP_BUCKET

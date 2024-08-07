@@ -119,7 +119,6 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.RUBY_DOOR, "Ruby Door");
         translationBuilder.add(ModBlocks.RUBY_TRAPDOOR, "Ruby Trapdoor");
         translationBuilder.add(ModEffects.HIGH.value(), "High");
-        translationBuilder.add(ModItems.PURIFY, "Purify Soul Card");
         translationBuilder.add(ModItems.PISTOL, "Tactical Pistol");
         translationBuilder.add(ModItems.BULLET, "Bullet");
         translationBuilder.add(ModBlocks.PACKED_IRON_BLOCK, "Packed Iron Block");
@@ -131,6 +130,17 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.PEDESTAL, "Pedestal");
         translationBuilder.add(ModItems.SNEK_SPAWN_EGG, "Snek Spawn Egg");
         translationBuilder.add(ModFluids.FROOTOP_BUCKET, "Bucket of Frootop");
+        translationBuilder.add(ModItems.SC_AMMO, "Ammo Soul Card");
+        translationBuilder.add(ModItems.SC_BOOK_OF_LIFE, "Book Of Life Soul Card");
+        translationBuilder.add(ModItems.SC_DOMINION, "Dominion Soul Card");
+        translationBuilder.add(ModItems.SC_ELEVATE, "Elevate Soul Card");
+        translationBuilder.add(ModItems.SC_FIREBALL, "Fireball Soul Card");
+        translationBuilder.add(ModItems.SC_FIST, "Fist Soul Card");
+        translationBuilder.add(ModItems.SC_GODSPEED, "Godspeed Soul Card");
+        translationBuilder.add(ModItems.SC_HEALTH, "Health Soul Card");
+        translationBuilder.add(ModItems.SC_KATANA, "Katana Soul Card");
+        translationBuilder.add(ModItems.SC_PURIFY, "Purify Soul Card");
+        translationBuilder.add(ModItems.SC_STOMP, "Stomp Soul Card");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_HIT, "Ruby Block Hit");
@@ -140,6 +150,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         addSoundEvent(translationBuilder, ModSounds.PEW, "Gunshot");
         addText(translationBuilder, ModItemGroups.RUBY_ITEM_GROUP.getDisplayName(), "The Ruby Collection");
         addText(translationBuilder, ModItemGroups.BSMPS3_ARTIFACTS.getDisplayName(), "BSMPS3 Artifacts");
+        addText(translationBuilder, ModItemGroups.NEON_WHITE_SOUL_CARDS.getDisplayName(), "Neon White Soul Cards");
         addVillager(translationBuilder, ModVillagers.RUBERT, "Rubert");
         addPotionTranslations(translationBuilder, ModPotions.KOKAINA, "Kokaina");
         addPainting(translationBuilder, "world", "The World Of Errors", "MrBeelo");

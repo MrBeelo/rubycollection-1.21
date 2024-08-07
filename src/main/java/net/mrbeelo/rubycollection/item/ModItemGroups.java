@@ -73,8 +73,6 @@ public class ModItemGroups {
                         entries.add(ModItems.PISTOL);
                         entries.add(ModItems.BULLET);
 
-                        entries.add(ModItems.PURIFY);
-
                         entries.add(ModItems.NUKE_BUTTON);
 
                         entries.add(ModItems.KOKAINA);
@@ -90,6 +88,23 @@ public class ModItemGroups {
                         entries.add(ModItems.XO_MUSIC_DISC);
 
                         entries.add(ModFluids.FROOTOP_BUCKET);
+                    }).build());
+
+    public static final ItemGroup NEON_WHITE_SOUL_CARDS = Registry.register(Registries.ITEM_GROUP,
+            Rubycollection.id("neon_white_soul_cards"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemGroup.rubycollection.neon_white_soul_cards"))
+                    .icon(() -> new ItemStack(ModItems.SC_PURIFY)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.SC_AMMO);
+                        entries.add(ModItems.SC_BOOK_OF_LIFE);
+                        entries.add(ModItems.SC_DOMINION);
+                        entries.add(ModItems.SC_ELEVATE);
+                        entries.add(ModItems.SC_FIREBALL);
+                        entries.add(ModItems.SC_FIST);
+                        entries.add(ModItems.SC_GODSPEED);
+                        entries.add(ModItems.SC_HEALTH);
+                        entries.add(ModItems.SC_KATANA);
+                        entries.add(ModItems.SC_PURIFY);
+                        entries.add(ModItems.SC_STOMP);
                     }).build());
 
 

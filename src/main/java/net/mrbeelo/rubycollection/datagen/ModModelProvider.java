@@ -60,7 +60,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_BOOTS));
-        itemModelGenerator.register(ModItems.PURIFY, Models.GENERATED);
         itemModelGenerator.register(ModItems.PISTOL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BULLET, Models.GENERATED);
         itemModelGenerator.register(ModItems.DEATH_AXE, Models.HANDHELD);
@@ -68,5 +67,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SNEK_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.XO_MUSIC_DISC, Models.GENERATED);
         itemModelGenerator.register(ModFluids.FROOTOP_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_AMMO, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_BOOK_OF_LIFE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_DOMINION, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_ELEVATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_FIREBALL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_FIST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_GODSPEED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_HEALTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_KATANA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_PURIFY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SC_STOMP, Models.GENERATED);
     }
 }

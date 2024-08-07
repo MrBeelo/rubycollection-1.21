@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "rubycollection:item/purify"
+    "layer0": "rubycollection:item/sc_katana"
   }
 }

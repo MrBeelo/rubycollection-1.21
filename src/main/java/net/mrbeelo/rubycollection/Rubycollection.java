@@ -32,7 +32,7 @@ public class Rubycollection implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Loading...");
+		LOGGER.info("Loading your stupid Ruby mod.");
 
 		//LOAD ALL MODADDONS CLASSES (INITS)
 		ModItems.registerModItems();
