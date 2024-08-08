@@ -1,0 +1,11 @@
+// 1.21	2024-08-08T19:22:41.6474292	The Ruby Collection/Tags for minecraft:block
+f2dda4cc4e1572782cfbf475985d7da5c37bc25f data\rubycollection\tags\block\ruby_ores.json
+3ea8a0be6c62046d39920c56034427d0d5ba9b28 data\minecraft\tags\block\mineable\pickaxe.json
+4c7307d6fa7c901d1ce27941f3bc89be56ffb608 data\minecraft\tags\block\walls.json
+cc0fc853f32eacb6d814f0ef4d6cf5779ecc8267 data\minecraft\tags\block\doors.json
+bede9231214621ebfe867f1e3f53f45389098950 data\rubycollection\tags\block\ruby_blocks.json
+3ea8a0be6c62046d39920c56034427d0d5ba9b28 data\minecraft\tags\block\needs_diamond_tool.json
+83360e07e03b82750d9f9f9173d693282b35ad08 data\minecraft\tags\block\beacon_base_blocks.json
+4c707be781b99bf5c14382f48fe62a3a380feed4 data\minecraft\tags\block\trapdoors.json
+b2d6aa614426167f700c41b440a6dd8325bb9732 data\minecraft\tags\block\fences.json
+77eafc0677c539fd474cc2ef1dcdc8ae06c38af8 data\minecraft\tags\block\fence_gates.json

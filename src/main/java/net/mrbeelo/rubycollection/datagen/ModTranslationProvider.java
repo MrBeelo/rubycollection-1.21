@@ -141,6 +141,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.SC_KATANA, "Katana Soul Card");
         translationBuilder.add(ModItems.SC_PURIFY, "Purify Soul Card");
         translationBuilder.add(ModItems.SC_STOMP, "Stomp Soul Card");
+        translationBuilder.add(ModBlocks.RGB_BLOCK, "RGB Block");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_HIT, "Ruby Block Hit");

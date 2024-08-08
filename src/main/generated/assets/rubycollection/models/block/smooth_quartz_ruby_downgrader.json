@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "rubycollection:block/smooth_quartz_ruby_downgrader"
+  }
+}

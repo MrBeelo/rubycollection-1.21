@@ -88,6 +88,8 @@ public class ModItemGroups {
                         entries.add(ModItems.XO_MUSIC_DISC);
 
                         entries.add(ModFluids.FROOTOP_BUCKET);
+
+                        entries.add(ModBlocks.RGB_BLOCK);
                     }).build());
 
     public static final ItemGroup NEON_WHITE_SOUL_CARDS = Registry.register(Registries.ITEM_GROUP,

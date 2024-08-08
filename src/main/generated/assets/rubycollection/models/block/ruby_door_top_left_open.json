@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "rubycollection:block/ruby_door_bottom",
+    "top": "rubycollection:block/ruby_door_top"
+  }
+}

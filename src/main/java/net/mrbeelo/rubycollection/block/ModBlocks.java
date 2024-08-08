@@ -6,12 +6,9 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.mrbeelo.rubycollection.Rubycollection;
-import net.mrbeelo.rubycollection.block.custom.PedestalBlock;
-import net.mrbeelo.rubycollection.block.custom.SMRDBlock;
-import net.mrbeelo.rubycollection.block.custom.SMRUBlock;
+import net.mrbeelo.rubycollection.block.custom.*;
 import net.mrbeelo.rubycollection.item.ModItems;
 import net.mrbeelo.rubycollection.sound.ModSounds;
-import net.mrbeelo.rubycollection.block.custom.KokainaCropBlock;
 
 public class ModBlocks {
 
@@ -36,6 +33,7 @@ public class ModBlocks {
     public static final WallBlock RUBY_WALL = registerWithItem("ruby_wall", new WallBlock(AbstractBlock.Settings.copy(Blocks.NETHER_BRICK_FENCE)));
     public static final DoorBlock RUBY_DOOR = registerWithItem("ruby_door", new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
     public static final TrapdoorBlock RUBY_TRAPDOOR = registerWithItem("ruby_trapdoor", new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
+    public static final RGBBlock RGB_BLOCK = registerWithItem("rgb_block", new RGBBlock(AbstractBlock.Settings.copy(Blocks.STONE)));
 
 
     //METHODS
