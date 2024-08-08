@@ -1,4 +1,4 @@
-package net.mrbeelo.rubycollection.java;
+package net.mrbeelo.rubycollection.java_by_kaupenjoe;
 
 import java.util.Scanner;
 

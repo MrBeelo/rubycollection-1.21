@@ -1,4 +1,4 @@
-package net.mrbeelo.rubycollection.java;
+package net.mrbeelo.rubycollection.java_by_kaupenjoe;
 
 public class J7BooleanComparison {
     public static void main(String[] args) {
