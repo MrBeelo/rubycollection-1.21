@@ -4,8 +4,8 @@
       "id": "rubycollection:ruby_cluster",
       "count": 1
     },
-    "title": "Master Beelo Staff?!?",
-    "description": "Obtain 40 Ruby Clusters.",
+    "title": "How the f-",
+    "description": "Obtain a stack of Ruby Clusters.",
     "frame": "challenge",
     "show_toast": false,
     "announce_to_chat": true,
@@ -22,7 +22,7 @@
         "items": [
           {
             "items": "rubycollection:ruby_cluster",
-            "count": 40
+            "count": 64
           }
         ]
       }

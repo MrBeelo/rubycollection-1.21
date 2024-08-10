@@ -31,16 +31,6 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:netherrack",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
               "name": "rubycollection:ruby_shard"
             }
           ]
