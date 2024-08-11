@@ -23,7 +23,6 @@ public class ModItems {
     public static final Item RUBY_INGOT = register("ruby_ingot", new Item(new Item.Settings()));
     public static final Item RUBY_CLUSTER = register("ruby_cluster", new Item(new Item.Settings()));
     public static final Item RUBY_SHARD = register("ruby_shard", new Item(new Item.Settings()));
-    public static final Item KOKAINA_LEAF = register("kokaina_leaf", new Item(new Item.Settings()));
     public static final Item KOKAINA_SEED = register("kokaina_seed", new AliasedBlockItem(ModBlocks.KOKAINA_CROP, new Item.Settings()));
     public static final KokainaItem KOKAINA = register("kokaina", new KokainaItem(new Item.Settings().maxCount(16).food(ModFoodItems.KOKAINA_COMPONENT)));
     public static final SwordItem RUBY_SWORD = register("ruby_sword", new SwordItem(ModToolMaterials.RUBY, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY, 3, -2.4f)))); //2 BONUS DMG INSTEAD OF 1
@@ -45,7 +44,7 @@ public class ModItems {
     public static final Item SNEK_SPAWN_EGG = register("snek_spawn_egg", new SpawnEggItem(ModEntities.SNEK, 0x78fa40, 0x5ed32b, new Item.Settings()));
     public static final Item XO_MUSIC_DISC = register("xo_music_disc", new Item(new Item.Settings().jukeboxPlayable(ModSounds.XO_KEY)));
     public static final Item SC_AMMO = register("sc_ammo", new SCAmmoItem(new Item.Settings()));
-    public static final Item SC_BOOK_OF_LIFE = register("sc_book_of_life", new Item(new Item.Settings().maxCount(3)));
+    public static final Item SC_BOOK_OF_LIFE = register("sc_book_of_life", new SCBookOfLifeItem(new Item.Settings().maxCount(3)));
     public static final Item SC_DOMINION = register("sc_dominion", new Item(new Item.Settings().maxCount(3)));
     public static final Item SC_ELEVATE = register("sc_elevate", new SCElevateItem(new Item.Settings().maxCount(3)));
     public static final Item SC_FIREBALL = register("sc_fireball", new SCFireballItem(new Item.Settings().maxCount(3)));

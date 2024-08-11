@@ -18,6 +18,7 @@ import net.mrbeelo.rubycollection.effect.ModEffects;
 import net.mrbeelo.rubycollection.fluid.ModFluids;
 import net.mrbeelo.rubycollection.item.ModItemGroups;
 import net.mrbeelo.rubycollection.item.ModItems;
+import net.mrbeelo.rubycollection.item.custom.KartusItem;
 import net.mrbeelo.rubycollection.potion.ModPotions;
 import net.mrbeelo.rubycollection.sound.ModSounds;
 import net.mrbeelo.rubycollection.villager.ModVillagers;
@@ -83,6 +84,15 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         builder.add(discDescriptionKey, discDescription);
     }
 
+    /*private static void addKartusCard(@NotNull TranslationBuilder builder, @NotNull KartusItem itemEntry, @NotNull String value) {
+        Identifier itemId = Registries.ITEM.getId(itemEntry);
+        int attackId = KartusItem.getAttack();
+        int defenceId = KartusItem.getDefence();
+        String kartusKey = "item.rubycollection." + itemId.getPath();
+        builder.add(kartusKey, value + " (Attack: " + attackId + ", Defence: " + defenceId + ")");
+    }
+     */
+
 
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
@@ -92,7 +102,6 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RUBY_SHARD, "Ruby Shard");
         translationBuilder.add(ModItems.KOKAINA, "Kokaina");
         translationBuilder.add(ModItems.KOKAINA_SEED, "Kokaina Seed");
-        translationBuilder.add(ModItems.KOKAINA_LEAF, "Kokaina Leaf");
         translationBuilder.add(ModItems.RUBY_KNOCKER, "Overly named device featuring retractable hand able of pushing living entities away from entity using device");
         translationBuilder.add(ModItems.RUBY_SWORD, "Ruby Sword");
         translationBuilder.add(ModItems.RUBY_PICKAXE, "Ruby Pickaxe");
@@ -156,6 +165,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         addPotionTranslations(translationBuilder, ModPotions.KOKAINA, "Kokaina");
         addPainting(translationBuilder, "world", "The World Of Errors", "MrBeelo");
         addMusicDisc(translationBuilder, "xo_music_disc", "XO Music Disc", "XO (eden cover and remake)");
+
     }
 }
 

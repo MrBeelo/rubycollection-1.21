@@ -52,7 +52,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RUBY_CLUSTER, Models.GENERATED);
         itemModelGenerator.register(ModItems.RUBY_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.KOKAINA, Models.GENERATED);
-        itemModelGenerator.register(ModItems.KOKAINA_LEAF, Models.GENERATED);
         itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);

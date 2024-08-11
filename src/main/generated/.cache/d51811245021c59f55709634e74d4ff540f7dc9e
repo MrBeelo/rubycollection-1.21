@@ -1,4 +1,4 @@
-// 1.21	2024-08-10T21:20:55.0232508	The Ruby Collection/Model Definitions
+// 1.21	2024-08-11T22:34:36.9085205	The Ruby Collection/Model Definitions
 543010d706cb0fd46137be817ccdc29470a8ad66 assets\rubycollection\models\item\sc_fireball.json
 b6e717e354790fb04964b5d082590babb71423f0 assets\rubycollection\blockstates\ruby_slab.json
 798e120b9fbcc3ae1c09388cbce28570260be53e assets\rubycollection\blockstates\end_ruby_ore.json
@@ -10,7 +10,6 @@ ef025b666a6b0c552bfd19390193482deb21a728 assets\rubycollection\models\item\ruby_
 081216e99a7fa6998f013908af819eb3c11d9c4f assets\rubycollection\models\block\ruby_fence_gate_open.json
 62bae3313a5d318ab449b85e82020ca81e1eb17a assets\rubycollection\models\block\ruby_pressure_plate.json
 eaa8bb848a03b0ab909ecbe3509dcfc8881c7a34 assets\rubycollection\models\block\kokaina_crop_stage0.json
-fef237c63442c328b6f0131b1dcdad128214c6f5 assets\rubycollection\models\item\kokaina_leaf.json
 73a21f0ab20499164eee86c4d7385c0bd6dd1b78 assets\rubycollection\models\item\ruby_boots_gold_trim.json
 1655ffbf02791f4a696971a47d86f33b920d6da3 assets\rubycollection\models\item\ruby_chestplate_copper_trim.json
 4cd3ddfd464274e1c54d1e1a7c4f2bfb0d44a822 assets\rubycollection\models\item\end_ruby_ore.json

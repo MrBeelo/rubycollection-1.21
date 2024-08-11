@@ -17,11 +17,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
-        getOrCreateTagBuilder(ModTags.Items.KOKAINA_FAMILY)
-                .add(ModItems.KOKAINA)
-                .add(ModItems.KOKAINA_SEED)
-                .add(ModItems.KOKAINA_LEAF);
-
         getOrCreateTagBuilder(ItemTags.SWORDS).add(ModItems.RUBY_SWORD).add(ModItems.RUBY_KNOCKER);
         getOrCreateTagBuilder(ItemTags.PICKAXES).add(ModItems.RUBY_PICKAXE);
         getOrCreateTagBuilder(ItemTags.AXES).add(ModItems.RUBY_AXE);

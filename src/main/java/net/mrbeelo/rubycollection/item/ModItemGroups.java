@@ -76,7 +76,6 @@ public class ModItemGroups {
                         entries.add(ModItems.NUKE_BUTTON);
 
                         entries.add(ModItems.KOKAINA);
-                        entries.add(ModItems.KOKAINA_LEAF);
                         entries.add(ModItems.KOKAINA_SEED);
 
                         entries.add(ModItems.MASTER_BEELO_STAFF);
