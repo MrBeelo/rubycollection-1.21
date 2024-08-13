@@ -8,19 +8,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.mrbeelo.rubycollection.components.ModDataComponentTypes;
 
-public class CooldownManager {
-    private static void vanillaCommandByPlayer(ServerWorld world, PlayerEntity user, String command) {
-        if (user != null) {
-            ServerCommandSource source = user.getCommandSource().withSilent().withEntity(user);
-            try {
-                world.getServer().getCommandManager().getDispatcher().execute(command, source);
-            } catch (CommandSyntaxException e) {
-                user.sendMessage(Text.literal("Command failed: " + e.getMessage()), false);
-            }
-        } else {
-            user.sendMessage(Text.literal("User not found"), false);
-        }
-    }
+import static net.mrbeelo.rubycollection.Rubycollection.vanillaCommandByPlayer;
+
+public class ServerTickManager {
+
 
     public static void updateCooldowns(ServerWorld world) {
         for (PlayerEntity user : world.getPlayers()) {

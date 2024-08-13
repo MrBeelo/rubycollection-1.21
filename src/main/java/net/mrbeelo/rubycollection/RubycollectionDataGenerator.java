@@ -22,6 +22,7 @@ public class RubycollectionDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModWorldGeneratorProvider::new);
 		pack.addProvider(ModPoiTagProvider::new);
 		pack.addProvider(ModFluidTagProvider::new);
+		pack.addProvider(ModEnchantmentGeneratorProvider::new);
 	}
 
 	@Override

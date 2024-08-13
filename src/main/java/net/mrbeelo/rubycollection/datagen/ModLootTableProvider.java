@@ -20,7 +20,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
 
-        //REGISTERING (ONLY BLOCKS THAT DROP THEMSELVES
+        //REGISTERING (ONLY BLOCKS THAT DROP THEMSELVES)
 
         addDrop(ModBlocks.RUBY_BLOCK);
         addDrop(ModBlocks.PACKED_IRON_BLOCK);

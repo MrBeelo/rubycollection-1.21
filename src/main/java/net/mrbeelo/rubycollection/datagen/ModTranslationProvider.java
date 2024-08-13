@@ -2,8 +2,6 @@ package net.mrbeelo.rubycollection.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
@@ -15,10 +13,10 @@ import net.minecraft.village.VillagerProfession;
 import net.mrbeelo.rubycollection.Rubycollection;
 import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.effect.ModEffects;
+import net.mrbeelo.rubycollection.enchantment.ModEnchantments;
 import net.mrbeelo.rubycollection.fluid.ModFluids;
 import net.mrbeelo.rubycollection.item.ModItemGroups;
 import net.mrbeelo.rubycollection.item.ModItems;
-import net.mrbeelo.rubycollection.item.custom.KartusItem;
 import net.mrbeelo.rubycollection.potion.ModPotions;
 import net.mrbeelo.rubycollection.sound.ModSounds;
 import net.mrbeelo.rubycollection.villager.ModVillagers;
@@ -151,6 +149,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.SC_PURIFY, "Purify Soul Card");
         translationBuilder.add(ModItems.SC_STOMP, "Stomp Soul Card");
         translationBuilder.add(ModBlocks.RGB_BLOCK, "RGB Block");
+        translationBuilder.addEnchantment(ModEnchantments.BANG_EFFECT_KEY, "Bang");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_HIT, "Ruby Block Hit");

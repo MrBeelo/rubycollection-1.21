@@ -1,41 +1,22 @@
 package net.mrbeelo.rubycollection.item.custom;
 
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.command.CommandManager;
-import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.mrbeelo.rubycollection.components.ModDataComponentTypes;
-
-import java.util.Objects;
+import static net.mrbeelo.rubycollection.Rubycollection.vanillaCommandByPlayer;
 
 public class MBSItem extends Item {
     public MBSItem(Settings settings) {
         super(settings);
     }
-
-    private void vanillaCommandByPlayer(ServerWorld world, PlayerEntity user, String command) {
-        if (user != null) {
-            ServerCommandSource source = user.getCommandSource().withSilent().withEntity(user);
-            try {
-                world.getServer().getCommandManager().getDispatcher().execute(command, source);
-            } catch (CommandSyntaxException e) {
-                user.sendMessage(Text.literal("Command failed: " + e.getMessage()), false);
-            }
-        } else {
-            user.sendMessage(Text.literal("User not found"), false);
-        }
-    }
-
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {

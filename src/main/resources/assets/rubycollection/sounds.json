@@ -11,5 +11,6 @@
   "gnome": {"subtitle": "sounds.rubycollection.gnome", "sounds": ["rubycollection:gnome"]},
   "correct": {"subtitle": "sounds.rubycollection.correct", "sounds": ["rubycollection:correct"]},
   "incorrect": {"subtitle": "sounds.rubycollection.incorrect", "sounds": ["rubycollection:incorrect"]},
+  "bang": {"subtitle": "sounds.rubycollection.bang", "sounds": ["rubycollection:bang"]},
   "xo": {"subtitle": "sounds.rubycollection.xo", "sounds": [{"name": "rubycollection:xo", "stream":  true}]}
 }

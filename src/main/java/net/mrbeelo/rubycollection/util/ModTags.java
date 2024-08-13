@@ -21,7 +21,6 @@ public class ModTags {
         public static final TagKey<Item> RUBY_TOOLS = TagKey.of(RegistryKeys.ITEM, Rubycollection.id("ruby_tools"));
         public static final TagKey<Item> RUBY_ARMOR = TagKey.of(RegistryKeys.ITEM, Rubycollection.id("ruby_armor"));
         public static final TagKey<Item> RUBY_VARIANTS = TagKey.of(RegistryKeys.ITEM, Rubycollection.id("ruby_variants"));
-        public static final TagKey<Item> KOKAINA_FAMILY = TagKey.of(RegistryKeys.ITEM, Rubycollection.id("kokaina_family"));
         public static final TagKey<Item> SOUL_CARDS = TagKey.of(RegistryKeys.ITEM, Rubycollection.id("soul_cards"));
 
     }

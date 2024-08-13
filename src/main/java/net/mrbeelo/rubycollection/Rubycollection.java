@@ -1,30 +1,29 @@
 package net.mrbeelo.rubycollection;
 
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.block.entity.ModBlockEntities;
 import net.mrbeelo.rubycollection.command.ModCommands;
 import net.mrbeelo.rubycollection.components.ModDataComponentTypes;
 import net.mrbeelo.rubycollection.effect.ModEffects;
+import net.mrbeelo.rubycollection.enchantment.ModEnchantments;
 import net.mrbeelo.rubycollection.entity.ModAttributes;
 import net.mrbeelo.rubycollection.entity.ModEntities;
-import net.mrbeelo.rubycollection.event.CooldownManager;
 import net.mrbeelo.rubycollection.fluid.ModFluids;
 import net.mrbeelo.rubycollection.item.*;
 import net.mrbeelo.rubycollection.potion.ModPotionRecipes;
 import net.mrbeelo.rubycollection.potion.ModPotions;
 import net.mrbeelo.rubycollection.sound.ModSounds;
-import net.mrbeelo.rubycollection.util.ModModelPredicates;
 import net.mrbeelo.rubycollection.util.ModServerHandling;
 import net.mrbeelo.rubycollection.villager.ModCustomTrades;
 import net.mrbeelo.rubycollection.villager.ModVillagers;
-import net.mrbeelo.rubycollection.world.gen.ModOreGeneration;
 import net.mrbeelo.rubycollection.world.gen.ModWorldGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -57,10 +56,24 @@ public class Rubycollection implements ModInitializer {
 		ModFluids.registerFluids();
 		ModEffects.registerModEffects();
 		ModCommands.registerModCommands();
+		ModEnchantments.registerModEnchantments();
 		ModServerHandling.registerModServerHandling();
 	}
 	public static Identifier id(String path) {
 		return Identifier.of(MOD_ID, path);
+	}
+
+	public static void vanillaCommandByPlayer(ServerWorld world, PlayerEntity user, String command) {
+		if (user != null) {
+			ServerCommandSource source = user.getCommandSource().withSilent().withEntity(user);
+			try {
+				world.getServer().getCommandManager().getDispatcher().execute(command, source);
+			} catch (CommandSyntaxException e) {
+				user.sendMessage(Text.literal("Command failed: " + e.getMessage()), false);
+			}
+		} else {
+			user.sendMessage(Text.literal("User not found"), false);
+		}
 	}
 }
 
