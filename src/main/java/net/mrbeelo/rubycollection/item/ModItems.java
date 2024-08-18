@@ -15,7 +15,11 @@ import net.mrbeelo.rubycollection.item.custom.*;
 import net.mrbeelo.rubycollection.item.custom.neon_white.*;
 import net.mrbeelo.rubycollection.sound.ModSounds;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ModItems {
+    public static final List<ItemConvertible> BLACKLIST = new ArrayList<>();
 
     //REGISTERING
 
@@ -54,6 +58,7 @@ public class ModItems {
     public static final Item SC_KATANA = register("sc_katana", new SwordItem(ToolMaterials.IRON, new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.IRON, 2, -2.4f))));
     public static final Item SC_PURIFY = register("sc_purify", new SCPurifyItem(new Item.Settings().maxCount(3)));
     public static final Item SC_STOMP = register("sc_stomp", new SCStompItem(new Item.Settings().maxCount(3)));
+    public static final PokeBallItem POKE_BALL = register("poke_ball", new PokeBallItem(new Item.Settings()));
 
 
     //METHODS

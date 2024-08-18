@@ -1,12 +1,15 @@
 package net.mrbeelo.rubycollection.block;
 
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.mrbeelo.rubycollection.Rubycollection;
 import net.mrbeelo.rubycollection.block.custom.*;
+import net.mrbeelo.rubycollection.effect.ModEffects;
 import net.mrbeelo.rubycollection.item.ModItems;
 import net.mrbeelo.rubycollection.sound.ModSounds;
 
@@ -34,6 +37,8 @@ public class ModBlocks {
     public static final DoorBlock RUBY_DOOR = registerWithItem("ruby_door", new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
     public static final TrapdoorBlock RUBY_TRAPDOOR = registerWithItem("ruby_trapdoor", new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
     public static final RGBBlock RGB_BLOCK = registerWithItem("rgb_block", new RGBBlock(AbstractBlock.Settings.copy(Blocks.STONE)));
+    public static final FlowerBlock ROSE = registerWithItem("rose", new FlowerBlock(ModEffects.HIGH, 20, AbstractBlock.Settings.copy(Blocks.POPPY).nonOpaque()));
+    public static final FlowerPotBlock POTTED_ROSE = (FlowerPotBlock) registerWithoutItem("potted_rose", new FlowerPotBlock(ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_POPPY).nonOpaque()));
 
 
     //METHODS
@@ -58,6 +63,10 @@ public class ModBlocks {
 
     public static <T extends Block> T registerWithItem(String name, T block) {
         return registerWithItem(name, block, new Item.Settings());
+    }
+
+    private static Block registerWithoutItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, Rubycollection.id(name), block);
     }
 
     public static void registerModBlocks() {

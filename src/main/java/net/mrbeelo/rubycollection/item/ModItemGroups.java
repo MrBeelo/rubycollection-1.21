@@ -1,22 +1,14 @@
 package net.mrbeelo.rubycollection.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.item.*;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 import net.mrbeelo.rubycollection.Rubycollection;
-import net.mrbeelo.rubycollection.RubycollectionClient;
 import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.fluid.ModFluids;
-import net.mrbeelo.rubycollection.potion.ModPotions;
+import java.util.Optional;
 
 
 public class ModItemGroups {
@@ -89,12 +81,18 @@ public class ModItemGroups {
                         entries.add(ModFluids.FROOTOP_BUCKET);
 
                         entries.add(ModBlocks.RGB_BLOCK);
+
+                        entries.add(ModItems.POKE_BALL);
+
+                        entries.add(ModBlocks.ROSE);
                     }).build());
 
     public static final ItemGroup NEON_WHITE_SOUL_CARDS = Registry.register(Registries.ITEM_GROUP,
             Rubycollection.id("neon_white_soul_cards"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemGroup.rubycollection.neon_white_soul_cards"))
-                    .icon(() -> new ItemStack(ModItems.SC_PURIFY)).entries((displayContext, entries) -> {
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemGroup.rubycollection.neon_white_soul_cards"))
+                    .icon(() -> new ItemStack(ModItems.SC_PURIFY))
+                    .entries((displayContext, entries) -> {
                         entries.add(ModItems.SC_AMMO);
                         entries.add(ModItems.SC_BOOK_OF_LIFE);
                         entries.add(ModItems.SC_DOMINION);
@@ -107,6 +105,20 @@ public class ModItemGroups {
                         entries.add(ModItems.SC_PURIFY);
                         entries.add(ModItems.SC_STOMP);
                     }).build());
+
+    public static final ItemGroup EVERYTHING = Registry.register(Registries.ITEM_GROUP,
+            Rubycollection.id("everything"),
+            FabricItemGroup.builder()
+            .displayName(Text.translatable("itemGroup.rubycollection.everything"))
+            .icon(() -> new ItemStack(ModItems.RUBY_INGOT))
+            .entries((displayContext, entries) -> Registries.ITEM.getIds()
+                    .stream()
+                    .filter(key -> key.getNamespace().equals(Rubycollection.MOD_ID))
+                    .map(Registries.ITEM::getOrEmpty)
+                    .map(Optional::orElseThrow)
+                    .filter(item -> !ModItems.BLACKLIST.contains(item))
+                    .forEach(entries::add))
+            .build());
 
 
     public static void registerModItemGroups() {

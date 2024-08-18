@@ -6,12 +6,7 @@ import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.text.Text;
-import net.minecraft.util.math.BlockPos;
 import net.mrbeelo.rubycollection.sound.ModSounds;
-import net.mrbeelo.rubycollection.util.IEntityDataSaver;
-
-import java.util.Objects;
 
 public class GnomeCommand {
     public static void register(CommandDispatcher<ServerCommandSource> serverCommandSourceCommandDispatcher,

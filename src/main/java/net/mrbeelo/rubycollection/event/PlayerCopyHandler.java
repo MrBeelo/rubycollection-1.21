@@ -2,7 +2,7 @@ package net.mrbeelo.rubycollection.event;
 
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.mrbeelo.rubycollection.util.IEntityDataSaver;
+import net.mrbeelo.rubycollection.server.IEntityDataSaver;
 
 public class PlayerCopyHandler implements ServerPlayerEvents.CopyFrom {
     @Override

@@ -30,10 +30,10 @@ public class MBSItem extends Item {
         int cooldown = stack.getOrDefault(ModDataComponentTypes.MBS_ACTIVE_COOLDOWN, 0);
         int lazer_time = stack.getOrDefault(ModDataComponentTypes.MBS_LAZER_TIME, 0);
         int glowing_time = stack.getOrDefault(ModDataComponentTypes.MBS_GLOWING_TIME, 0);
-        boolean isCrouching = user.isSneaking();
 
 
-        if (!isCrouching) {
+
+        if (!user.isSneaking()) {
             stack.set(ModDataComponentTypes.MBS_STAGE, ++count);
 
             if (count == 0) {
@@ -67,7 +67,7 @@ public class MBSItem extends Item {
         }
 
 
-        if (isCrouching) {
+        if (user.isSneaking()) {
             if (cooldown == 0) {
                 stack.set(ModDataComponentTypes.MBS_ACTIVE_COOLDOWN, 500);
 
@@ -84,22 +84,9 @@ public class MBSItem extends Item {
                 if (count == 1) {
                     Text aggresiumA = Text.literal("Aggresium Activated!").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(255 << 16 | 0 << 8 | 0)));
                     user.sendMessage(aggresiumA, true);
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^3 {width:1b,height:1b,limit:1,Tags:[\"lazer3\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^4 {width:1b,height:1b,limit:1,Tags:[\"lazer4\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^5 {width:1b,height:1b,limit:1,Tags:[\"lazer5\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^6 {width:1b,height:1b,limit:1,Tags:[\"lazer6\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^7 {width:1b,height:1b,limit:1,Tags:[\"lazer7\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^8 {width:1b,height:1b,limit:1,Tags:[\"lazer8\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^9 {width:1b,height:1b,limit:1,Tags:[\"lazer9\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^10 {width:1b,height:1b,limit:1,Tags:[\"lazer10\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^11 {width:1b,height:1b,limit:1,Tags:[\"lazer11\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^12 {width:1b,height:1b,limit:1,Tags:[\"lazer12\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^13 {width:1b,height:1b,limit:1,Tags:[\"lazer13\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^14 {width:1b,height:1b,limit:1,Tags:[\"lazer14\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^15 {width:1b,height:1b,limit:1,Tags:[\"lazer15\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^16 {width:1b,height:1b,limit:1,Tags:[\"lazer16\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^17 {width:1b,height:1b,limit:1,Tags:[\"lazer17\",\"lazer\"]}");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^18 {width:1b,height:1b,limit:1,Tags:[\"lazer18\",\"lazer\"]}");
+                    for (int i = 3; i <= 18; i++) {
+                        vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^" + i + " {width:1b,height:1b,limit:1,Tags:[\"lazer" + i + "\",\"lazer\"]}");
+                    }
                     stack.set(ModDataComponentTypes.MBS_LAZER_TIME, 140);
                 }
 
@@ -107,16 +94,9 @@ public class MBSItem extends Item {
                     Text mobiliumA = Text.literal("Mobilium Activated!").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(255 << 16 | 255 << 8 | 0)));
                     user.sendMessage(mobiliumA, true);
                     vanillaCommandByPlayer((ServerWorld) world, user, "tp @s ^ ^ ^25");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^1 0.12 0.12 0.12 1 500");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^2 0.12 0.12 0.12 1 500");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^3 0.12 0.12 0.12 1 500");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^4 0.12 0.12 0.12 1 500");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^5 0.12 0.12 0.12 1 500");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^6 0.12 0.12 0.12 1 500");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^7 0.12 0.12 0.12 1 500");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^8 0.12 0.12 0.12 1 500");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^9 0.12 0.12 0.12 1 500");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^10 0.12 0.12 0.12 1 500");
+                    for (int i = 1; i <= 10; i++) {
+                        vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^" + i + " 0.12 0.12 0.12 1 500");
+                    }
                     vanillaCommandByPlayer((ServerWorld) world, user, "summon minecraft:creeper ^ ^ ^10 {Fuse:0,ignited:1b}");
                 }
 

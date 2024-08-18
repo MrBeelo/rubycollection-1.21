@@ -2,9 +2,8 @@ package net.mrbeelo.rubycollection.mixin;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NbtCompound;
-import net.mrbeelo.rubycollection.util.IEntityDataSaver;
+import net.mrbeelo.rubycollection.server.IEntityDataSaver;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;

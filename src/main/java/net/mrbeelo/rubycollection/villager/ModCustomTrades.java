@@ -113,9 +113,8 @@ public class ModCustomTrades {
                         ModItems.PISTOL,
                         ModItems.KOKAINA_SEED,
                         ModItems.MASTER_BEELO_STAFF,
-                        ModItems.SNEK_SPAWN_EGG,
+                        ModItems.POKE_BALL,
                         ModItems.XO_MUSIC_DISC,
-                        ModItems.NUKE_BUTTON,
                         ModBlocks.PEDESTAL.asItem(),
                         ModBlocks.PACKED_IRON_BLOCK.asItem(),
                         ModFluids.FROOTOP_BUCKET
@@ -133,8 +132,18 @@ public class ModCustomTrades {
             });
 
             factories.add((entity, random) -> new TradeOffer(
+
                     new TradedItem(ModItems.RUBY, 3),
                     new ItemStack(ModItems.KOKAINA, 2), //KOKAINA
+                    9999,
+                    10,
+                    0.05f
+            ));
+
+            factories.add((entity, random) -> new TradeOffer(
+
+                    new TradedItem(ModItems.RUBY, 3),
+                    new ItemStack(ModItems.BULLET, 10), //KOKAINA
                     9999,
                     10,
                     0.05f

@@ -5,8 +5,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 import net.mrbeelo.rubycollection.datagen.*;
-import net.mrbeelo.rubycollection.world.ConfiguredFeature;
-import net.mrbeelo.rubycollection.world.PlacedFeature;
+import net.mrbeelo.rubycollection.world.ModConfiguredFeatures;
+import net.mrbeelo.rubycollection.world.ModPlacedFeatures;
 
 
 public class RubycollectionDataGenerator implements DataGeneratorEntrypoint {
@@ -27,7 +27,7 @@ public class RubycollectionDataGenerator implements DataGeneratorEntrypoint {
 
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder) {
-		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ConfiguredFeature::bootstrap);
-		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, PlacedFeature::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }

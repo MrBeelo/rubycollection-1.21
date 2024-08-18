@@ -7,7 +7,7 @@ import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
-import net.mrbeelo.rubycollection.util.IEntityDataSaver;
+import net.mrbeelo.rubycollection.server.IEntityDataSaver;
 
 public class ReturnHomeCommand {
     public static void register(CommandDispatcher<ServerCommandSource> serverCommandSourceCommandDispatcher,

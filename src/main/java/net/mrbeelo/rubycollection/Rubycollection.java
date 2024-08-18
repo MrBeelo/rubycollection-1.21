@@ -21,10 +21,10 @@ import net.mrbeelo.rubycollection.item.*;
 import net.mrbeelo.rubycollection.potion.ModPotionRecipes;
 import net.mrbeelo.rubycollection.potion.ModPotions;
 import net.mrbeelo.rubycollection.sound.ModSounds;
-import net.mrbeelo.rubycollection.util.ModServerHandling;
+import net.mrbeelo.rubycollection.server.ModServerInitHandler;
 import net.mrbeelo.rubycollection.villager.ModCustomTrades;
 import net.mrbeelo.rubycollection.villager.ModVillagers;
-import net.mrbeelo.rubycollection.world.gen.ModWorldGenerator;
+import net.mrbeelo.rubycollection.world.ModWorldGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -57,7 +57,7 @@ public class Rubycollection implements ModInitializer {
 		ModEffects.registerModEffects();
 		ModCommands.registerModCommands();
 		ModEnchantments.registerModEnchantments();
-		ModServerHandling.registerModServerHandling();
+		ModServerInitHandler.registerModServerInitHandler();
 	}
 	public static Identifier id(String path) {
 		return Identifier.of(MOD_ID, path);
