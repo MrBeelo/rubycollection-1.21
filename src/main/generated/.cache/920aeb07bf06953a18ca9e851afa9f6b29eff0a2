@@ -1,4 +1,4 @@
-// 1.21	2024-08-18T18:26:35.909845	The Ruby Collection/Block Loot Tables
+// 1.21	2024-08-18T23:13:27.7728676	The Ruby Collection/Block Loot Tables
 3d4b24525f89928e94f16695c119760a4f8d3786 data\rubycollection\loot_table\blocks\ruby_ore.json
 167dc5ce417ca920af8289f2859a08e41ac4e4f2 data\rubycollection\loot_table\blocks\rose.json
 6ff99e1848482eed375bf8aed1d5958ee1721a34 data\rubycollection\loot_table\blocks\ruby_pressure_plate.json
@@ -10,7 +10,7 @@ e700c2c3e72bc7288dccee067cd8a92ff8c44dd2 data\rubycollection\loot_table\blocks\r
 302a7d2df137bb72a4ce7326bd1677514b1db519 data\rubycollection\loot_table\blocks\ruby_button.json
 1f7140503e7b543ac110b8a8d17a818cfb8ad42a data\rubycollection\loot_table\blocks\ruby_fence_gate.json
 9e28bfe4d5ed35963f32838749124e7697e0eb77 data\rubycollection\loot_table\blocks\smooth_quartz_ruby_upgrader.json
-134875004462138128b2fbace8fe51d4c1e7c389 data\rubycollection\loot_table\blocks\nether_ruby_ore.json
+2311216702a03f7581c5926ec7ed8617992f4493 data\rubycollection\loot_table\blocks\nether_ruby_ore.json
 7554c5d7002db53cd0a0252c4e09df44c99b6f0b data\rubycollection\loot_table\blocks\ruby_door.json
 6909d8151d0ac658e79bca4c4b6360a77f37b5f2 data\rubycollection\loot_table\blocks\ruby_stairs.json
 0159caf1cd3214526887c2c18685f541c4d02401 data\rubycollection\loot_table\blocks\packed_iron_block.json

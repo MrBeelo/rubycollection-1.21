@@ -155,6 +155,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.POTTED_ROSE, "Potted Rosé");
         translationBuilder.add(ModEntities.SNEK, "Snek");
         translationBuilder.add(ModEntities.POKE_BALL_PROJECTILE, "Flying Poke ball");
+        translationBuilder.add(ModBlocks.CS_LEAVES, "Cupressus Sempervirens Leaves");
         translationBuilder.addEnchantment(ModEnchantments.BANG_EFFECT_KEY, "Bang");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");

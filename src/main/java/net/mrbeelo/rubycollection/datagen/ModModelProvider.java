@@ -39,6 +39,7 @@ public class ModModelProvider extends FabricModelProvider {
         rubyTexturePool.wall(ModBlocks.RUBY_WALL);
         blockStateModelGenerator.registerDoor(ModBlocks.RUBY_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.RUBY_TRAPDOOR);
+        blockStateModelGenerator.registerSingleton(ModBlocks.CS_LEAVES, TexturedModel.LEAVES);
 
         Identifier rgbOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.RGB_BLOCK, blockStateModelGenerator.modelCollector);
         Identifier rgbOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.RGB_BLOCK, "_on", Models.CUBE_ALL, TextureMap::all);

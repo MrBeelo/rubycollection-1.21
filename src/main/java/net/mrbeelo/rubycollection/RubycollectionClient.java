@@ -4,11 +4,14 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
+import net.minecraft.world.biome.FoliageColors;
 import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.block.entity.ModBlockEntities;
 import net.mrbeelo.rubycollection.block.entity.renderer.PedestalBlockEntityRenderer;
@@ -41,5 +44,9 @@ public class RubycollectionClient implements ClientModInitializer {
 				SimpleFluidRenderHandler.coloredWater(0xFFFFA500));
 		BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
 				ModFluids.STILL_FROOTOP, ModFluids.FLOWING_FROOTOP);
+
+		ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> world != null && pos != null ?
+				BiomeColors.getFoliageColor(world, pos) : FoliageColors.getDefaultColor(), ModBlocks.CS_LEAVES);
+		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getDefaultColor(), ModBlocks.CS_LEAVES);
 	}
 }

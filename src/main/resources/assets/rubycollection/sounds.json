@@ -14,5 +14,7 @@
   "bang": {"subtitle": "sounds.rubycollection.bang", "sounds": ["rubycollection:bang"]},
   "doodoo": {"subtitle": "sounds.rubycollection.doodoo", "sounds": ["rubycollection:doodoo"]},
   "mua": {"subtitle": "sounds.rubycollection.mua", "sounds": ["rubycollection:mua"]},
+  "aaau": {"subtitle": "sounds.rubycollection.aaau", "sounds": ["rubycollection:aaau"]},
+  "oof": {"subtitle": "sounds.rubycollection.oof", "sounds": ["rubycollection:oof"]},
   "xo": {"subtitle": "sounds.rubycollection.xo", "sounds": [{"name": "rubycollection:xo", "stream":  true}]}
 }

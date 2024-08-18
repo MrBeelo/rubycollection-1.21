@@ -24,6 +24,7 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.mrbeelo.rubycollection.entity.variant.SnekVariant;
+import net.mrbeelo.rubycollection.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 public class SnekEntity extends HostileEntity {
@@ -138,18 +139,18 @@ public class SnekEntity extends HostileEntity {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_PARROT_AMBIENT;
+        return ModSounds.DOODOO;
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_GHAST_HURT;
+        return ModSounds.AAAU;
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_PANDA_DEATH;
+        return ModSounds.OOF;
     }
 }

@@ -39,6 +39,7 @@ public class ModBlocks {
     public static final RGBBlock RGB_BLOCK = registerWithItem("rgb_block", new RGBBlock(AbstractBlock.Settings.copy(Blocks.STONE)));
     public static final FlowerBlock ROSE = registerWithItem("rose", new FlowerBlock(ModEffects.HIGH, 20, AbstractBlock.Settings.copy(Blocks.POPPY).nonOpaque()));
     public static final FlowerPotBlock POTTED_ROSE = (FlowerPotBlock) registerWithoutItem("potted_rose", new FlowerPotBlock(ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_POPPY).nonOpaque()));
+    public static final LeavesBlock CS_LEAVES = registerWithItem("cs_leaves", new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).nonOpaque()));
 
 
     //METHODS

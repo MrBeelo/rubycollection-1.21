@@ -85,6 +85,8 @@ public class ModItemGroups {
                         entries.add(ModItems.POKE_BALL);
 
                         entries.add(ModBlocks.ROSE);
+
+                        entries.add(ModBlocks.CS_LEAVES);
                     }).build());
 
     public static final ItemGroup NEON_WHITE_SOUL_CARDS = Registry.register(Registries.ITEM_GROUP,
