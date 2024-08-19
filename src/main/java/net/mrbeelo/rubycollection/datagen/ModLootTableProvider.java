@@ -55,6 +55,23 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ROSE);
         addDrop(ModBlocks.POTTED_ROSE, pottedPlantDrops(ModBlocks.ROSE));
 
+        addDrop(ModBlocks.CS_LOG);
+        addDrop(ModBlocks.CS_WOOD);
+        addDrop(ModBlocks.STRIPPED_CS_LOG);
+        addDrop(ModBlocks.STRIPPED_CS_WOOD);
+        addDrop(ModBlocks.CS_PLANKS);
+        addDrop(ModBlocks.CS_SAPLING);
+        addDrop(ModBlocks.CS_LEAVES, leavesDrops(ModBlocks.CS_LEAVES, ModBlocks.CS_SAPLING, 0.0625f));
+        addDrop(ModBlocks.CS_STAIRS);
+        addDrop(ModBlocks.CS_SLAB, slabDrops(ModBlocks.CS_SLAB));
+        addDrop(ModBlocks.CS_BUTTON);
+        addDrop(ModBlocks.CS_PRESSURE_PLATE);
+        addDrop(ModBlocks.CS_FENCE);
+        addDrop(ModBlocks.CS_FENCE_GATE);
+        addDrop(ModBlocks.CS_DOOR, doorDrops(ModBlocks.CS_DOOR));
+        addDrop(ModBlocks.CS_TRAPDOOR);
+
+
         LootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.KOKAINA_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(CropBlock.AGE, 3));
         addDrop(ModBlocks.KOKAINA_CROP, cropDrops(ModBlocks.KOKAINA_CROP, ModItems.KOKAINA, ModItems.KOKAINA_SEED, builder));

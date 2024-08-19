@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "rubycollection:block/cs_sapling"
+    }
+  }
+}

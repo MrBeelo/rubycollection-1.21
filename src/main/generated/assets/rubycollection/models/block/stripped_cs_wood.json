@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "rubycollection:block/stripped_cs_log",
+    "side": "rubycollection:block/stripped_cs_log"
+  }
+}

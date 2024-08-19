@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "rubycollection:block/cs_planks",
+    "side": "rubycollection:block/cs_planks",
+    "top": "rubycollection:block/cs_planks"
+  }
+}

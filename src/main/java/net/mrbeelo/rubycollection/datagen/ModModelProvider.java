@@ -39,7 +39,23 @@ public class ModModelProvider extends FabricModelProvider {
         rubyTexturePool.wall(ModBlocks.RUBY_WALL);
         blockStateModelGenerator.registerDoor(ModBlocks.RUBY_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.RUBY_TRAPDOOR);
+
+
+        blockStateModelGenerator.registerLog(ModBlocks.CS_LOG).log(ModBlocks.CS_LOG).wood(ModBlocks.CS_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_CS_LOG).log(ModBlocks.STRIPPED_CS_LOG).wood(ModBlocks.STRIPPED_CS_WOOD);
+
+        BlockStateModelGenerator.BlockTexturePool csPlankTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CS_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.CS_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.CS_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        csPlankTexturePool.stairs(ModBlocks.CS_STAIRS);
+        csPlankTexturePool.slab(ModBlocks.CS_SLAB);
+        csPlankTexturePool.button(ModBlocks.CS_BUTTON);
+        csPlankTexturePool.pressurePlate(ModBlocks.CS_PRESSURE_PLATE);
+        csPlankTexturePool.fence(ModBlocks.CS_FENCE);
+        csPlankTexturePool.fenceGate(ModBlocks.CS_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.CS_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.CS_TRAPDOOR);
 
         Identifier rgbOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.RGB_BLOCK, blockStateModelGenerator.modelCollector);
         Identifier rgbOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.RGB_BLOCK, "_on", Models.CUBE_ALL, TextureMap::all);

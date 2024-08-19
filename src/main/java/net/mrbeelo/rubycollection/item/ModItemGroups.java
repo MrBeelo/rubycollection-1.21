@@ -86,7 +86,21 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.ROSE);
 
+                        entries.add(ModBlocks.CS_LOG);
+                        entries.add(ModBlocks.CS_WOOD);
+                        entries.add(ModBlocks.STRIPPED_CS_LOG);
+                        entries.add(ModBlocks.STRIPPED_CS_WOOD);
+                        entries.add(ModBlocks.CS_PLANKS);
                         entries.add(ModBlocks.CS_LEAVES);
+                        entries.add(ModBlocks.CS_SAPLING);
+                        entries.add(ModBlocks.CS_STAIRS);
+                        entries.add(ModBlocks.CS_SLAB);
+                        entries.add(ModBlocks.CS_BUTTON);
+                        entries.add(ModBlocks.CS_PRESSURE_PLATE);
+                        entries.add(ModBlocks.CS_FENCE);
+                        entries.add(ModBlocks.CS_FENCE_GATE);
+                        entries.add(ModBlocks.CS_DOOR);
+                        entries.add(ModBlocks.CS_TRAPDOOR);
                     }).build());
 
     public static final ItemGroup NEON_WHITE_SOUL_CARDS = Registry.register(Registries.ITEM_GROUP,

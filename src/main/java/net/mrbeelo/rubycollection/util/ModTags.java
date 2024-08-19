@@ -14,6 +14,7 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_RUBY_TOOL = TagKey.of(RegistryKeys.BLOCK, Rubycollection.id("incorrect_for_ruby_tool"));
         public static final TagKey<Block> RUBY_ORES = TagKey.of(RegistryKeys.BLOCK, Rubycollection.id("ruby_ores"));
         public static final TagKey<Block> RUBY_BLOCKS = TagKey.of(RegistryKeys.BLOCK, Rubycollection.id("ruby_blocks"));
+        public static final TagKey<Block> CS_BLOCKS = TagKey.of(RegistryKeys.BLOCK, Rubycollection.id("cs_blocks"));
     }
 
     public static class Items {

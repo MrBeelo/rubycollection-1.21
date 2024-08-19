@@ -9,6 +9,6 @@ import net.mrbeelo.rubycollection.world.ModPlacedFeatures;
 public class ModFlowerGeneration {
     public static void generateFlowers() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ROSE_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ROSE_PLACED_KEY);
     }
 }

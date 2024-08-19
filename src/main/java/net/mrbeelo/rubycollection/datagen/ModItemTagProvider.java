@@ -3,7 +3,9 @@ package net.mrbeelo.rubycollection.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
+import net.mrbeelo.rubycollection.block.ModBlocks;
 import net.mrbeelo.rubycollection.item.ModItems;
 import net.mrbeelo.rubycollection.util.ModTags;
 
@@ -68,5 +70,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.SC_KATANA)
                 .add(ModItems.SC_PURIFY)
                 .add(ModItems.SC_STOMP);
+
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CS_LOG.asItem(), ModBlocks.CS_WOOD.asItem(), ModBlocks.STRIPPED_CS_LOG.asItem(), ModBlocks.STRIPPED_CS_WOOD.asItem());
+
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.CS_PLANKS.asItem());
     }
 }

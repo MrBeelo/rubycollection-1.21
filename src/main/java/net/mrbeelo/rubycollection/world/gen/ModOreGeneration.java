@@ -10,19 +10,19 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(
                 BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES,
-                ModPlacedFeatures.OVERWORLD_RUBY_ORE_KEY
+                ModPlacedFeatures.OVERWORLD_RUBY_ORE_PLACED_KEY
         );
 
         BiomeModifications.addFeature(
                 BiomeSelectors.foundInTheNether(),
                 GenerationStep.Feature.UNDERGROUND_ORES,
-                ModPlacedFeatures.NETHER_RUBY_ORE_KEY
+                ModPlacedFeatures.NETHER_RUBY_ORE_PLACED_KEY
         );
 
         BiomeModifications.addFeature(
                 BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES,
-                ModPlacedFeatures.END_RUBY_ORE_KEY
+                ModPlacedFeatures.END_RUBY_ORE_PLACED_KEY
         );
     }
 }

@@ -115,6 +115,7 @@ public class ModCustomTrades {
                         ModItems.MASTER_BEELO_STAFF,
                         ModItems.POKE_BALL,
                         ModItems.XO_MUSIC_DISC,
+                        ModItems.RUBY_KNOCKER,
                         ModBlocks.PEDESTAL.asItem(),
                         ModBlocks.PACKED_IRON_BLOCK.asItem(),
                         ModFluids.FROOTOP_BUCKET

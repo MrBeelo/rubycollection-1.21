@@ -9,8 +9,14 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
+import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.mrbeelo.rubycollection.Rubycollection;
 import net.mrbeelo.rubycollection.block.ModBlocks;
 
@@ -25,6 +31,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<net.minecraft.world.gen.feature.ConfiguredFeature<?, ?>> END_RUBY_ORE_KEY = registerKey("end_ruby_ore");
 
     public static final RegistryKey<net.minecraft.world.gen.feature.ConfiguredFeature<?, ?>> ROSE_KEY = registerKey("rose");
+
+    public static final RegistryKey<net.minecraft.world.gen.feature.ConfiguredFeature<?, ?>> CS_KEY = registerKey("cs");
 
     public static void bootstrap(Registerable<net.minecraft.world.gen.feature.ConfiguredFeature<?, ?>> context) {
         RuleTest stoneOreReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -48,6 +56,13 @@ public class ModConfiguredFeatures {
 
         register(context, ROSE_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(32, 6, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.ROSE)))));
+
+        register(context, CS_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.CS_LOG),
+                new GiantTrunkPlacer(20, 7, 14),
+                BlockStateProvider.of(ModBlocks.CS_LEAVES),
+                new SpruceFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(5), ConstantIntProvider.create(20)),
+                new TwoLayersFeatureSize(1, 0, 2)).dirtProvider(BlockStateProvider.of(Blocks.GRASS_BLOCK)).build());
 
         //METHODS
 

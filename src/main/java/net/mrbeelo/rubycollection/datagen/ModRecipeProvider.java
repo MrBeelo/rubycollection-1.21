@@ -220,5 +220,71 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.GUNPOWDER)
                 .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.GUNPOWDER))
                 .offerTo(exporter, Rubycollection.id("bullet"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CS_PLANKS, 4)
+                .input(ModBlocks.CS_LOG)
+                .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.GUNPOWDER))
+                .offerTo(exporter, Rubycollection.id("cs_planks_from_cs_log"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CS_PLANKS, 2)
+                .input(ModBlocks.STRIPPED_CS_LOG)
+                .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.GUNPOWDER))
+                .offerTo(exporter, Rubycollection.id("cs_planks_from_stripped_cs_log"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CS_STAIRS, 4)
+                .input('E', ModBlocks.CS_PLANKS)
+                .pattern("E  ")
+                .pattern("EE ")
+                .pattern("EEE")
+                .criterion(hasItem(ModBlocks.CS_PLANKS), conditionsFromItem(ModBlocks.CS_PLANKS))
+                .offerTo(exporter, Rubycollection.id("cs_stairs"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CS_SLAB, 6)
+                .input('E', ModBlocks.CS_PLANKS)
+                .pattern("EEE")
+                .criterion(hasItem(ModBlocks.CS_PLANKS), conditionsFromItem(ModBlocks.CS_PLANKS))
+                .offerTo(exporter, Rubycollection.id("cs_slab"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CS_BUTTON, 1)
+                .input(ModBlocks.CS_PLANKS)
+                .criterion(hasItem(ModBlocks.CS_PLANKS), conditionsFromItem(ModBlocks.CS_PLANKS))
+                .offerTo(exporter, Rubycollection.id("cs_button"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CS_PRESSURE_PLATE, 6)
+                .input('E', ModBlocks.CS_PLANKS)
+                .pattern("EE")
+                .criterion(hasItem(ModBlocks.CS_PLANKS), conditionsFromItem(ModBlocks.CS_PLANKS))
+                .offerTo(exporter, Rubycollection.id("cs_pressure_plate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CS_FENCE, 3)
+                .input('E', ModBlocks.CS_PLANKS)
+                .input('F', Items.STICK)
+                .pattern("EFE")
+                .pattern("EFE")
+                .criterion(hasItem(ModBlocks.CS_PLANKS), conditionsFromItem(ModBlocks.CS_PLANKS))
+                .offerTo(exporter, Rubycollection.id("cs_fence"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CS_FENCE_GATE, 1)
+                .input('E', ModBlocks.CS_PLANKS)
+                .input('F', Items.STICK)
+                .pattern("FEF")
+                .pattern("FEF")
+                .criterion(hasItem(ModBlocks.CS_PLANKS), conditionsFromItem(ModBlocks.CS_PLANKS))
+                .offerTo(exporter, Rubycollection.id("cs_fence_gate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CS_DOOR, 3)
+                .input('E', ModBlocks.CS_PLANKS)
+                .pattern("EE")
+                .pattern("EE")
+                .pattern("EE")
+                .criterion(hasItem(ModBlocks.CS_PLANKS), conditionsFromItem(ModBlocks.CS_PLANKS))
+                .offerTo(exporter, Rubycollection.id("cs_door"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CS_TRAPDOOR, 3)
+                .input('E', ModBlocks.CS_PLANKS)
+                .pattern("EEE")
+                .pattern("EEE")
+                .criterion(hasItem(ModBlocks.CS_PLANKS), conditionsFromItem(ModBlocks.CS_PLANKS))
+                .offerTo(exporter, Rubycollection.id("cs_trapdoor"));
     }
 }
