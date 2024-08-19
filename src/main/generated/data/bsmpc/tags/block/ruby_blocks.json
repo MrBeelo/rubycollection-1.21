@@ -1,0 +1,15 @@
+{
+  "values": [
+    "bsmpc:ruby_block",
+    "bsmpc:ruby_stairs",
+    "bsmpc:ruby_slab",
+    "bsmpc:ruby_button",
+    "bsmpc:ruby_pressure_plate",
+    "bsmpc:ruby_fence",
+    "bsmpc:ruby_fence_gate",
+    "bsmpc:ruby_wall",
+    "bsmpc:ruby_door",
+    "bsmpc:ruby_trapdoor",
+    "#bsmpc:ruby_ores"
+  ]
+}

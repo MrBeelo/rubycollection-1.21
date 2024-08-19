@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "bsmpc:cs_planks"
+    }
+  },
+  "pattern": [
+    "EEE"
+  ],
+  "result": {
+    "count": 6,
+    "id": "bsmpc:cs_slab"
+  }
+}

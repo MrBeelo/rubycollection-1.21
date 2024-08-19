@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "bsmpc:ruby_block"
+    }
+  },
+  "pattern": [
+    "E  ",
+    "EE ",
+    "EEE"
+  ],
+  "result": {
+    "count": 4,
+    "id": "bsmpc:ruby_stairs"
+  }
+}

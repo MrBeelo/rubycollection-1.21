@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "bsmpc:ruby_ingot"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "id": "bsmpc:ruby"
+  }
+}

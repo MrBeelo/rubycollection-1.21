@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "bsmpc:cs_planks"
+    },
+    "F": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "EFE",
+    "EFE"
+  ],
+  "result": {
+    "count": 3,
+    "id": "bsmpc:cs_fence"
+  }
+}

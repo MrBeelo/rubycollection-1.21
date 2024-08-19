@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "bsmpc:ruby_block"
+    }
+  },
+  "pattern": [
+    "EEE"
+  ],
+  "result": {
+    "count": 6,
+    "id": "bsmpc:ruby_slab"
+  }
+}

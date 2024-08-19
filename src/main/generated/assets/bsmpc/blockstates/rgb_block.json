@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "bsmpc:block/rgb_block"
+    },
+    "clicked=true": {
+      "model": "bsmpc:block/rgb_block_on"
+    }
+  }
+}

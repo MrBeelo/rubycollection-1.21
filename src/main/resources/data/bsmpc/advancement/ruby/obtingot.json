@@ -1,0 +1,40 @@
+{
+    "display": {
+      "icon": {
+        "id": "bsmpc:ruby_ingot",
+        "count": 1
+      },
+      "title": "So compact!",
+      "description": "Obtain your first Ruby Ingot.",
+      "frame": "task",
+      "show_toast": false,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "bsmpc:ruby/obt15",
+    "criteria": {
+      "requirementi1": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "player": {
+            "type": "minecraft:player"
+          },
+          "items": [
+            {
+              "items": "bsmpc:ruby_ingot",
+              "count": 1
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "requirementi1"
+      ]
+    ],
+    "rewards": {
+      "experience": 500
+    }
+  }
+  

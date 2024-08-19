@@ -1,0 +1,93 @@
+{
+  "display": {
+    "icon": {
+      "id": "bsmpc:ruby_ore",
+      "count": 1
+    },
+    "title": "Completely Rubied Up",
+    "description": "Obtain ALL Ruby and Kokaina items.",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "bsmpc:ruby/obtingot",
+  "criteria": {
+    "requirementall": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player"
+        },
+        "items": [
+          {
+            "items": "bsmpc:ruby_knocker"
+          },
+          {
+            "items": "bsmpc:ruby_hoe"
+          },
+          {
+            "items": "bsmpc:ruby_shovel"
+          },
+          {
+            "items": "bsmpc:ruby_axe"
+          },
+          {
+            "items": "bsmpc:ruby_pickaxe"
+          },
+          {
+            "items": "bsmpc:ruby_sword"
+          },
+          {
+            "items": "bsmpc:ruby_boots"
+          },
+          {
+            "items": "bsmpc:ruby_leggings"
+          },
+          {
+            "items": "bsmpc:ruby_chestplate"
+          },
+          {
+            "items": "bsmpc:ruby_helmet"
+          },
+          {
+            "items": "bsmpc:end_ruby_ore"
+          },
+          {
+            "items": "bsmpc:nether_ruby_ore"
+          },
+          {
+            "items": "bsmpc:deepslate_ruby_ore"
+          },
+          {
+            "items": "bsmpc:ruby_ore"
+          },
+          {
+            "items": "bsmpc:ruby_block"
+          },
+          {
+            "items": "bsmpc:ruby_shard"
+          },
+          {
+            "items": "bsmpc:ruby_ingot"
+          },
+          {
+            "items": "bsmpc:ruby"
+          },
+          {
+            "items": "bsmpc:ruby_cluster"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirementall"
+    ]
+  ],
+  "rewards": {
+    "function": "bsmpc:gnome",
+    "experience": 7000
+  }
+}

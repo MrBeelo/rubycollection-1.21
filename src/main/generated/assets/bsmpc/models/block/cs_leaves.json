@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "bsmpc:block/cs_leaves"
+  }
+}

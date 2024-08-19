@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "bsmpc:block/cs_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "bsmpc:block/cs_log"
+    },
+    "axis=z": {
+      "model": "bsmpc:block/cs_log_horizontal",
+      "x": 90
+    }
+  }
+}

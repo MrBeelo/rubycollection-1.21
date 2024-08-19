@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "bsmpc:block/cs_planks",
+    "side": "bsmpc:block/cs_planks",
+    "top": "bsmpc:block/cs_planks"
+  }
+}

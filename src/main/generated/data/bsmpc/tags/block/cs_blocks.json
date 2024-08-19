@@ -1,0 +1,19 @@
+{
+  "values": [
+    "bsmpc:cs_log",
+    "bsmpc:cs_wood",
+    "bsmpc:stripped_cs_log",
+    "bsmpc:stripped_cs_wood",
+    "bsmpc:cs_planks",
+    "bsmpc:cs_leaves",
+    "bsmpc:cs_sapling",
+    "bsmpc:cs_stairs",
+    "bsmpc:cs_slab",
+    "bsmpc:cs_button",
+    "bsmpc:cs_pressure_plate",
+    "bsmpc:cs_fence",
+    "bsmpc:cs_fence_gate",
+    "bsmpc:cs_door",
+    "bsmpc:cs_trapdoor"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "bsmpc:block/cs_slab"
+    },
+    "type=double": {
+      "model": "bsmpc:block/cs_planks"
+    },
+    "type=top": {
+      "model": "bsmpc:block/cs_slab_top"
+    }
+  }
+}

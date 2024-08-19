@@ -280,7 +280,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "rubycollection:ruby",
+          "name": "bsmpc:ruby",
           "weight": 20,
           "functions": [
             {
@@ -295,7 +295,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "rubycollection:ruby_shard",
+          "name": "bsmpc:ruby_shard",
           "weight": 30,
           "functions": [
             {
@@ -310,7 +310,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "rubycollection:ruby_ingot",
+          "name": "bsmpc:ruby_ingot",
           "weight": 3,
           "functions": [
             {

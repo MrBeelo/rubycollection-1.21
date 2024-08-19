@@ -1,0 +1,9 @@
+package net.mrbeelo.bsmpc.entity.client;
+
+import net.minecraft.client.render.entity.model.EntityModelLayer;
+import net.mrbeelo.bsmpc.BsmpC;
+
+public class ModEntityModelLayers {
+    public static final EntityModelLayer SNEK =
+            new EntityModelLayer(BsmpC.id("snek"), "main");
+}

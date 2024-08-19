@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "bsmpc:ruby_chestplate",
+      "count": 1
+    },
+    "title": "Fully Rubied up",
+    "description": "Obtain full Ruby Armor.",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "bsmpc:ruby/obti15",
+  "criteria": {
+    "requirementarmor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": "bsmpc:ruby_boots",
+            "count": 1
+          },
+          {
+            "items": "bsmpc:ruby_leggings",
+            "count": 1
+          },
+          {
+            "items": "bsmpc:ruby_chestplate",
+            "count": 1
+          },
+          {
+            "items": "bsmpc:ruby_helmet",
+            "count": 1
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirementarmor"
+    ]
+  ],
+  "rewards": {
+    "function": "bsmpc:gnome",
+    "experience": 4000
+  }
+}

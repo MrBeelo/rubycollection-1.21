@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "rubycollection",
+	"id": "bsmpc",
 	"version": "${version}",
-	"name": "The Ruby Collection",
-	"description": "A mod that adds the Ruby along with many other things! Made for BSMP.",
+	"name": "The BSMP Collection",
+	"description": "A collection of modules made by me bundled into a mod ! Made for BSMP.",
 	"authors": [
 		"MrBeelo"
 	],
@@ -11,22 +11,22 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/rubycollection/icon.png",
+	"license": "MIT License",
+	"icon": "assets/bsmpc/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.mrbeelo.rubycollection.Rubycollection"
+			"net.mrbeelo.bsmpc.BsmpC"
 		],
 		"fabric-datagen": [
-			"net.mrbeelo.rubycollection.RubycollectionDataGenerator"
+			"net.mrbeelo.bsmpc.BsmpCDataGenerator"
 		],
 		"client": [
-			"net.mrbeelo.rubycollection.RubycollectionClient"
+			"net.mrbeelo.bsmpc.BsmpCClient"
 		]
 	},
 	"mixins": [
-		"rubycollection.mixins.json"
+		"bsmpc.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",

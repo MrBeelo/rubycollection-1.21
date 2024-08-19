@@ -1,6 +1,6 @@
 {
   "values": [
-    "rubycollection:cs_fence",
-    "rubycollection:ruby_fence"
+    "bsmpc:cs_fence",
+    "bsmpc:ruby_fence"
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "bsmpc:ruby_shard"
+    },
+    "title": "WHY??",
+    "description": "No really, why do that; they're useless!",
+    "frame": "challenge",
+    "show_toast": false,
+    "hidden": true
+  },
+  "parent": "bsmpc:ruby/root",
+  "criteria": {
+    "requirementshardwhy": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "bsmpc:ruby_shards_from_rubies"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirementshardwhy"
+    ]
+  ],
+  "rewards": {
+    "function": "bsmpc:gnome",
+    "experience": 1000
+  }
+}

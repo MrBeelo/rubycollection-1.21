@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "id": "bsmpc:ruby",
+      "count": 1
+    },
+    "title": "Nice XD",
+    "description": ":)",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "bsmpc:ruby/obt15",
+  "criteria": {
+    "requirementnice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player"
+        },
+        "items": [
+          {
+            "items": "bsmpc:ruby",
+            "count": 69
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirementnice"
+    ]
+  ],
+  "rewards": {
+    "function": "bsmpc:gnome",
+    "experience": 2000
+  }
+}

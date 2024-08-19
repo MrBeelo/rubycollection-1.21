@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "bsmpc:block/smooth_quartz_ruby_downgrader"
+  }
+}

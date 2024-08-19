@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "bsmpc:cs_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "bsmpc:cs_planks"
+  }
+}

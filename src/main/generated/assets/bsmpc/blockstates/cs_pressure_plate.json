@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "bsmpc:block/cs_pressure_plate"
+    },
+    "powered=true": {
+      "model": "bsmpc:block/cs_pressure_plate_down"
+    }
+  }
+}

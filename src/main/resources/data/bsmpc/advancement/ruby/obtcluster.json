@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "bsmpc:ruby_cluster",
+      "count": 1
+    },
+    "title": "So many!",
+    "description": "Obtain your first Ruby Cluster.",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "bsmpc:ruby/obti15",
+  "criteria": {
+    "requirementcluster": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player"
+        },
+        "items": [
+          {
+            "items": "bsmpc:ruby_cluster",
+            "count": 1
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirementcluster"
+    ]
+  ],
+  "rewards": {
+    "experience": 3500
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "bsmpc:block/stripped_cs_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "bsmpc:block/stripped_cs_wood"
+    },
+    "axis=z": {
+      "model": "bsmpc:block/stripped_cs_wood",
+      "x": 90
+    }
+  }
+}

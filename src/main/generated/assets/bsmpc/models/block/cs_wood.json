@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "bsmpc:block/cs_log",
+    "side": "bsmpc:block/cs_log"
+  }
+}

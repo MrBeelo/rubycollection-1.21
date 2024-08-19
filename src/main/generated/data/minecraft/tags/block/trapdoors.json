@@ -1,6 +1,6 @@
 {
   "values": [
-    "rubycollection:cs_trapdoor",
-    "rubycollection:ruby_trapdoor"
+    "bsmpc:cs_trapdoor",
+    "bsmpc:ruby_trapdoor"
   ]
 }

@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "id": "bsmpc:ruby",
+      "count": 1
+    },
+    "title": "Life is Ruby",
+    "description": "Obtain *LIFE* Rubies.",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "bsmpc:ruby/root",
+  "criteria": {
+    "requirement42": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player"
+        },
+        "items": [
+          {
+            "items": "bsmpc:ruby",
+            "count": 42
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement42"
+    ]
+  ],
+  "rewards": {
+    "function": "bsmpc:gnome",
+    "experience": 1000
+  }
+}

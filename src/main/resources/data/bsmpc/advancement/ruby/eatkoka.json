@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "bsmpc:kokaina",
+      "count": 1
+    },
+    "title": "WHAT IS HAPPENING TO ME?!?!",
+    "description": "Eat Kokaina and see what happens.",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "bsmpc:ruby/doruberttrade",
+  "criteria": {
+    "requirementeatkoka": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "bsmpc:kokaina"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirementeatkoka"
+    ]
+  ],
+  "rewards": {
+    "experience": 1500
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "bsmpc:block/end_ruby_ore"
+  }
+}

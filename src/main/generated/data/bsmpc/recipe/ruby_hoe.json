@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "bsmpc:ruby_ingot"
+    },
+    "F": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "EE",
+    "F ",
+    "F "
+  ],
+  "result": {
+    "count": 1,
+    "id": "bsmpc:ruby_hoe"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "values": [
+    "bsmpc:ruby_shard",
+    "bsmpc:ruby",
+    "bsmpc:ruby_ingot",
+    "bsmpc:ruby_cluster"
+  ]
+}

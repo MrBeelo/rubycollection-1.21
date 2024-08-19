@@ -1,0 +1,1 @@
+playsound bsmpc:gnome master @s ~ ~ ~ 3.0

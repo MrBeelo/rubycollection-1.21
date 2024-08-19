@@ -1,0 +1,39 @@
+{
+    "display": {
+      "icon": {
+        "id": "bsmpc:ruby_ingot",
+        "count": 1
+      },
+      "title": "Getting rich with Ruby Ingots",
+      "description": "Obtain 15 Ruby Ingots.",
+      "frame": "task",
+      "show_toast": false,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "bsmpc:ruby/obtingot",
+    "criteria": {
+      "requirementi15": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "player": {
+            "type": "minecraft:player"
+          },
+          "items": [
+            {
+              "items": "bsmpc:ruby_ingot",
+              "count": 15
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "requirementi15"
+      ]
+    ],
+    "rewards": {
+      "experience": 1000
+    }
+  }
