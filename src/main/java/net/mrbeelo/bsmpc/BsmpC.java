@@ -77,4 +77,4 @@ public class BsmpC implements ModInitializer {
 	}
 }
 
-//UPDATE CHECK 18
+//UPDATE CHECK 19
