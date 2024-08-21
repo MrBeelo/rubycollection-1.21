@@ -61,10 +61,10 @@ public class ModBlocks {
     public static final PressurePlateBlock CS_PRESSURE_PLATE = registerWithItem("cs_pressure_plate", new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE)));
 
     public static final FenceBlock CS_FENCE = registerWithItem("cs_fence", new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
-    public static final FenceGateBlock CS_FENCE_GATE = registerWithItem("cs_fence_gate", new FenceGateBlock(WoodType.OAK ,AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
+    public static final FenceGateBlock CS_FENCE_GATE = registerWithItem("cs_fence_gate", new FenceGateBlock(WoodType.OAK ,AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
 
-    public static final DoorBlock CS_DOOR = registerWithItem("cs_door", new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
-    public static final TrapdoorBlock CS_TRAPDOOR = registerWithItem("cs_trapdoor", new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().requiresTool().nonOpaque()));
+    public static final DoorBlock CS_DOOR = registerWithItem("cs_door", new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_DOOR)));
+    public static final TrapdoorBlock CS_TRAPDOOR = registerWithItem("cs_trapdoor", new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_DOOR)));
 
     //METHODS
 

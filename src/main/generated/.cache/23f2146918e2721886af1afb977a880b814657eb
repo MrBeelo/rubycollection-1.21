@@ -1,9 +1,9 @@
-// 1.21	2024-08-19T21:19:05.0406324	The BSMP Collection/Tags for minecraft:block
+// 1.21	2024-08-21T19:07:16.0436837	The BSMP Collection/Tags for minecraft:block
 1e15c06bbd2ea75bbe0803c71f51befa14e19c38 data\minecraft\tags\block\fences.json
 1e194cb9bf0d20f8d092b4157949ffa55316ef21 data\minecraft\tags\block\logs_that_burn.json
 534fc95a403ae4ec6a023a2ce294482d2ac81f5d data\bsmpc\tags\block\ruby_blocks.json
-dfe4cb085db43444b243a2d88ffb6785db5f2f8e data\minecraft\tags\block\doors.json
 1270b0d7e0b0bb8153fc17f6225c44289a5e12c2 data\minecraft\tags\block\trapdoors.json
+dfe4cb085db43444b243a2d88ffb6785db5f2f8e data\minecraft\tags\block\doors.json
 eec415d85f87a7b180b63562c5d8e822d70e5e6d data\bsmpc\tags\block\ruby_ores.json
 14ea280dc5c5a0e291be14428ec851392ab89c96 data\minecraft\tags\block\needs_diamond_tool.json
 14ea280dc5c5a0e291be14428ec851392ab89c96 data\minecraft\tags\block\mineable\pickaxe.json

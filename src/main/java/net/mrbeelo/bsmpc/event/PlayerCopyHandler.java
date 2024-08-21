@@ -7,7 +7,7 @@ import net.mrbeelo.bsmpc.server.IEntityDataSaver;
 public class PlayerCopyHandler implements ServerPlayerEvents.CopyFrom {
     @Override
     public void copyFromPlayer(ServerPlayerEntity oldPlayer, ServerPlayerEntity newPlayer, boolean alive) {
-        ((IEntityDataSaver) newPlayer).getPersistentData().putIntArray("rubycollection.homepos",
-                ((IEntityDataSaver) oldPlayer).getPersistentData().getIntArray("rubycollection.homepos"));
+        ((IEntityDataSaver) newPlayer).getPersistentData().putIntArray("bsmpc.homepos",
+                ((IEntityDataSaver) oldPlayer).getPersistentData().getIntArray("bsmpc.homepos"));
     }
 }

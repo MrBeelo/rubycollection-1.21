@@ -11,6 +11,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.mrbeelo.bsmpc.entity.ModEntities;
+import net.mrbeelo.bsmpc.entity.custom.PurifyBombProjectileEntity;
 
 import java.util.List;
 
@@ -29,11 +31,11 @@ public class SCPurifyItem extends Item {
         ItemStack heldStack = user.getStackInHand(hand);
         heldStack.decrement(1);
 
-        ArrowEntity arrow = new ArrowEntity(EntityType.ARROW, world);
-        arrow.setPos(user.getX(), user.getEyeY() - 0.1, user.getZ());
-        arrow.setOwner(user);
-        arrow.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 3.0F, 1.0F);
-        world.spawnEntity(arrow);
+        PurifyBombProjectileEntity bomb = new PurifyBombProjectileEntity(ModEntities.PURIFY_BOMB_PROJECTILE, world);
+        bomb.setPos(user.getX(), user.getEyeY() - 0.1, user.getZ());
+        bomb.setOwner(user);
+        bomb.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 3.0F, 1.0F);
+        world.spawnEntity(bomb);
 
         return TypedActionResult.success(heldStack);
     }

@@ -10,6 +10,7 @@ import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
@@ -31,6 +32,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<net.minecraft.world.gen.feature.ConfiguredFeature<?, ?>> ROSE_KEY = registerKey("rose");
 
     public static final RegistryKey<net.minecraft.world.gen.feature.ConfiguredFeature<?, ?>> CS_KEY = registerKey("cs");
+
+    public static final RegistryKey<net.minecraft.world.gen.feature.ConfiguredFeature<?, ?>> RUBY_GEODE_KEY = registerKey("ruby_geode");
 
     public static void bootstrap(Registerable<net.minecraft.world.gen.feature.ConfiguredFeature<?, ?>> context) {
         RuleTest stoneOreReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -61,6 +64,20 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(ModBlocks.CS_LEAVES),
                 new SpruceFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(5), ConstantIntProvider.create(20)),
                 new TwoLayersFeatureSize(1, 0, 2)).dirtProvider(BlockStateProvider.of(Blocks.GRASS_BLOCK)).build());
+
+        register(context, RUBY_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                BlockStateProvider.of(Blocks.DEEPSLATE),
+                BlockStateProvider.of(ModBlocks.DEEPSLATE_RUBY_ORE),
+                BlockStateProvider.of(Blocks.DEEPSLATE),
+                BlockStateProvider.of(Blocks.AIR),
+                List.of(Blocks.AIR.getDefaultState()),
+                BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                new GeodeLayerThicknessConfig(1.5D, 1.0D, 2.0D, 3.0D),
+                new GeodeCrackConfig(0.25D, 1.5D, 1),
+                0.5D, 0.1D,
+                true, UniformIntProvider.create(3, 8),
+                UniformIntProvider.create(2, 6), UniformIntProvider.create(1, 2),
+                -18, 18, 0.075D, 1));
 
         //METHODS
 

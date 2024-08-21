@@ -27,6 +27,8 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<net.minecraft.world.gen.feature.PlacedFeature> CS_PLACED_KEY = registerKey("cs_placed");
 
+    public static final RegistryKey<net.minecraft.world.gen.feature.PlacedFeature> RUBY_GEODE_PLACED_KEY = registerKey("ruby_geode_placed");
+
     public static void bootstrap(Registerable<net.minecraft.world.gen.feature.PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
@@ -45,6 +47,10 @@ public class ModPlacedFeatures {
         register(context, CS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CS_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(2, 0.1f, 2), ModBlocks.CS_SAPLING));
+
+        register(context, RUBY_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RUBY_GEODE_KEY),
+                RarityFilterPlacementModifier.of(300), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.getBottom(),
+                        YOffset.fixed(10)), BiomePlacementModifier.of());
     }
 
     //METHODS

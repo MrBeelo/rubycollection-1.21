@@ -14,7 +14,7 @@ public class SetHomeCommand {
                                 CommandRegistryAccess commandRegistryAccess,
                                 CommandManager.RegistrationEnvironment registrationEnvironment) {
         serverCommandSourceCommandDispatcher.register(CommandManager.literal("home")
-                .then(CommandManager.literal("set").executes(SetHomeCommand::run)));
+                .then(CommandManager.literal("set").requires(serverCommandSource -> serverCommandSource.hasPermissionLevel(2)).executes(SetHomeCommand::run)));
     }
 
     private static int run(CommandContext<ServerCommandSource> context) {
@@ -22,7 +22,7 @@ public class SetHomeCommand {
         BlockPos playerPos = context.getSource().getPlayer().getBlockPos();
         String positionString = "(" + playerPos.getX() + ", " + playerPos.getY() + ", " + playerPos.getZ() + ")";
 
-        player.getPersistentData().putIntArray("rubycollection.homepos",
+        player.getPersistentData().putIntArray("bsmpc.homepos",
                 new int[] { playerPos.getX(), playerPos.getY(), playerPos.getZ() });
 
         context.getSource().sendFeedback(() -> Text.literal("Set Home at " + positionString), true);

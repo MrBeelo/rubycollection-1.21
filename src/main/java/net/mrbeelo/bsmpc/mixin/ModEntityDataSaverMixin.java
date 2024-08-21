@@ -25,14 +25,14 @@ public abstract class ModEntityDataSaverMixin implements IEntityDataSaver {
     @Inject(method = "writeNbt", at = @At("HEAD"))
     protected void injectWriteMethod(NbtCompound nbt, CallbackInfoReturnable<NbtCompound> info) {
         if(this.persistentData != null) {
-            nbt.put("rubycollection.custom_data", persistentData);
+            nbt.put("bsmpc.custom_data", persistentData);
         }
     }
 
     @Inject(method = "readNbt", at = @At("HEAD"))
     protected void injectReadMethod(NbtCompound nbt, CallbackInfo info) {
-        if(nbt.contains("rubycollection.custom_data", 10)) {
-            this.persistentData = nbt.getCompound("rubycollection.custom_data");
+        if(nbt.contains("bsmpc.custom_data", 10)) {
+            this.persistentData = nbt.getCompound("bsmpc.custom_data");
         }
     }
 }

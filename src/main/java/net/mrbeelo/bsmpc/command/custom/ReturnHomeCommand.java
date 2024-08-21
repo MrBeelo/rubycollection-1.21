@@ -14,13 +14,13 @@ public class ReturnHomeCommand {
                                 CommandRegistryAccess commandRegistryAccess,
                                 CommandManager.RegistrationEnvironment registrationEnvironment) {
         serverCommandSourceCommandDispatcher.register(CommandManager.literal("home")
-                .then(CommandManager.literal("return").executes(ReturnHomeCommand::run)));
+                .then(CommandManager.literal("return").requires(serverCommandSource -> serverCommandSource.hasPermissionLevel(2)).executes(ReturnHomeCommand::run)));
     }
 
     private static int run(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
         IEntityDataSaver player = (IEntityDataSaver)context.getSource().getPlayer();
 
-        int[] homepos = player.getPersistentData().getIntArray("rubycollection.homepos");
+        int[] homepos = player.getPersistentData().getIntArray("bsmpc.homepos");
 
         if(homepos.length != 0) {
             context.getSource().getPlayer().requestTeleport(homepos[0], homepos[1], homepos[2]);

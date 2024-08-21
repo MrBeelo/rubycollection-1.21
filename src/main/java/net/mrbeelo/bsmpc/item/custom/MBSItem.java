@@ -11,7 +11,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.mrbeelo.bsmpc.components.ModDataComponentTypes;
-import static net.mrbeelo.bsmpc.BsmpC.vanillaCommandByPlayer;
+
+import static net.mrbeelo.bsmpc.BsmpC.serverCommand;
+
 
 public class MBSItem extends Item {
     public MBSItem(Settings settings) {
@@ -74,10 +76,10 @@ public class MBSItem extends Item {
                 if (count == 0) {
                     Text beeliumA = Text.literal("Beelium Activated!").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(255 << 16 | 215 << 8 | 0)));
                     user.sendMessage(beeliumA, true);
-                    vanillaCommandByPlayer((ServerWorld) world, user, "effect give @s resistance 5 255");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "effect give @s slowness 5 255");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon lightning_bolt ~ ~ ~");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "effect give @e[distance=..10] levitation 5 2");
+                    serverCommand((ServerWorld) world, user, "effect give @s resistance 5 255");
+                    serverCommand((ServerWorld) world, user, "effect give @s slowness 5 255");
+                    serverCommand((ServerWorld) world, user, "execute at @s run summon lightning_bolt ~ ~ ~");
+                    serverCommand((ServerWorld) world, user, "effect give @e[distance=..10] levitation 5 2");
                     stack.set(ModDataComponentTypes.MBS_GLOWING_TIME, 140);
                 }
 
@@ -85,7 +87,7 @@ public class MBSItem extends Item {
                     Text aggresiumA = Text.literal("Aggresium Activated!").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(255 << 16 | 0 << 8 | 0)));
                     user.sendMessage(aggresiumA, true);
                     for (int i = 3; i <= 18; i++) {
-                        vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^" + i + " {width:1b,height:1b,limit:1,Tags:[\"lazer" + i + "\",\"lazer\"]}");
+                        serverCommand((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^" + i + " {width:1b,height:1b,limit:1,Tags:['lazer" + i + "','lazer']}");
                     }
                     stack.set(ModDataComponentTypes.MBS_LAZER_TIME, 140);
                 }
@@ -93,18 +95,18 @@ public class MBSItem extends Item {
                 if (count == 2) {
                     Text mobiliumA = Text.literal("Mobilium Activated!").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(255 << 16 | 255 << 8 | 0)));
                     user.sendMessage(mobiliumA, true);
-                    vanillaCommandByPlayer((ServerWorld) world, user, "tp @s ^ ^ ^25");
+                    serverCommand((ServerWorld) world, user, "tp @s ^ ^ ^25");
                     for (int i = 1; i <= 10; i++) {
-                        vanillaCommandByPlayer((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^" + i + " 0.12 0.12 0.12 1 500");
+                        serverCommand((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^" + i + " 0.12 0.12 0.12 1 500");
                     }
-                    vanillaCommandByPlayer((ServerWorld) world, user, "summon minecraft:creeper ^ ^ ^10 {Fuse:0,ignited:1b}");
+                    serverCommand((ServerWorld) world, user, "summon minecraft:creeper ^ ^ ^10 {Fuse:0,ignited:1b}");
                 }
 
                 if (count == 3) {
                     Text protisiumA = Text.literal("Protisium Activated!").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(0 << 16 | 255 << 8 | 255)));
                     user.sendMessage(protisiumA, true);
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute as @s run effect give @e[distance=..10] regeneration 7 3");
-                    vanillaCommandByPlayer((ServerWorld) world, user, "execute at @s run particle dust{color:[0.000,1.000,0.880],scale:1} ~ ~ ~ 5 0.1 5 1 10000");
+                    serverCommand((ServerWorld) world, user, "execute as @s run effect give @e[distance=..10] regeneration 7 3");
+                    serverCommand((ServerWorld) world, user, "execute at @s run particle dust{color:[0.000,1.000,0.880],scale:1} ~ ~ ~ 5 0.1 5 1 10000");
                 }
             } else {
                 Text failed = Text.literal("Can't activate, cooldown is: " + cooldown).setStyle(Style.EMPTY.withColor(TextColor.fromRgb(255 << 16 | 0 << 8 | 0)));
