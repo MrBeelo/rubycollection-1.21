@@ -22,7 +22,5 @@ public class ModTags {
         public static final TagKey<Item> RUBY_TOOLS = TagKey.of(RegistryKeys.ITEM, BsmpC.id("ruby_tools"));
         public static final TagKey<Item> RUBY_ARMOR = TagKey.of(RegistryKeys.ITEM, BsmpC.id("ruby_armor"));
         public static final TagKey<Item> RUBY_VARIANTS = TagKey.of(RegistryKeys.ITEM, BsmpC.id("ruby_variants"));
-        public static final TagKey<Item> SOUL_CARDS = TagKey.of(RegistryKeys.ITEM, BsmpC.id("soul_cards"));
-
     }
 }

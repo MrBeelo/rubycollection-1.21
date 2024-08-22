@@ -42,6 +42,7 @@ public class PistolItem extends Item {
         }
 
         if (hasBullet) {
+            user.getItemCooldownManager().set(gunStack.getItem(), 40);
             BulletProjectileEntity bullet = new BulletProjectileEntity(ModEntities.BULLET_PROJECTILE, world);
             bullet.setPos(user.getX(), user.getEyeY() - 0.1, user.getZ());
             bullet.setOwner(user);

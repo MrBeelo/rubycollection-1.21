@@ -13,6 +13,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.mrbeelo.bsmpc.entity.ModEntities;
+import net.mrbeelo.bsmpc.entity.custom.NukeEntity;
 import net.mrbeelo.bsmpc.sound.ModSounds;
 
 import java.util.List;
@@ -32,9 +34,9 @@ public class NukeButtonItem extends Item {
 
         BlockPos frontOfPlayer = user.getBlockPos().offset(user.getHorizontalFacing(), 10).up(30);
 
-        Entity tntbomb = new TntEntity(EntityType.TNT, world);
-        tntbomb.setPosition(frontOfPlayer.toCenterPos());
-        world.spawnEntity(tntbomb);
+        Entity nuke = new TntEntity(EntityType.TNT, world);
+        nuke.setPosition(frontOfPlayer.toCenterPos());
+        world.spawnEntity(nuke);
 
         return TypedActionResult.success(user.getStackInHand(hand));
     }

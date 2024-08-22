@@ -6,4 +6,7 @@ import net.mrbeelo.bsmpc.BsmpC;
 public class ModEntityModelLayers {
     public static final EntityModelLayer SNEK =
             new EntityModelLayer(BsmpC.id("snek"), "main");
+
+    public static final EntityModelLayer NUKE =
+            new EntityModelLayer(BsmpC.id("nuke"), "main");
 }

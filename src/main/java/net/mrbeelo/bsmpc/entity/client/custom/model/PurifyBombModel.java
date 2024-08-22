@@ -8,22 +8,8 @@ import net.minecraft.entity.Entity;
 
 public class PurifyBombModel extends EntityModel<Entity> {
 	private final ModelPart body;
-	private final ModelPart outside;
-	private final ModelPart face1;
-	private final ModelPart face2;
-	private final ModelPart face3;
-	private final ModelPart face4;
-	private final ModelPart face5;
-	private final ModelPart face6;
 	public PurifyBombModel(ModelPart root) {
 		this.body = root.getChild("body");
-		this.outside = root.getChild("outside");
-		this.face1 = root.getChild("face1");
-		this.face2 = root.getChild("face2");
-		this.face3 = root.getChild("face3");
-		this.face4 = root.getChild("face4");
-		this.face5 = root.getChild("face5");
-		this.face6 = root.getChild("face6");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();

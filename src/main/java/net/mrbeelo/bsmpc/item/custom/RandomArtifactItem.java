@@ -1,4 +1,4 @@
-package net.mrbeelo.bsmpc.item.custom.neon_white;
+package net.mrbeelo.bsmpc.item.custom;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.player.PlayerEntity;
@@ -9,13 +9,16 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.mrbeelo.bsmpc.block.ModBlocks;
+import net.mrbeelo.bsmpc.fluid.ModFluids;
 import net.mrbeelo.bsmpc.item.ModItems;
+import net.mrbeelo.bsmpc.util.ModTags;
 
 import java.util.List;
 import java.util.Random;
 
-public class SCBookOfLifeItem extends Item {
-    public SCBookOfLifeItem(Settings settings) {
+public class RandomArtifactItem extends Item {
+    public RandomArtifactItem(Settings settings) {
         super(settings);
     }
 
@@ -30,16 +33,19 @@ public class SCBookOfLifeItem extends Item {
         if (user != null && world != null) {
 
             Item[] cardItems = {
-                    ModItems.SC_AMMO,
-                    ModItems.SC_DOMINION,
-                    ModItems.SC_ELEVATE,
-                    ModItems.SC_FIREBALL,
-                    ModItems.SC_FIST,
-                    ModItems.SC_GODSPEED,
-                    ModItems.SC_HEALTH,
-                    ModItems.SC_KATANA,
-                    ModItems.SC_PURIFY,
-                    ModItems.SC_STOMP
+                    ModItems.DEATH_AXE,
+                    ModItems.PISTOL,
+                    ModItems.NUKE_BUTTON,
+                    ModItems.KOKAINA,
+                    ModItems.KOKAINA_SEED,
+                    ModItems.MASTER_BEELO_STAFF,
+                    ModBlocks.PEDESTAL.asItem(),
+                    ModItems.SNEK_SPAWN_EGG,
+                    ModItems.XO_MUSIC_DISC,
+                    ModFluids.FROOTOP_BUCKET,
+                    ModBlocks.RGB_BLOCK.asItem(),
+                    ModItems.POKE_BALL,
+                    ModBlocks.ROSE.asItem()
             };
 
             Item randomCardItem = cardItems[random.nextInt(cardItems.length)];
@@ -54,7 +60,6 @@ public class SCBookOfLifeItem extends Item {
                 }
             }
 
-            user.sendMessage(Text.literal("You got blessed!"), true);
             heldStack.decrement(1);
 
             return TypedActionResult.success(heldStack, world.isClient());

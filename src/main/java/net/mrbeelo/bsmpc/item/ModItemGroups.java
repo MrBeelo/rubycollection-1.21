@@ -86,6 +86,13 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.ROSE);
 
+                        entries.add(ModItems.RANDOM_ARTIFACT);
+                    }).build());
+
+    public static final ItemGroup CS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            BsmpC.id("cs"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemGroup.rubycollection.cs_item_group"))
+                    .icon(() -> new ItemStack(ModBlocks.CS_PLANKS)).entries((displayContext, entries) -> {
                         entries.add(ModBlocks.CS_LOG);
                         entries.add(ModBlocks.CS_WOOD);
                         entries.add(ModBlocks.STRIPPED_CS_LOG);
@@ -101,25 +108,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CS_FENCE_GATE);
                         entries.add(ModBlocks.CS_DOOR);
                         entries.add(ModBlocks.CS_TRAPDOOR);
-                    }).build());
-
-    public static final ItemGroup NEON_WHITE_SOUL_CARDS = Registry.register(Registries.ITEM_GROUP,
-            BsmpC.id("neon_white_soul_cards"),
-            FabricItemGroup.builder()
-                    .displayName(Text.translatable("itemGroup.rubycollection.neon_white_soul_cards"))
-                    .icon(() -> new ItemStack(ModItems.SC_PURIFY))
-                    .entries((displayContext, entries) -> {
-                        entries.add(ModItems.SC_AMMO);
-                        entries.add(ModItems.SC_BOOK_OF_LIFE);
-                        entries.add(ModItems.SC_DOMINION);
-                        entries.add(ModItems.SC_ELEVATE);
-                        entries.add(ModItems.SC_FIREBALL);
-                        entries.add(ModItems.SC_FIST);
-                        entries.add(ModItems.SC_GODSPEED);
-                        entries.add(ModItems.SC_HEALTH);
-                        entries.add(ModItems.SC_KATANA);
-                        entries.add(ModItems.SC_PURIFY);
-                        entries.add(ModItems.SC_STOMP);
                     }).build());
 
     public static final ItemGroup EVERYTHING = Registry.register(Registries.ITEM_GROUP,

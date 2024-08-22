@@ -12,7 +12,6 @@ import net.mrbeelo.bsmpc.block.ModBlocks;
 import net.mrbeelo.bsmpc.components.ModDataComponentTypes;
 import net.mrbeelo.bsmpc.entity.ModEntities;
 import net.mrbeelo.bsmpc.item.custom.*;
-import net.mrbeelo.bsmpc.item.custom.neon_white.*;
 import net.mrbeelo.bsmpc.sound.ModSounds;
 
 import java.util.ArrayList;
@@ -47,17 +46,7 @@ public class ModItems {
     public static final MBSItem MASTER_BEELO_STAFF = register("master_beelo_staff", new MBSItem(new Item.Settings().maxCount(1).component(ModDataComponentTypes.MBS_STAGE, 0)));
     public static final Item SNEK_SPAWN_EGG = register("snek_spawn_egg", new SpawnEggItem(ModEntities.SNEK, 0x78fa40, 0x5ed32b, new Item.Settings()));
     public static final Item XO_MUSIC_DISC = register("xo_music_disc", new Item(new Item.Settings().jukeboxPlayable(ModSounds.XO_KEY)));
-    public static final Item SC_AMMO = register("sc_ammo", new SCAmmoItem(new Item.Settings()));
-    public static final Item SC_BOOK_OF_LIFE = register("sc_book_of_life", new SCBookOfLifeItem(new Item.Settings().maxCount(3)));
-    public static final Item SC_DOMINION = register("sc_dominion", new Item(new Item.Settings().maxCount(3)));
-    public static final Item SC_ELEVATE = register("sc_elevate", new SCElevateItem(new Item.Settings().maxCount(3)));
-    public static final Item SC_FIREBALL = register("sc_fireball", new SCFireballItem(new Item.Settings().maxCount(3)));
-    public static final Item SC_FIST = register("sc_fist", new AxeItem(ToolMaterials.IRON, new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.IRON, 2, -2.9f))));
-    public static final Item SC_GODSPEED = register("sc_godspeed", new SCGodspeedItem(new Item.Settings().maxCount(3)));
-    public static final Item SC_HEALTH = register("sc_health", new SCHealthItem(new Item.Settings()));
-    public static final Item SC_KATANA = register("sc_katana", new SwordItem(ToolMaterials.IRON, new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.IRON, 2, -2.4f))));
-    public static final Item SC_PURIFY = register("sc_purify", new SCPurifyItem(new Item.Settings().maxCount(3)));
-    public static final Item SC_STOMP = register("sc_stomp", new SCStompItem(new Item.Settings().maxCount(3)));
+    public static final Item RANDOM_ARTIFACT = register("random_artifact", new RandomArtifactItem(new Item.Settings().maxCount(1)));
     public static final PokeBallItem POKE_BALL = register("poke_ball", new PokeBallItem(new Item.Settings()));
 
 

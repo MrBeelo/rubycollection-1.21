@@ -46,7 +46,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         BlockStateModelGenerator.BlockTexturePool csPlankTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CS_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.CS_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.CS_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.CS_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         csPlankTexturePool.stairs(ModBlocks.CS_STAIRS);
         csPlankTexturePool.slab(ModBlocks.CS_SLAB);
@@ -87,17 +87,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SNEK_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.XO_MUSIC_DISC, Models.GENERATED);
         itemModelGenerator.register(ModFluids.FROOTOP_BUCKET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_AMMO, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_BOOK_OF_LIFE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_DOMINION, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_ELEVATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_FIREBALL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_FIST, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_GODSPEED, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_HEALTH, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_KATANA, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_PURIFY, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SC_STOMP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RANDOM_ARTIFACT, Models.GENERATED);
         itemModelGenerator.register(ModItems.POKE_BALL, Models.GENERATED);
     }
 }
