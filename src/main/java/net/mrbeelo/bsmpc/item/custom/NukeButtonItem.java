@@ -35,7 +35,7 @@ public class NukeButtonItem extends Item {
         user.getWorld().playSound(null, user.getX(), user.getY(), user.getZ(), ModSounds.BEEP, user.getSoundCategory(), 1.0F, 1.0F);
 
 
-        BlockPos frontOfPlayer = getBlockInFront(user, 15);
+        BlockPos frontOfPlayer = getBlockInFront(user, 15).up(50);
 
         Entity nuke = new TntEntity(EntityType.TNT, world);
         nuke.setPosition(frontOfPlayer.toCenterPos());

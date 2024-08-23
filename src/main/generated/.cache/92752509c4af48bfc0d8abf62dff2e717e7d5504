@@ -1,6 +1,6 @@
-// 1.21	2024-08-23T23:45:06.2232648	The BSMP Collection/Tags for minecraft:item
-1e194cb9bf0d20f8d092b4157949ffa55316ef21 data\minecraft\tags\item\logs_that_burn.json
+// 1.21	2024-08-24T01:30:14.0375635	The BSMP Collection/Tags for minecraft:item
 25b2ec6fbd9fdddaff74be747f8ec50eeaf94351 data\minecraft\tags\item\planks.json
+1e194cb9bf0d20f8d092b4157949ffa55316ef21 data\minecraft\tags\item\logs_that_burn.json
 a38a0e04eddaf58bd3a13fed14e537c6a964f258 data\minecraft\tags\item\hoes.json
 4429cd33a15f6703a353250194b52f41183132e6 data\bsmpc\tags\item\ruby_armor.json
 f8197a322823ef50094169863c6f29ef4c9d28d9 data\minecraft\tags\item\axes.json
@@ -12,6 +12,6 @@ aa94286277215bb67075af6a4ad085b3a969bbb8 data\minecraft\tags\item\foot_armor.jso
 9fce918ef9014996f74b2d59af57e681af6694de data\minecraft\tags\item\head_armor.json
 1c6c5e0c1f2ad2fdd5e7ac62d10d68426411205d data\minecraft\tags\item\swords.json
 d015674bea75f4510868b785ae54402502554663 data\bsmpc\tags\item\ruby_tools.json
-ab176f62ae952f21c4951e1a81116d54c7de1a1e data\bsmpc\tags\item\ruby_items.json
 b1c66e482dba5fdeb4b1764a502693267096432f data\minecraft\tags\item\leg_armor.json
+ab176f62ae952f21c4951e1a81116d54c7de1a1e data\bsmpc\tags\item\ruby_items.json
 5856a540976a3212c2f38528de5bd20b2a578a72 data\minecraft\tags\item\chest_armor.json
