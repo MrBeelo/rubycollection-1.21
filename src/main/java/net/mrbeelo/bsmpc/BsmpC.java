@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
@@ -27,13 +28,14 @@ import net.mrbeelo.bsmpc.fluid.ModFluids;
 import net.mrbeelo.bsmpc.item.*;
 import net.mrbeelo.bsmpc.potion.ModPotionRecipes;
 import net.mrbeelo.bsmpc.potion.ModPotions;
-import net.mrbeelo.bsmpc.util.ModServerTickHandler;
 import net.mrbeelo.bsmpc.sound.ModSounds;
 import net.mrbeelo.bsmpc.villager.ModCustomTrades;
 import net.mrbeelo.bsmpc.villager.ModVillagers;
 import net.mrbeelo.bsmpc.world.ModWorldGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static net.mrbeelo.bsmpc.effect.custom.HighEffect.playersWithHighSound;
 
 public class BsmpC implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("bsmpc");
@@ -64,8 +66,17 @@ public class BsmpC implements ModInitializer {
 		ModCommands.registerModCommands();
 		ModEnchantments.registerModEnchantments();
 
-		ServerTickEvents.START_WORLD_TICK.register(world -> {if (world instanceof ServerWorld) {
-			ModServerTickHandler.registerModServerTickHandler((ServerWorld) world);}});
+		ServerTickEvents.END_WORLD_TICK.register(world -> {
+			if (world instanceof ServerWorld) {
+				for (PlayerEntity player : world.getPlayers()) {
+					if (!player.hasStatusEffect(ModEffects.HIGH) && playersWithHighSound.contains(player)) {
+						playersWithHighSound.remove(player);
+                        serverCommand(world, player, "stopsound @s player bsmpc:high");
+                    }
+				}
+			}});
+
+
 		ServerPlayerEvents.COPY_FROM.register(new PlayerCopyHandler());
 
 		StrippableBlockRegistry.register(ModBlocks.CS_LOG, ModBlocks.STRIPPED_CS_LOG);

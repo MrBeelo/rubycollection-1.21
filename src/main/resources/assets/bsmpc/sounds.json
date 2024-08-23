@@ -4,7 +4,7 @@
   "ruby_block_hit": {"subtitle": "sounds.bsmpc.ruby_block_hit", "sounds": ["bsmpc:ruby_block_hit"]},
   "ruby_block_place": {"subtitle": "sounds.bsmpc.ruby_block_place", "sounds": ["bsmpc:ruby_block_place"]},
   "ruby_block_step": {"subtitle": "sounds.bsmpc.ruby_block_step", "sounds": ["bsmpc:ruby_block_step"]},
-  "high": {"subtitle": "sounds.bsmpc.high", "sounds": ["bsmpc:high"]},
+  "high": {"subtitle": "sounds.bsmpc.high", "sounds": [{"name": "bsmpc:high", "stream":  true}]},
   "pew": {"subtitle": "sounds.bsmpc.pew", "sounds": ["bsmpc:pew"]},
   "beep": {"subtitle": "sounds.bsmpc.beep", "sounds": ["bsmpc:beep"]},
   "magempty": {"subtitle": "sounds.bsmpc.magempty", "sounds": ["bsmpc:magempty"]},

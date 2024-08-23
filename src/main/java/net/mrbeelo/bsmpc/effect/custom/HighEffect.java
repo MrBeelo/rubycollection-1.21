@@ -1,6 +1,8 @@
 package net.mrbeelo.bsmpc.effect.custom;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -10,8 +12,12 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.mrbeelo.bsmpc.effect.ModEffects;
 import net.mrbeelo.bsmpc.sound.ModSounds;
+import java.util.HashSet;
+import java.util.Set;
 
+import static net.minecraft.block.entity.BeaconBlockEntity.playSound;
 import static net.mrbeelo.bsmpc.BsmpC.serverCommand;
 
 
@@ -20,15 +26,19 @@ public class HighEffect extends StatusEffect {
         super(statusEffectCategory, color);
     }
 
+    public final static Set<PlayerEntity> playersWithHighSound = new HashSet<>();
+
     @Override
     public void onApplied(LivingEntity entity, int amplifier) {
-        World world = entity.getWorld();
-        if (world instanceof ServerWorld && entity instanceof PlayerEntity) {
-            serverCommand((ServerWorld) world, (PlayerEntity) entity, "playsound bsmpc:high player @s ~ ~ ~ 50 1 1");
+        if (entity instanceof PlayerEntity player) {
+            World world = player.getWorld();
+            if (!playersWithHighSound.contains(player) && world instanceof ServerWorld) {
+                playersWithHighSound.add(player);
+                serverCommand((ServerWorld) world, player, "playsound bsmpc:high player @s ~ ~ ~ 50 1 1");
+            }
         }
         super.onApplied(entity, amplifier);
     }
-
 
     @Override
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {

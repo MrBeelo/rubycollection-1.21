@@ -10,7 +10,7 @@ public class ModFoodItems {
             .alwaysEdible()
             .nutrition(6)
             .saturationModifier(0.4F)
-            .statusEffect(new StatusEffectInstance(ModEffects.HIGH, 460, 0, false, true), 1.0f)
+            .statusEffect(new StatusEffectInstance(ModEffects.HIGH, 600, 0, false, true), 1.0f)
             .build();
 }
 
