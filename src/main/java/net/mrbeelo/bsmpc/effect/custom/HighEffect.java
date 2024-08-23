@@ -6,8 +6,13 @@ import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.World;
 import net.mrbeelo.bsmpc.sound.ModSounds;
+
+import static net.mrbeelo.bsmpc.BsmpC.serverCommand;
 
 
 public class HighEffect extends StatusEffect {
@@ -17,11 +22,11 @@ public class HighEffect extends StatusEffect {
 
     @Override
     public void onApplied(LivingEntity entity, int amplifier) {
-        super.onApplied(entity, amplifier);
-        if (entity instanceof PlayerEntity) {
-            PlayerEntity player = (PlayerEntity) entity;
-            player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(), ModSounds.HIGH, player.getSoundCategory(), 50.0F, 1.0F);
+        World world = entity.getWorld();
+        if (world instanceof ServerWorld && entity instanceof PlayerEntity) {
+            serverCommand((ServerWorld) world, (PlayerEntity) entity, "playsound bsmpc:high player @s ~ ~ ~ 50 1 1");
         }
+        super.onApplied(entity, amplifier);
     }
 
 
@@ -31,9 +36,8 @@ public class HighEffect extends StatusEffect {
 
         // Apply nausea effect directly to simulate the effect
         if (entity instanceof PlayerEntity) {
-            // TRIPPY EFFECT: Adjust yaw and pitch to simulate nausea
             applyCustomNausea((PlayerEntity) entity);
-            simulateNauseaEffect((PlayerEntity) entity);
+            simulateNauseaEffect(entity);
         }
         return true;
     }

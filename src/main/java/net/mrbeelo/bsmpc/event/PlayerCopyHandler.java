@@ -2,7 +2,7 @@ package net.mrbeelo.bsmpc.event;
 
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.mrbeelo.bsmpc.server.IEntityDataSaver;
+import net.mrbeelo.bsmpc.util.IEntityDataSaver;
 
 public class PlayerCopyHandler implements ServerPlayerEvents.CopyFrom {
     @Override

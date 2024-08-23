@@ -1,4 +1,4 @@
-package net.mrbeelo.bsmpc.server;
+package net.mrbeelo.bsmpc.util;
 
 import net.minecraft.nbt.NbtCompound;
 

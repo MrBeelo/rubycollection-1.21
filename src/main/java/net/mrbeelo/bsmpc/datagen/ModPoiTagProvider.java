@@ -13,8 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModPoiTagProvider extends TagProvider<PointOfInterestType> {
 
-    public ModPoiTagProvider(DataOutput output,
-                             CompletableFuture<RegistryWrapper.WrapperLookup> registryLookupFuture) {
+    public ModPoiTagProvider(DataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookupFuture) {
         super(output, RegistryKeys.POINT_OF_INTEREST_TYPE, registryLookupFuture);
     }
     @Override

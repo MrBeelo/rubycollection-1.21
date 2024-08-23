@@ -23,7 +23,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.NETHER_RUBY_ORE)
                 .add(ModBlocks.END_RUBY_ORE);
 
-
         getOrCreateTagBuilder(ModTags.Blocks.RUBY_BLOCKS)
                 .add(ModBlocks.RUBY_BLOCK)
                 .add(ModBlocks.RUBY_STAIRS)
@@ -56,6 +55,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL).addTag(ModTags.Blocks.RUBY_BLOCKS);
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).addTag(ModTags.Blocks.RUBY_BLOCKS);
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE).addTag(ModTags.Blocks.CS_BLOCKS);
 
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(ModBlocks.CS_FENCE)
