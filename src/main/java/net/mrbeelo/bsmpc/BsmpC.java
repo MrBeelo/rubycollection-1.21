@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
@@ -26,6 +25,7 @@ import net.mrbeelo.bsmpc.entity.ModEntities;
 import net.mrbeelo.bsmpc.event.PlayerCopyHandler;
 import net.mrbeelo.bsmpc.fluid.ModFluids;
 import net.mrbeelo.bsmpc.item.*;
+import net.mrbeelo.bsmpc.particle.ModParticles;
 import net.mrbeelo.bsmpc.potion.ModPotionRecipes;
 import net.mrbeelo.bsmpc.potion.ModPotions;
 import net.mrbeelo.bsmpc.sound.ModSounds;
@@ -65,6 +65,7 @@ public class BsmpC implements ModInitializer {
 		ModEffects.registerModEffects();
 		ModCommands.registerModCommands();
 		ModEnchantments.registerModEnchantments();
+		ModParticles.registerModParticles();
 
 		ServerTickEvents.END_WORLD_TICK.register(world -> {
 			if (world instanceof ServerWorld) {
@@ -75,7 +76,6 @@ public class BsmpC implements ModInitializer {
                     }
 				}
 			}});
-
 
 		ServerPlayerEvents.COPY_FROM.register(new PlayerCopyHandler());
 
@@ -92,6 +92,10 @@ public class BsmpC implements ModInitializer {
 	}
 	public static Identifier id(String path) {
 		return Identifier.of(MOD_ID, path);
+	}
+
+	public static Identifier id(String namespace, String path) {
+		return Identifier.of(namespace, path);
 	}
 
 	public static void serverCommand(ServerWorld world, PlayerEntity user, String command) {
