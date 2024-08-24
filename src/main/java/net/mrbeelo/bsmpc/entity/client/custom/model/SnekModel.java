@@ -51,6 +51,7 @@ public class SnekModel extends SinglePartEntityModel<SnekEntity> {
 
 		//this.animateMovement(SnekAnimations.IDLE, limbSwing, limbSwingAmount, 2f, 2.5f);
 		this.updateAnimation(entity.idleAnimationState, SnekAnimations.IDLE, ageInTicks, 1f);
+		this.updateAnimation(entity.attackAnimationState, SnekAnimations.ATTACK, ageInTicks, 1f);
 	}
 
 	private void setHeadAngles(float headYaw, float headPitch) {

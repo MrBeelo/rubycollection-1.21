@@ -1,4 +1,4 @@
-// 1.21	2024-08-24T01:30:14.0304353	The BSMP Collection/Block Loot Tables
+// 1.21	2024-08-25T01:52:05.8324955	The BSMP Collection/Block Loot Tables
 c7f3894ba76d01ab7c64a1be15c73b606140fa12 data\bsmpc\loot_table\blocks\nether_ruby_ore.json
 e7a0b66c5fd4888b0111668e4deb97484a5ccc81 data\bsmpc\loot_table\blocks\smooth_quartz_ruby_downgrader.json
 213cf9110f9c9d7d1184d48a86cf753b0eae5bfb data\bsmpc\loot_table\blocks\cs_sapling.json
@@ -24,8 +24,8 @@ f50215772c04441020013a7b91fdd6c28fac4646 data\bsmpc\loot_table\blocks\ruby_door.
 779c0dba12b3efc8ed8ed68f9d2482283f86dcad data\bsmpc\loot_table\blocks\kokaina_crop.json
 c25d75c1f203a06298170618f28bec42f0daecfd data\bsmpc\loot_table\blocks\ruby_stairs.json
 d210343c8835053093d96a0dc92ecec13f142cb8 data\bsmpc\loot_table\blocks\cs_log.json
-f45a7e8d9d6c168b9b9fdb9819f392d6362b6623 data\bsmpc\loot_table\blocks\cs_button.json
 b0efdfcf6b78e13a8b306bb7bde4bea0029ee51d data\bsmpc\loot_table\blocks\pedestal.json
+f45a7e8d9d6c168b9b9fdb9819f392d6362b6623 data\bsmpc\loot_table\blocks\cs_button.json
 d59bea6b1839914eb890b715f805dd06d45d93f6 data\bsmpc\loot_table\blocks\cs_pressure_plate.json
 d2896ce47166cc5ff36cc3146c2a490bb386b4ea data\bsmpc\loot_table\blocks\cs_planks.json
 7d52ae9c831b66fdfad51722d63db695788d2fbe data\bsmpc\loot_table\blocks\stripped_cs_log.json

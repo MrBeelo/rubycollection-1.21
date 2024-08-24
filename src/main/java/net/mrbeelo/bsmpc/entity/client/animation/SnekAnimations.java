@@ -104,7 +104,7 @@ public class SnekAnimations {
                                     Transformation.Interpolations.LINEAR),
                             new Keyframe(0.35f, AnimationHelper.createRotationalVector(0f, 0f, 0f),
                                     Transformation.Interpolations.LINEAR))).build();
-    public static final Animation ROARANDATTACK = Animation.Builder.create(1.7f).looping()
+    public static final Animation ATTACK = Animation.Builder.create(1.7f).looping()
             .addBoneAnimation("bodypart1",
                     new Transformation(Transformation.Targets.TRANSLATE,
                             new Keyframe(0f, AnimationHelper.createTranslationalVector(0f, 0f, 0f),
