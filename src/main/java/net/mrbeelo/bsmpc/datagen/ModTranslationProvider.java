@@ -119,7 +119,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModEffects.HIGH.value(), "High");
         translationBuilder.add(ModItems.PISTOL, "Tactical Pistol");
         translationBuilder.add(ModItems.BULLET, "Bullet");
-        translationBuilder.add(ModBlocks.PACKED_IRON_BLOCK, "Packed Iron Block");
+        translationBuilder.add(ModBlocks.PACKED_IRON_BLOCK, "Dense Iron Block");
         translationBuilder.add(ModItems.DEATH_AXE, "Death Axe");
         translationBuilder.add(ModItems.NUKE_BUTTON, "핵 버튼");
         translationBuilder.add(ModItems.MASTER_BEELO_STAFF, "Master Beelo Staff");
