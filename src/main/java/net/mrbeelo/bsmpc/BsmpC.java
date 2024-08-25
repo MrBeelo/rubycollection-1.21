@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
@@ -34,6 +35,8 @@ import net.mrbeelo.bsmpc.villager.ModVillagers;
 import net.mrbeelo.bsmpc.world.ModWorldGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Set;
 
 import static net.mrbeelo.bsmpc.effect.custom.HighEffect.playersWithHighSound;
 
@@ -206,6 +209,10 @@ public class BsmpC implements ModInitializer {
 		return targetZ;
 	}
 
+	public static boolean hasTag(Entity entity, String tag) {
+		Set<String> tags = entity.getCommandTags();
+		return tags.contains(tag);
+	}
 }
 
 //UPDATE CHECK 19
