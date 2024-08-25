@@ -1,9 +1,6 @@
 package net.mrbeelo.bsmpc.entity.custom;
 
-import net.minecraft.entity.AnimationState;
-import net.minecraft.entity.EntityData;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnReason;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -45,12 +42,11 @@ public class SnekEntity extends HostileEntity {
 
     @Override
     protected void initGoals() {
-        this.goalSelector.add(1, new SnekAttackGoal(this, 1.0, true));
-        this.goalSelector.add(2, new WanderAroundFarGoal(this, 1.0, 0.0F));
-        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
+        this.goalSelector.add(1, new SnekAttackGoal(this, 1.0, false));
+        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(3, new LookAroundGoal(this));
-        this.targetSelector.add(1, new RevengeGoal(this));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(2, new RevengeGoal(this));
         super.initGoals();
     }
 
@@ -97,11 +93,16 @@ public class SnekEntity extends HostileEntity {
         this.bossBar.removePlayer(player);
     }
 
+    @Override
+    public void onAttacking(Entity target) {
+        super.onAttacking(target);
+    }
+
     public static DefaultAttributeContainer.Builder createSnekAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 600)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.8)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 6);
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.6)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 18);
     }
 
     @Override

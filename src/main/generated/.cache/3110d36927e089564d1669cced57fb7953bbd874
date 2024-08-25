@@ -1,10 +1,10 @@
-// 1.21	2024-08-25T01:52:05.8399367	The BSMP Collection/Model Definitions
+// 1.21	2024-08-25T16:53:07.1160873	The BSMP Collection/Model Definitions
 429314aa8e3a708b9ecaa3163eadb85f9dead366 assets\bsmpc\models\block\cs_door_top_right_open.json
 9d8cab3ab91386bdb81bf179a5e1bfbb9eaf2249 assets\bsmpc\models\item\ruby_helmet_redstone_trim.json
 d13b57d6872fb44a90a000ecf49222bc64407824 assets\bsmpc\models\item\ruby_leggings_redstone_trim.json
 14e070ff63a4261c99fea0c97e0ffeda4330aea4 assets\bsmpc\models\block\ruby_fence_gate_wall.json
-e7f0bea545dd208ed358a80694a49ac7457f8bce assets\bsmpc\models\block\ruby_fence_side.json
 1d1c49cd439c8e8a2fd0e17ab131414d32ec76f5 assets\bsmpc\models\block\ruby_door_bottom_right_open.json
+e7f0bea545dd208ed358a80694a49ac7457f8bce assets\bsmpc\models\block\ruby_fence_side.json
 f98650ab37964e75c858e4ace565b578d4db6afa assets\bsmpc\models\block\cs_sapling.json
 6191ad44af580e3e7b306fdd0b22e0cdd1ef696b assets\bsmpc\models\block\ruby_pressure_plate.json
 46ce4913a4ccf602a31829b6631dfa6d38a4b96a assets\bsmpc\blockstates\potted_rose.json
@@ -34,8 +34,8 @@ ff6c2ddbfc88d12201307c75b89687da66f5354f assets\bsmpc\models\block\ruby_button.j
 7226facc1495a0ef2005452a8b5c7caf3ec4411f assets\bsmpc\models\item\ruby_chestplate_diamond_trim.json
 53af4789fb14e8cef3195a2a1672c54b1edabfd1 assets\bsmpc\models\block\cs_door_bottom_right.json
 bc43f673a72e8333d9e3101ea596b17bc9c7cd25 assets\bsmpc\models\item\cs_sapling.json
-e4069cfd2c6ccbaa75d89f7af03e4aefe4337350 assets\bsmpc\models\item\ruby_shard.json
 2fcd56185080f396265900843a5c2302b95bbebf assets\bsmpc\models\block\cs_door_top_left.json
+e4069cfd2c6ccbaa75d89f7af03e4aefe4337350 assets\bsmpc\models\item\ruby_shard.json
 50aabdd18d372c3f91626ebf7662d163de230a27 assets\bsmpc\models\item\smooth_quartz_ruby_upgrader.json
 5f2194ea9a73216653c9ef9fbdfd75bcd44b7e51 assets\bsmpc\models\block\cs_stairs_inner.json
 c1ae482ca299801c36177b5f48699f8b272a5ed9 assets\bsmpc\models\block\ruby_door_top_right.json
@@ -133,8 +133,8 @@ b339571ed95d9c7a81f58a4337f4ff928a092c82 assets\bsmpc\models\item\cs_door.json
 4f22a18d7aae0e22f154e51a38a08a29c3441dda assets\bsmpc\models\block\rgb_block.json
 cd97169f6f5c7b13914141cd106bd6b9bc68f9ab assets\bsmpc\blockstates\packed_iron_block.json
 720f6170e1ddc2d38a8395403e7a574128291f60 assets\bsmpc\models\block\ruby_wall_side.json
-792f2cc3dc39bb9511b80e992a72ea4d0e7f8a0d assets\bsmpc\models\item\ruby.json
 e52d9a78a8c25bcccec15c233a282f93b4a5c0d7 assets\bsmpc\models\item\xo_music_disc.json
+792f2cc3dc39bb9511b80e992a72ea4d0e7f8a0d assets\bsmpc\models\item\ruby.json
 18fb49e4f30683460a6118d2eb7c86cae88c4873 assets\bsmpc\models\item\ruby_boots_copper_trim.json
 d598361685a42c0474d880fbd414f0cf12352b85 assets\bsmpc\blockstates\cs_fence.json
 74d350fd4045834773f840936e6e54f6d066ac99 assets\bsmpc\models\item\deepslate_ruby_ore.json
@@ -158,10 +158,10 @@ e783a84f0420963916d7b67842537550d5caed98 assets\bsmpc\models\block\cs_leaves.jso
 02d990f1812979a5c5f55aecc6be512599eeeab7 assets\bsmpc\models\block\cs_stairs.json
 7fae9a0eff8a7062490def577497c7be240b398f assets\bsmpc\models\item\ruby_leggings_gold_trim.json
 7cebb23c63910aa93035502311546466db036325 assets\bsmpc\models\item\ruby_chestplate_amethyst_trim.json
-73f2ade4b0909b0a6a12a56161ab9167a72a26b5 assets\bsmpc\models\item\ruby_hoe.json
 9f2584769f681b0e0daa62c782bc73f4379153fc assets\bsmpc\models\block\kokaina_crop_stage2.json
-d9a9e09ab28bee4f212250672febf883d6e39c3f assets\bsmpc\blockstates\ruby_block.json
+73f2ade4b0909b0a6a12a56161ab9167a72a26b5 assets\bsmpc\models\item\ruby_hoe.json
 52b632c5bfcda2c211984867c062dcc896ae3b4e assets\bsmpc\blockstates\ruby_fence_gate.json
+d9a9e09ab28bee4f212250672febf883d6e39c3f assets\bsmpc\blockstates\ruby_block.json
 3cd5c4a2a11ccffbecd9260cba49ae54769cba2e assets\bsmpc\models\item\ruby_chestplate_gold_trim.json
 b5deba82f9482f3899a36685151f68763c827b93 assets\bsmpc\models\block\smooth_quartz_ruby_downgrader.json
 55a9b6ec2b0c0fbf19018d6ebf5bb3ce4eef026f assets\bsmpc\blockstates\ruby_fence.json
@@ -189,13 +189,13 @@ aa38ae0f2ad5ec262f5226a0bf1684d53e79530d assets\bsmpc\models\item\rgb_block.json
 4b500a5443265ef11527bacf544c7902a7a1c91d assets\bsmpc\models\block\ruby_pressure_plate_down.json
 217091f73f641d894f2113a8b119c6481943bdbc assets\bsmpc\blockstates\ruby_stairs.json
 c8e61420212ec45bb15667ff2ef789abb85ac53e assets\bsmpc\blockstates\cs_sapling.json
-73881769ff4f677f12207c401b2aac375317eb19 assets\bsmpc\models\item\ruby_trapdoor.json
 06ddf42381bc7e98af4106b059342e5039cfc404 assets\bsmpc\models\block\ruby_fence_post.json
+73881769ff4f677f12207c401b2aac375317eb19 assets\bsmpc\models\item\ruby_trapdoor.json
 4eb3c3c5b84f0a4f4d18c21e66ebcc7ced781abb assets\bsmpc\models\item\ruby_boots_quartz_trim.json
 ced979a39d91626116aa844748a7e990995f1f9a assets\bsmpc\models\block\ruby_door_bottom_right.json
 b7aacc61d804b9c86656cec12b8c5f7b4daf54c7 assets\bsmpc\blockstates\stripped_cs_log.json
-b3df2d3c347f7a23b896ac66d62bf2dadc35125d assets\bsmpc\models\block\stripped_cs_log.json
 cb3c429aa5bf0d5033f40a29a05b6f53479e55ec assets\bsmpc\models\item\end_ruby_ore.json
+b3df2d3c347f7a23b896ac66d62bf2dadc35125d assets\bsmpc\models\block\stripped_cs_log.json
 219301bae723c45003c5e15665c6b4aa65b6b013 assets\bsmpc\models\block\ruby_slab.json
 88f438b63a551c7b6d16824bdf0d70d591e97942 assets\bsmpc\models\block\ruby_door_top_right_open.json
 b173797e2868a3475cf0e4371d283c7752d41d95 assets\bsmpc\models\item\nether_ruby_ore.json

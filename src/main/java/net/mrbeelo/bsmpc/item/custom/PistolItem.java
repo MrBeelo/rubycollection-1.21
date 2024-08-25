@@ -46,7 +46,7 @@ public class PistolItem extends Item {
             BulletProjectileEntity bullet = new BulletProjectileEntity(ModEntities.BULLET_PROJECTILE, world);
             bullet.setPos(user.getX(), user.getEyeY() - 0.1, user.getZ());
             bullet.setOwner(user);
-            bullet.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 8.0F, 1.0F);
+            bullet.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 4.0F, 1.0F);
             world.spawnEntity(bullet);
             user.getWorld().playSound(null, user.getX(), user.getY(), user.getZ(), ModSounds.PEW, user.getSoundCategory(), 4.0F, 1.0F);
         } else {

@@ -2,14 +2,20 @@ package net.mrbeelo.bsmpc.entity.client.ai;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.PathAwareEntity;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Hand;
+import net.minecraft.world.World;
+import net.mrbeelo.bsmpc.entity.ModDamageTypes;
 import net.mrbeelo.bsmpc.entity.custom.SnekEntity;
+import net.mrbeelo.bsmpc.sound.ModSounds;
 
 public class SnekAttackGoal extends MeleeAttackGoal {
     private final SnekEntity entity;
-    private int attackDelay = 20;
-    private int ticksUntilNextAttack = 14;
+    private int attackDelay = 10;
+    private int ticksUntilNextAttack = 5;
     private boolean shouldCountTillNextAttack = false;
 
     public SnekAttackGoal(PathAwareEntity mob, double speed, boolean pauseWhenMobIdle) {
@@ -20,8 +26,9 @@ public class SnekAttackGoal extends MeleeAttackGoal {
     @Override
     public void start() {
         super.start();
-        attackDelay = 20;
-        ticksUntilNextAttack = 14;
+        //resetAttackCooldown();
+        attackDelay = 10;
+        ticksUntilNextAttack = 5;
     }
 
     @Override
@@ -36,6 +43,7 @@ public class SnekAttackGoal extends MeleeAttackGoal {
             if(isTimeToAttack()) {
                 this.mob.getLookControl().lookAt(pEnemy.getX(), pEnemy.getEyeY(), pEnemy.getZ());
                 performAttack(pEnemy);
+                pEnemy.getWorld().playSound(null, pEnemy.getBlockPos(), ModSounds.MUA, SoundCategory.HOSTILE, 3F, 1F);
             }
         } else {
             resetAttackCooldown();
@@ -46,7 +54,7 @@ public class SnekAttackGoal extends MeleeAttackGoal {
     }
 
     private boolean isEnemyWithinAttackDistance(LivingEntity pEnemy) {
-        return this.entity.distanceTo(pEnemy) <= 2f; // TODO
+        return this.entity.distanceTo(pEnemy) <= 2f;
     }
 
     protected void resetAttackCooldown() {
@@ -64,7 +72,13 @@ public class SnekAttackGoal extends MeleeAttackGoal {
     protected void performAttack(LivingEntity pEnemy) {
         this.resetAttackCooldown();
         this.mob.swingHand(Hand.MAIN_HAND);
-        this.mob.tryAttack(pEnemy);
+        World world = pEnemy.getWorld();
+        //this.mob.tryAttack(pEnemy);
+        DamageSource damageSource = new DamageSource(
+                world.getRegistryManager()
+                        .get(RegistryKeys.DAMAGE_TYPE)
+                        .entryOf(ModDamageTypes.TATER_DAMAGE));
+        pEnemy.damage(damageSource, 5.0f);
     }
 
     @Override

@@ -83,6 +83,13 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         builder.add(discDescriptionKey, discDescription);
     }
 
+    private static void addDamageType(@NotNull TranslationBuilder builder, @NotNull String messageId, @NotNull String messageValue) {
+        String messageSingleKey = "death.attack." + messageId;
+        builder.add(messageSingleKey, messageValue);
+        String messagePlayerKey = "death.attack." + messageId + ".player";
+        builder.add(messagePlayerKey, messageValue);
+    }
+
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.RUBY, "Ruby");
@@ -91,7 +98,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RUBY_SHARD, "Ruby Shard");
         translationBuilder.add(ModItems.KOKAINA, "Kokaina");
         translationBuilder.add(ModItems.KOKAINA_SEED, "Kokaina Seed");
-        translationBuilder.add(ModItems.RUBY_KNOCKER, "Overly named device featuring retractable hand able of pushing living entities away from entity using device");
+        translationBuilder.add(ModItems.RUBY_KNOCKER, "Ruby Knockbacker");
         translationBuilder.add(ModItems.RUBY_SWORD, "Ruby Sword");
         translationBuilder.add(ModItems.RUBY_PICKAXE, "Ruby Pickaxe");
         translationBuilder.add(ModItems.RUBY_AXE, "Ruby Axe");
@@ -166,7 +173,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         addPotionTranslations(translationBuilder, ModPotions.KOKAINA, "Kokaina");
         addPainting(translationBuilder, "world", "The World Of Errors", "MrBeelo");
         addMusicDisc(translationBuilder, "xo_music_disc", "XO Music Disc", "XO (eden cover and remake)");
-
+        addDamageType(translationBuilder, "emotional_damage", "Emotional Damage.");
     }
 }
 

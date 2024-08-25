@@ -1,11 +1,20 @@
 package net.mrbeelo.bsmpc.item.custom;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LightningEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.decoration.InteractionEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particle.DustParticleEffect;
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleType;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
@@ -15,8 +24,12 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.mrbeelo.bsmpc.components.ModDataComponentTypes;
+import net.mrbeelo.bsmpc.entity.ModEntities;
+import net.mrbeelo.bsmpc.entity.custom.BulletProjectileEntity;
+import net.mrbeelo.bsmpc.particle.ModParticles;
+import org.joml.Vector3f;
 
-import static net.mrbeelo.bsmpc.BsmpC.serverCommand;
+import static net.mrbeelo.bsmpc.BsmpC.*;
 
 
 public class MBSItem extends Item {
@@ -36,10 +49,6 @@ public class MBSItem extends Item {
         }
 
         int count = stack.getOrDefault(ModDataComponentTypes.MBS_STAGE, 0);
-        int lazer_time = stack.getOrDefault(ModDataComponentTypes.MBS_LAZER_TIME, 0);
-        int glowing_time = stack.getOrDefault(ModDataComponentTypes.MBS_GLOWING_TIME, 0);
-
-
 
         if (!user.isSneaking()) {
             stack.set(ModDataComponentTypes.MBS_STAGE, ++count);
@@ -82,11 +91,25 @@ public class MBSItem extends Item {
                 if (count == 0) {
                     Text beeliumA = Text.literal("Beelium Activated!").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(255 << 16 | 215 << 8 | 0)));
                     user.sendMessage(beeliumA, true);
-                    serverCommand((ServerWorld) world, user, "effect give @s resistance 5 255");
-                    serverCommand((ServerWorld) world, user, "effect give @s slowness 5 255");
-                    serverCommand((ServerWorld) world, user, "execute at @s run summon lightning_bolt ~ ~ ~");
-                    serverCommand((ServerWorld) world, user, "effect give @e[distance=..10] levitation 5 2");
-                    //stack.set(ModDataComponentTypes.MBS_GLOWING_TIME, 140);
+                    //serverCommand((ServerWorld) world, user, "effect give @s resistance 5 255");
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 6, 255));
+                    //serverCommand((ServerWorld) world, user, "effect give @s slowness 5 255");
+                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 5, 255));
+                    //serverCommand((ServerWorld) world, user, "execute at @s run summon lightning_bolt ~ ~ ~");
+                    Entity bolt = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
+                    bolt.setPos(user.getX(), user.getY(), user.getZ());
+                    world.spawnEntity(bolt);
+                    //serverCommand((ServerWorld) world, user, "effect give @e[distance=..10] levitation 5 2");
+                    double radius = 10.0;
+                    for (Entity entity : world.getEntitiesByClass(Entity.class, user.getBoundingBox().expand(radius), e -> true)) {
+                        // Check if the entity is an instance of LivingEntity
+                        if (entity instanceof LivingEntity livingEntity) {
+                            if (livingEntity.squaredDistanceTo(user) <= radius * radius) {
+                                // Apply levitation effect
+                                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 100, 2)); // 100 ticks = 5 seconds, amplifier 2
+                            }
+                        }
+                    }
                     glowingDuration = 140;
                 }
 
@@ -94,27 +117,46 @@ public class MBSItem extends Item {
                     Text aggresiumA = Text.literal("Aggresium Activated!").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(255 << 16 | 0 << 8 | 0)));
                     user.sendMessage(aggresiumA, true);
                     for (int i = 3; i <= 18; i++) {
-                        serverCommand((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^" + i + " {width:1b,height:1b,limit:1,Tags:['lazer" + i + "','lazer']}");
+                        //serverCommand((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^" + i + " {width:1b,height:1b,limit:1,Tags:['lazer" + i + "','lazer']}");
+                        InteractionEntity interaction = new InteractionEntity(EntityType.INTERACTION, world);
+                        interaction.addCommandTag("lazer" + i);
+                        interaction.addCommandTag("lazer");
+                        world.spawnEntity(interaction);
                     }
-                    //stack.set(ModDataComponentTypes.MBS_LAZER_TIME, 140);
                     lazerDuration = 140;
                 }
 
                 if (count == 2) {
                     Text mobiliumA = Text.literal("Mobilium Activated!").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(255 << 16 | 255 << 8 | 0)));
                     user.sendMessage(mobiliumA, true);
-                    serverCommand((ServerWorld) world, user, "tp @s ^ ^ ^25");
                     for (int i = 1; i <= 10; i++) {
-                        serverCommand((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^" + i + " 0.12 0.12 0.12 1 500");
+                        //serverCommand((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^" + i + " 0.12 0.12 0.12 1 500");
+                        Vector3f color = new Vector3f(1.0f, 0.92f, 0.0f);
+                        ((ServerWorld) world).spawnParticles((ServerPlayerEntity) user, new DustParticleEffect(color, 1.0f), true, getBlockInFrontX(user, i), getBlockInFrontY(user), getBlockInFrontZ(user, i), 200, 0.5, 0.5, 0.5, 0.2);
                     }
-                    serverCommand((ServerWorld) world, user, "summon minecraft:creeper ^ ^ ^10 {Fuse:0,ignited:1b}");
+                    //serverCommand((ServerWorld) world, user, "tp @s ^ ^ ^25");
+                    user.teleport(getBlockInFrontX(user, 10), getBlockInFrontY(user), getBlockInFrontZ(user, 10), false);
+                    //serverCommand((ServerWorld) world, user, "summon minecraft:creeper ^ ^ ^10 {Fuse:0,ignited:1b}");
+                    world.createExplosion(user, user.getX(), user.getY(), user.getZ(), 7.0F, World.ExplosionSourceType.TNT);
                 }
 
                 if (count == 3) {
                     Text protisiumA = Text.literal("Protisium Activated!").setStyle(Style.EMPTY.withColor(TextColor.fromRgb(0 << 16 | 255 << 8 | 255)));
                     user.sendMessage(protisiumA, true);
-                    serverCommand((ServerWorld) world, user, "execute as @s run effect give @e[distance=..10] regeneration 7 3");
-                    serverCommand((ServerWorld) world, user, "execute at @s run particle dust{color:[0.000,1.000,0.880],scale:1} ~ ~ ~ 5 0.1 5 1 10000");
+                    //serverCommand((ServerWorld) world, user, "execute as @s run effect give @e[distance=..10] regeneration 7 3");
+                    double radius = 10.0;
+                    for (Entity entity : world.getEntitiesByClass(Entity.class, user.getBoundingBox().expand(radius), e -> true)) {
+                        // Check if the entity is an instance of LivingEntity
+                        if (entity instanceof LivingEntity livingEntity) {
+                            if (livingEntity.squaredDistanceTo(user) <= radius * radius) {
+                                // Apply levitation effect
+                                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 140, 3)); // 100 ticks = 5 seconds, amplifier 2
+                            }
+                        }
+                    }
+                    //serverCommand((ServerWorld) world, user, "execute at @s run particle dust{color:[0.000,1.000,0.880],scale:1} ~ ~ ~ 5 0.1 5 1 10000");
+                    Vector3f color = new Vector3f(0.000f, 1.000f, 0.880f);
+                    ((ServerWorld) world).spawnParticles((ServerPlayerEntity) user, new DustParticleEffect(color, 1.0f), true, user.getX(), user.getY(), user.getZ(), 1000, 5, 0.1, 5, 1);
                 }
             }
         }

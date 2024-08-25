@@ -10,9 +10,11 @@ import net.mrbeelo.bsmpc.BsmpC;
 public class ModParticles {
 
     public static final SimpleParticleType SPARKLE_PARTICLE = FabricParticleTypes.simple();
+    public static final SimpleParticleType MOBILIUM_PARTICLE = FabricParticleTypes.simple();
 
     public static void registerModParticles() {
         Registry.register(Registries.PARTICLE_TYPE, BsmpC.id("sparkle_particle"), SPARKLE_PARTICLE);
+        Registry.register(Registries.PARTICLE_TYPE, BsmpC.id("mobilium_particle"), MOBILIUM_PARTICLE);
     }
 
 }

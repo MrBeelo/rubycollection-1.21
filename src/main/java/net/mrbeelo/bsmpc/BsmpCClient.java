@@ -9,6 +9,8 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.particle.BlockDustParticle;
+import net.minecraft.client.particle.DustPlumeParticle;
 import net.minecraft.client.particle.EndRodParticle;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -27,6 +29,7 @@ import net.mrbeelo.bsmpc.entity.client.custom.renderer.NukeRenderer;
 import net.mrbeelo.bsmpc.entity.client.custom.renderer.SnekRenderer;
 import net.mrbeelo.bsmpc.fluid.ModFluids;
 import net.mrbeelo.bsmpc.particle.ModParticles;
+import net.mrbeelo.bsmpc.particle.custom.MobiliumParticle;
 import net.mrbeelo.bsmpc.util.ModModelPredicates;
 
 public class BsmpCClient implements ClientModInitializer {
@@ -42,6 +45,7 @@ public class BsmpCClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CS_TRAPDOOR, RenderLayer.getCutout());
 
 		ParticleFactoryRegistry.getInstance().register(ModParticles.SPARKLE_PARTICLE, EndRodParticle.Factory::new);
+		ParticleFactoryRegistry.getInstance().register(ModParticles.MOBILIUM_PARTICLE, EndRodParticle.Factory::new);
 
 		ModModelPredicates.registerModelPredicates();
 

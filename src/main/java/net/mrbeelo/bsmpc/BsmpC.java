@@ -125,26 +125,25 @@ public class BsmpC implements ModInitializer {
 	}
 
 	public static BlockPos getBlockInFront(PlayerEntity player, int distance) {
-		// Get the player's yaw and pitch
+		// Get the player's yaw
 		float yaw = player.getYaw();
-		float pitch = player.getPitch();
 
-		// Convert yaw and pitch from degrees to radians for trigonometric functions
+		// Convert yaw from degrees to radians for trigonometric functions
 		double yawRad = Math.toRadians(yaw);
-		double pitchRad = Math.toRadians(pitch);
 
-		// Calculate the x, y, z offsets using trigonometry
-		double xOffset = -Math.sin(yawRad) * Math.cos(pitchRad) * distance;
-		double yOffset = -Math.sin(pitchRad) * distance;
-		double zOffset = Math.cos(yawRad) * Math.cos(pitchRad) * distance;
+		// Calculate the x and z offsets using trigonometry, ignoring the pitch (y-axis)
+		double xOffset = -Math.sin(yawRad) * distance;
+		double zOffset = Math.cos(yawRad) * distance;
 
 		// Get the player's current position
 		Vec3d playerPos = player.getPos();
 
 		// Calculate the target position by adding the offsets to the player's position
 		double targetX = playerPos.x + xOffset;
-		double targetY = playerPos.y + yOffset;
 		double targetZ = playerPos.z + zOffset;
+
+		// Use the player's current Y position since we are ignoring the Y-axis
+		double targetY = playerPos.y;
 
 		// Convert the target position to a block position by casting to integers
 		// We round the coordinates to get the nearest block
@@ -152,9 +151,61 @@ public class BsmpC implements ModInitializer {
 		int blockY = (int) Math.round(targetY);
 		int blockZ = (int) Math.round(targetZ);
 
-		// Return the block position 10 blocks in front of the player
+		// Return the block position in front of the player
 		return new BlockPos(blockX, blockY, blockZ);
 	}
+
+	public static double getBlockInFrontX(PlayerEntity player, int distance) {
+		// Get the player's yaw
+		float yaw = player.getYaw();
+
+		// Convert yaw from degrees to radians for trigonometric functions
+		double yawRad = Math.toRadians(yaw);
+
+		// Calculate the x offset using trigonometry
+		double xOffset = -Math.sin(yawRad) * distance;
+
+		// Get the player's current position
+		Vec3d playerPos = player.getPos();
+
+		// Calculate the target X position by adding the offset to the player's X position
+		double targetX = playerPos.x + xOffset;
+
+		// Return the target X coordinate
+		return targetX;
+	}
+
+	public static double getBlockInFrontY(PlayerEntity player) {
+		// Get the player's current position
+		Vec3d playerPos = player.getPos();
+
+		// Use the player's current Y position since we are ignoring the Y-axis movement
+		double targetY = playerPos.y;
+
+		// Return the target Y coordinate
+		return targetY;
+	}
+
+	public static double getBlockInFrontZ(PlayerEntity player, int distance) {
+		// Get the player's yaw
+		float yaw = player.getYaw();
+
+		// Convert yaw from degrees to radians for trigonometric functions
+		double yawRad = Math.toRadians(yaw);
+
+		// Calculate the z offset using trigonometry
+		double zOffset = Math.cos(yawRad) * distance;
+
+		// Get the player's current position
+		Vec3d playerPos = player.getPos();
+
+		// Calculate the target Z position by adding the offset to the player's Z position
+		double targetZ = playerPos.z + zOffset;
+
+		// Return the target Z coordinate
+		return targetZ;
+	}
+
 }
 
 //UPDATE CHECK 19
