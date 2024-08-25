@@ -198,11 +198,11 @@ public class MBSItem extends Item {
             if (lazerDuration > 1) {
                 for (int i = 3; i <= 18; i++) {
                     if (world instanceof ServerWorld serverWorld){
-                        //serverCommand((ServerWorld) world, player, "execute at @s run particle dust{color:[1.000,0.000,0.000],scale:1} ^ ^ ^" + i + " 0.25 0.25 0.25 1 1000");
-                        Vector3f color = new Vector3f(1.000f, 0.000f, 0.00f);
-                        ((ServerWorld) world).spawnParticles(new DustParticleEffect(color, 1.0f), getBlockInFrontX(player, i), player.getY() + 1, getBlockInFrontZ(player, i), 30, 0.3, 0.3, 0.3, 1);
-                        //serverCommand((ServerWorld) world, player, "execute at @s run tp @e[tag=lazer" + i + ", limit=1, sort=nearest] ^ ^ ^" + i);
-                        double teleportRadius = 60.0;
+                        serverCommand((ServerWorld) world, player, "execute at @s run particle dust{color:[1.000,0.000,0.000],scale:1} ^ ^ ^" + i + " 0.25 0.25 0.25 1 1000");
+                        //Vector3f color = new Vector3f(1.000f, 0.000f, 0.00f);
+                        //((ServerWorld) world).spawnParticles(new DustParticleEffect(color, 1.0f), getBlockInFrontX(player, i), player.getY() + 1, getBlockInFrontZ(player, i), 30, 0.3, 0.3, 0.3, 1);
+                        serverCommand((ServerWorld) world, player, "execute at @s run tp @e[tag=lazer" + i + ", limit=1, sort=nearest] ^ ^ ^" + i);
+                        /*double teleportRadius = 60.0;
                         for (InteractionEntity iEntity : world.getEntitiesByClass(InteractionEntity.class, player.getBoundingBox().expand(teleportRadius), e -> true)) {
                             if (iEntity.squaredDistanceTo(player) <= teleportRadius * teleportRadius) {
                                 if(hasTag(iEntity, "lazer" + i)) {
@@ -210,6 +210,7 @@ public class MBSItem extends Item {
                                 }
                             }
                         }
+                         */
                     }
                 }
             }
