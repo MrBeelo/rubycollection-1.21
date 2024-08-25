@@ -45,7 +45,6 @@ public class SnekEntity extends HostileEntity {
 
     @Override
     protected void initGoals() {
-        this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new SnekAttackGoal(this, 1.0, true));
         this.goalSelector.add(2, new WanderAroundFarGoal(this, 1.0, 0.0F));
         this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
