@@ -1,9 +1,6 @@
 package net.mrbeelo.bsmpc.item.custom;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LightningEntity;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.TargetPredicate;
 import net.minecraft.entity.decoration.InteractionEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -21,11 +18,13 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
+import net.minecraft.util.Arm;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.mrbeelo.bsmpc.components.ModDataComponentTypes;
@@ -125,11 +124,15 @@ public class MBSItem extends Item {
                     user.sendMessage(aggresiumA, true);
                     for (int i = 3; i <= 18; i++) {
                         //serverCommand((ServerWorld) world, user, "execute at @s run summon interaction ^ ^ ^" + i + " {width:1b,height:1b,limit:1,Tags:['lazer" + i + "','lazer']}");
+                        float entityWidth = 1.0f;
+                        float entityHeight = 1.0f;
                         InteractionEntity interaction = new InteractionEntity(EntityType.INTERACTION, world);
-                        interaction.setBoundingBox(new Box(1, 1, 1, 2, 2, 2));
+                        interaction.setPos(getBlockInFrontX(user, i), getBlockInFrontY(user, i), getBlockInFrontZ(user, i));
+                        interaction.setBoundingBox(new Box(interaction.getX() - entityWidth / 2.0, interaction.getY(), interaction.getZ() - entityWidth / 2.0, interaction.getX() + entityWidth / 2.0, interaction.getY() + entityHeight, interaction.getZ() + entityWidth / 2.0));
                         interaction.addCommandTag("lazer" + i);
                         interaction.addCommandTag("lazer");
-                        interaction.setPos(getBlockInFrontX(user, i), getBlockInFrontY(user), getBlockInFrontZ(user, i));
+                        interaction.setInvulnerable(true);
+                        interaction.setFireTicks(0);
                         world.spawnEntity(interaction);
                     }
                     lazerDuration = 140;
@@ -141,10 +144,10 @@ public class MBSItem extends Item {
                     for (int i = 1; i <= 10; i++) {
                         //serverCommand((ServerWorld) world, user, "particle dust{color:[1.000,0.920,0.000],scale:1} ^ ^ ^" + i + " 0.12 0.12 0.12 1 500");
                         Vector3f color = new Vector3f(1.0f, 0.92f, 0.0f);
-                        ((ServerWorld) world).spawnParticles((ServerPlayerEntity) user, new DustParticleEffect(color, 1.0f), true, getBlockInFrontX(user, i), getBlockInFrontY(user), getBlockInFrontZ(user, i), 200, 0.5, 0.5, 0.5, 0.2);
+                        ((ServerWorld) world).spawnParticles((ServerPlayerEntity) user, new DustParticleEffect(color, 1.0f), true, getBlockInFrontX(user, i), getBlockInFrontY(user, 0), getBlockInFrontZ(user, i), 200, 0.5, 0.5, 0.5, 0.2);
                     }
                     //serverCommand((ServerWorld) world, user, "tp @s ^ ^ ^25");
-                    user.teleport(getBlockInFrontX(user, 10), getBlockInFrontY(user), getBlockInFrontZ(user, 10), false);
+                    user.teleport(getBlockInFrontX(user, 10), getBlockInFrontY(user, 0), getBlockInFrontZ(user, 10), false);
                     //serverCommand((ServerWorld) world, user, "summon minecraft:creeper ^ ^ ^10 {Fuse:0,ignited:1b}");
                     world.createExplosion(user, user.getX(), user.getY(), user.getZ(), 7.0F, World.ExplosionSourceType.TNT);
                 }
@@ -172,10 +175,18 @@ public class MBSItem extends Item {
         return TypedActionResult.success(stack);
     }
 
+
+
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (entity instanceof PlayerEntity player && !world.isClient && world instanceof ServerWorld) {
-            serverCommand((ServerWorld) world, player, "execute at @e[type=minecraft:interaction,tag=lazer] if entity @e[distance=..1.7] run execute as @e[distance=..1.7] run effect give @s instant_damage 1 1");
+            //serverCommand((ServerWorld) world, player, "execute at @e[type=minecraft:interaction,tag=lazer] if entity @e[distance=..1.7] run execute as @e[distance=..1.7] run effect give @s instant_damage 1 1");
+            double radius = 0;
+            for (LivingEntity livingEntity : ((ServerWorld) world).getEntitiesByClass(LivingEntity.class, player.getBoundingBox().expand(30), e -> true)) {
+                for (InteractionEntity lazerEntity : world.getEntitiesByClass(InteractionEntity.class, livingEntity.getBoundingBox().expand(radius), e -> hasTag(e, "lazer"))) {
+                    livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1, 1));
+                }
+            }
 
             if (lazerDuration > 0) {
                 lazerDuration--;
@@ -198,19 +209,18 @@ public class MBSItem extends Item {
             if (lazerDuration > 1) {
                 for (int i = 3; i <= 18; i++) {
                     if (world instanceof ServerWorld serverWorld){
-                        serverCommand((ServerWorld) world, player, "execute at @s run particle dust{color:[1.000,0.000,0.000],scale:1} ^ ^ ^" + i + " 0.25 0.25 0.25 1 1000");
-                        //Vector3f color = new Vector3f(1.000f, 0.000f, 0.00f);
-                        //((ServerWorld) world).spawnParticles(new DustParticleEffect(color, 1.0f), getBlockInFrontX(player, i), player.getY() + 1, getBlockInFrontZ(player, i), 30, 0.3, 0.3, 0.3, 1);
-                        serverCommand((ServerWorld) world, player, "execute at @s run tp @e[tag=lazer" + i + ", limit=1, sort=nearest] ^ ^ ^" + i);
-                        /*double teleportRadius = 60.0;
+                        //serverCommand((ServerWorld) world, player, "execute at @s run particle dust{color:[1.000,0.000,0.000],scale:1} ^ ^ ^" + i + " 0.25 0.25 0.25 1 1000");
+                        Vector3f color = new Vector3f(1.000f, 0.000f, 0.00f);
+                        ((ServerWorld) world).spawnParticles(new DustParticleEffect(color, 1.0f), getBlockInFrontX(player, i), getBlockInFrontY(player, i), getBlockInFrontZ(player, i), 30, 0.3, 0.3, 0.3, 1);
+                        //serverCommand((ServerWorld) world, player, "execute at @s run tp @e[tag=lazer" + i + ", limit=1, sort=nearest] ^ ^ ^" + i);
+                        double teleportRadius = 30.0;
                         for (InteractionEntity iEntity : world.getEntitiesByClass(InteractionEntity.class, player.getBoundingBox().expand(teleportRadius), e -> true)) {
                             if (iEntity.squaredDistanceTo(player) <= teleportRadius * teleportRadius) {
                                 if(hasTag(iEntity, "lazer" + i)) {
-                                    iEntity.teleport(serverWorld, getBlockInFrontX(player, i), player.getY() + 1, getBlockInFrontZ(player, i), EnumSet.noneOf(PositionFlag.class), player.getYaw(), 1f);
+                                    iEntity.teleport(serverWorld, getBlockInFrontX(player, i), getBlockInFrontY(player, i), getBlockInFrontZ(player, i), EnumSet.noneOf(PositionFlag.class), player.getYaw(), 1f);
                                 }
                             }
                         }
-                         */
                     }
                 }
             }

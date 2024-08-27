@@ -19,7 +19,8 @@ import net.mrbeelo.bsmpc.sound.ModSounds;
 
 import java.util.List;
 
-import static net.mrbeelo.bsmpc.BsmpC.getBlockInFront;
+import static net.mrbeelo.bsmpc.BsmpC.getBlockInFrontXZ;
+
 
 public class NukeButtonItem extends Item {
     public NukeButtonItem(Settings settings) {
@@ -35,7 +36,7 @@ public class NukeButtonItem extends Item {
         user.getWorld().playSound(null, user.getX(), user.getY(), user.getZ(), ModSounds.BEEP, user.getSoundCategory(), 1.0F, 1.0F);
 
 
-        BlockPos frontOfPlayer = getBlockInFront(user, 15).up(50);
+        BlockPos frontOfPlayer = getBlockInFrontXZ(user, 15).up(50);
 
         Entity nuke = new TntEntity(EntityType.TNT, world);
         nuke.setPosition(frontOfPlayer.toCenterPos());
