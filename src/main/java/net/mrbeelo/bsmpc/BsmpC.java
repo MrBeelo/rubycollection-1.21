@@ -9,10 +9,12 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
@@ -77,8 +79,11 @@ public class BsmpC implements ModInitializer {
 				for (PlayerEntity player : world.getPlayers()) {
 					if (!player.hasStatusEffect(ModEffects.HIGH) && playersWithHighSound.contains(player)) {
 						playersWithHighSound.remove(player);
-                        serverCommand(world, player, "stopsound @s player bsmpc:high");
-                    }
+                        //serverCommand(world, player, "stopsound @s player bsmpc:high");
+						if (player instanceof ServerPlayerEntity serverPlayerEntity) {
+							serverPlayerEntity.networkHandler.sendPacket(new net.minecraft.network.packet.s2c.play.StopSoundS2CPacket(Identifier.of("bsmpc", "high"), SoundCategory.PLAYERS));
+						}
+					}
 				}
 			}});
 

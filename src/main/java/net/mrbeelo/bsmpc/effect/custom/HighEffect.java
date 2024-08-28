@@ -8,18 +8,20 @@ import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.mrbeelo.bsmpc.BsmpC;
 import net.mrbeelo.bsmpc.effect.ModEffects;
 import net.mrbeelo.bsmpc.sound.ModSounds;
 import java.util.HashSet;
 import java.util.Set;
-
-import static net.minecraft.block.entity.BeaconBlockEntity.playSound;
-import static net.mrbeelo.bsmpc.BsmpC.serverCommand;
-
 
 public class HighEffect extends StatusEffect {
     public HighEffect(StatusEffectCategory statusEffectCategory, int color) {
@@ -30,11 +32,14 @@ public class HighEffect extends StatusEffect {
 
     @Override
     public void onApplied(LivingEntity entity, int amplifier) {
-        if (entity instanceof PlayerEntity player) {
-            World world = player.getWorld();
-            if (!playersWithHighSound.contains(player) && world instanceof ServerWorld) {
-                playersWithHighSound.add(player);
-                serverCommand((ServerWorld) world, player, "playsound bsmpc:high player @s ~ ~ ~ 50 1 1");
+        if (entity instanceof PlayerEntity) {
+            World world = entity.getWorld();
+            if (!playersWithHighSound.contains(entity) && world instanceof ServerWorld) {
+                playersWithHighSound.add((PlayerEntity) entity);
+                if (entity instanceof ServerPlayerEntity serverPlayerEntity) {
+                    //serverCommand((ServerWorld) world, player, "playsound bsmpc:high player @s ~ ~ ~ 50 1 1");
+                    serverPlayerEntity.networkHandler.sendPacket(new net.minecraft.network.packet.s2c.play.PlaySoundS2CPacket(RegistryEntry.of(ModSounds.HIGH), SoundCategory.PLAYERS, serverPlayerEntity.getX(), serverPlayerEntity.getY(), serverPlayerEntity.getZ(), 50F, 1F, serverPlayerEntity.getWorld().getRandom().nextLong()));
+                }
             }
         }
         super.onApplied(entity, amplifier);
@@ -43,8 +48,6 @@ public class HighEffect extends StatusEffect {
     @Override
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         super.applyUpdateEffect(entity, amplifier);
-
-        // Apply nausea effect directly to simulate the effect
         if (entity instanceof PlayerEntity) {
             applyCustomNausea((PlayerEntity) entity);
             simulateNauseaEffect(entity);
