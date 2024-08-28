@@ -9,7 +9,9 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -255,6 +257,30 @@ public class BsmpC implements ModInitializer {
 	public static boolean hasTag(Entity entity, String tag) {
 		Set<String> tags = entity.getCommandTags();
 		return tags.contains(tag);
+	}
+
+	public static void scheduleTicks(ServerPlayerEntity player, int delayTicks, Runnable action) {
+		// Use an array to hold the tick count and flag for task completion in a single scope
+		final int[] ticksRemaining = {delayTicks}; // Array to store remaining ticks
+		final boolean[] isTaskComplete = {false}; // Flag to indicate task completion
+
+		// Register a tick event handler for scheduling
+		ServerTickEvents.END_SERVER_TICK.register(server -> {
+			if (!isTaskComplete[0]) { // Check if the task is already complete
+				if (ticksRemaining[0] > 0) {
+					ticksRemaining[0]--; // Decrement the tick counter
+				} else {
+					action.run(); // Run the action
+					isTaskComplete[0] = true; // Mark task as complete
+				}
+			}
+		});
+
+		/*
+		scheduleTicks(serverPlayerEntity, 100, () -> {
+                player.sendMessage(Text.literal("Message after 100 ticks"), true);
+            });
+		 */
 	}
 }
 
