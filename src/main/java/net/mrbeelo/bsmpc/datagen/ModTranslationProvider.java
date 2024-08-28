@@ -14,6 +14,7 @@ import net.mrbeelo.bsmpc.BsmpC;
 import net.mrbeelo.bsmpc.block.ModBlocks;
 import net.mrbeelo.bsmpc.effect.ModEffects;
 import net.mrbeelo.bsmpc.enchantment.ModEnchantments;
+import net.mrbeelo.bsmpc.entity.ModDamageTypes;
 import net.mrbeelo.bsmpc.entity.ModEntities;
 import net.mrbeelo.bsmpc.fluid.ModFluids;
 import net.mrbeelo.bsmpc.item.ModItemGroups;
@@ -183,5 +184,3 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         addDamageType(translationBuilder, "emotional_damage", "Emotional Damage.");
     }
 }
-
-

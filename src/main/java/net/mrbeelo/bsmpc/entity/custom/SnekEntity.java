@@ -100,9 +100,9 @@ public class SnekEntity extends HostileEntity {
 
     public static DefaultAttributeContainer.Builder createSnekAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 600)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.6)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 18);
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 2000)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.8)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 20);
     }
 
     @Override

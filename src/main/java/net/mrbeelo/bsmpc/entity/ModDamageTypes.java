@@ -7,5 +7,5 @@ import net.minecraft.util.Identifier;
 import net.mrbeelo.bsmpc.BsmpC;
 
 public class ModDamageTypes {
-    public static final RegistryKey<DamageType> TATER_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, BsmpC.id("emotional_damage"));
+    public static final RegistryKey<DamageType> EMOTIONAL_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, BsmpC.id("emotional_damage"));
 }

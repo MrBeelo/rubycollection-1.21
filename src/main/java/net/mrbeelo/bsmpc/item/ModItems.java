@@ -41,7 +41,7 @@ public class ModItems {
     public static final SwordItem RUBY_KNOCKER = register("ruby_knocker", new SwordItem(RubyToolMaterial.RUBY, new Item.Settings().maxDamage(100).attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, new EntityAttributeModifier(BsmpC.id("effect.knockback"), 30.0, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND).build())));
     public static final Item PISTOL = register("pistol", new PistolItem(new Item.Settings().maxCount(1)));
     public static final Item BULLET = register("bullet", new Item(new Item.Settings()));
-    public static final DeathAxeItem DEATH_AXE = register("death_axe", new DeathAxeItem(new Item.Settings().attributeModifiers(DeathAxeItem.createAttributeModifiers(ToolMaterials.IRON, 997, -3.5f))));
+    public static final DeathAxeItem DEATH_AXE = register("death_axe", new DeathAxeItem(new Item.Settings().attributeModifiers(DeathAxeItem.createAttributeModifiers(ToolMaterials.IRON, 4997, -3.5f))));
     public static final NukeButtonItem NUKE_BUTTON = register("nuke_button", new NukeButtonItem(new Item.Settings().maxCount(1)));
     public static final MBSItem MASTER_BEELO_STAFF = register("master_beelo_staff", new MBSItem(new Item.Settings().maxCount(1).component(ModDataComponentTypes.MBS_STAGE, 0)));
     public static final Item SNEK_SPAWN_EGG = register("snek_spawn_egg", new SpawnEggItem(ModEntities.SNEK, 0x78fa40, 0x5ed32b, new Item.Settings()));

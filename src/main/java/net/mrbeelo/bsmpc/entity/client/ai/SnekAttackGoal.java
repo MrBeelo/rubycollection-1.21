@@ -15,7 +15,7 @@ import net.mrbeelo.bsmpc.sound.ModSounds;
 public class SnekAttackGoal extends MeleeAttackGoal {
     private final SnekEntity entity;
     private int attackDelay = 10;
-    private int ticksUntilNextAttack = 5;
+    private int ticksUntilNextAttack = 0;
     private boolean shouldCountTillNextAttack = false;
 
     public SnekAttackGoal(PathAwareEntity mob, double speed, boolean pauseWhenMobIdle) {
@@ -26,9 +26,9 @@ public class SnekAttackGoal extends MeleeAttackGoal {
     @Override
     public void start() {
         super.start();
-        //resetAttackCooldown();
-        attackDelay = 10;
-        ticksUntilNextAttack = 5;
+        resetAttackCooldown();
+        //attackDelay = 10;
+        //ticksUntilNextAttack = 0;
     }
 
     @Override
@@ -77,8 +77,8 @@ public class SnekAttackGoal extends MeleeAttackGoal {
         DamageSource damageSource = new DamageSource(
                 world.getRegistryManager()
                         .get(RegistryKeys.DAMAGE_TYPE)
-                        .entryOf(ModDamageTypes.TATER_DAMAGE));
-        pEnemy.damage(damageSource, 5.0f);
+                        .entryOf(ModDamageTypes.EMOTIONAL_DAMAGE));
+        pEnemy.damage(damageSource, 50.0f);
     }
 
     @Override
