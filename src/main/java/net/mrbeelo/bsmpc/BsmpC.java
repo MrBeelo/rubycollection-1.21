@@ -110,27 +110,13 @@ public class BsmpC implements ModInitializer {
 
 	public static void serverCommand(ServerWorld world, PlayerEntity user, String command) {
 		if (user != null) {
-			// Get a ServerCommandSource with elevated permissions
 			ServerCommandSource source = new ServerCommandSource(
-					user,
-					user.getPos(),
-					user.getRotationClient(),
-					world,
-					4, // Permission level 4 (OP level)
-					user.getName().getString(),
-					user.getDisplayName(),
-					world.getServer(),
-					user
-			).withSilent(); // This makes the command output silent
-
+					user, user.getPos(), user.getRotationClient(), world, 4, user.getName().getString(), user.getDisplayName(), world.getServer(), user).withSilent();
 			try {
-				// Execute the command using the elevated source
 				world.getServer().getCommandManager().getDispatcher().execute(command, source);
 			} catch (CommandSyntaxException e) {
 				user.sendMessage(Text.literal("Command failed: " + e.getMessage()), false);
 			}
-		} else {
-			user.sendMessage(Text.literal("User not found"), false);
 		}
 	}
 
