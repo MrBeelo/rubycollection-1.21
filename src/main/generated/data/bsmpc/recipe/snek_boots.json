@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "bsmpc:snek_scale"
+    }
+  },
+  "pattern": [
+    "E E",
+    "E E"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bsmpc:snek_boots"
+  }
+}

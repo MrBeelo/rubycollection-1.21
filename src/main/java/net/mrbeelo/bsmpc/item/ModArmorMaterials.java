@@ -31,6 +31,19 @@ public class ModArmorMaterials {
             0.2F,
             false);
 
+    public static final RegistryEntry<ArmorMaterial> SNEK = register("snek", Map.of(
+                    ArmorItem.Type.HELMET, 6,
+                    ArmorItem.Type.CHESTPLATE, 10,
+                    ArmorItem.Type.LEGGINGS, 9,
+                    ArmorItem.Type.BOOTS, 5
+            ),
+            15,
+            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
+            () -> Ingredient.ofItems(ModItems.SNEK_SCALE),
+            6,
+            0.3F,
+            false);
+
     //METHODS
 
     public static RegistryEntry<ArmorMaterial> register(String id, Map<ArmorItem.Type, Integer> defencePoints,

@@ -18,7 +18,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
-        getOrCreateTagBuilder(ItemTags.SWORDS).add(ModItems.RUBY_SWORD).add(ModItems.RUBY_KNOCKER);
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(ModItems.RUBY_SWORD)
+                .add(ModItems.WARDEN_SWORD)
+                .add(ModItems.RUBY_KNOCKER);
         getOrCreateTagBuilder(ItemTags.PICKAXES).add(ModItems.RUBY_PICKAXE);
         getOrCreateTagBuilder(ItemTags.AXES).add(ModItems.RUBY_AXE);
         getOrCreateTagBuilder(ItemTags.SHOVELS).add(ModItems.RUBY_SHOVEL);
@@ -32,10 +35,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.RUBY_HOE)
                 .add(ModItems.RUBY_KNOCKER);
 
-        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR).add(ModItems.RUBY_HELMET);
-        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR).add(ModItems.RUBY_CHESTPLATE);
-        getOrCreateTagBuilder(ItemTags.LEG_ARMOR).add(ModItems.RUBY_LEGGINGS);
-        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR).add(ModItems.RUBY_BOOTS);
+        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR).add(ModItems.RUBY_HELMET).add(ModItems.SNEK_HELMET);
+        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR).add(ModItems.RUBY_CHESTPLATE).add(ModItems.SNEK_CHESTPLATE);
+        getOrCreateTagBuilder(ItemTags.LEG_ARMOR).add(ModItems.RUBY_LEGGINGS).add(ModItems.SNEK_LEGGINGS);
+        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR).add(ModItems.RUBY_BOOTS).add(ModItems.SNEK_BOOTS);
 
         getOrCreateTagBuilder(ModTags.Items.RUBY_ARMOR)
                 .add(ModItems.RUBY_HELMET)

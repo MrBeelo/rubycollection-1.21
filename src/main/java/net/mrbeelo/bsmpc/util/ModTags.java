@@ -17,6 +17,7 @@ public class ModTags {
         public static final TagKey<Block> RUBY_ORES = TagKey.of(RegistryKeys.BLOCK, BsmpC.id("ruby_ores"));
         public static final TagKey<Block> RUBY_BLOCKS = TagKey.of(RegistryKeys.BLOCK, BsmpC.id("ruby_blocks"));
         public static final TagKey<Block> CS_BLOCKS = TagKey.of(RegistryKeys.BLOCK, BsmpC.id("cs_blocks"));
+        public static final TagKey<Block> INCORRECT_FOR_WARDEN_HORN_TOOL = TagKey.of(RegistryKeys.BLOCK, BsmpC.id("incorrect_for_warden_horn_tool"));
     }
 
     public static class Items {

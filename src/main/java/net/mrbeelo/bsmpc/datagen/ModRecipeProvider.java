@@ -279,5 +279,44 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .criterion(hasItem(ModBlocks.CS_PLANKS), conditionsFromItem(ModBlocks.CS_PLANKS))
                 .offerTo(exporter, BsmpC.id("cs_trapdoor"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.WARDEN_SWORD, 1)
+                .input('E', ModItems.WARDEN_HORN)
+                .input('F', Items.STICK)
+                .pattern("E")
+                .pattern("E")
+                .pattern("F")
+                .criterion(hasItem(ModItems.WARDEN_HORN), conditionsFromItem(ModItems.WARDEN_HORN))
+                .offerTo(exporter, BsmpC.id("warden_sword"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SNEK_HELMET, 1)
+                .input('E', ModItems.SNEK_SCALE)
+                .pattern("EEE")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.SNEK_SCALE), conditionsFromItem(ModItems.SNEK_SCALE))
+                .offerTo(exporter, BsmpC.id("snek_helmet"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SNEK_CHESTPLATE, 1)
+                .input('E', ModItems.SNEK_SCALE)
+                .pattern("E E")
+                .pattern("EEE")
+                .pattern("EEE")
+                .criterion(hasItem(ModItems.SNEK_SCALE), conditionsFromItem(ModItems.SNEK_SCALE))
+                .offerTo(exporter, BsmpC.id("snek_chestplate"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SNEK_LEGGINGS, 1)
+                .input('E', ModItems.SNEK_SCALE)
+                .pattern("EEE")
+                .pattern("E E")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.SNEK_SCALE), conditionsFromItem(ModItems.SNEK_SCALE))
+                .offerTo(exporter, BsmpC.id("snek_leggings"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SNEK_BOOTS, 1)
+                .input('E', ModItems.SNEK_SCALE)
+                .pattern("E E")
+                .pattern("E E")
+                .criterion(hasItem(ModItems.SNEK_SCALE), conditionsFromItem(ModItems.SNEK_SCALE))
+                .offerTo(exporter, BsmpC.id("snek_boots"));
     }
 }

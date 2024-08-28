@@ -1,17 +1,17 @@
-// 1.21	2024-08-27T18:03:34.8464617	The BSMP Collection/Tags for minecraft:item
-25b2ec6fbd9fdddaff74be747f8ec50eeaf94351 data\minecraft\tags\item\planks.json
+// 1.21	2024-08-28T14:48:24.2031197	The BSMP Collection/Tags for minecraft:item
 1e194cb9bf0d20f8d092b4157949ffa55316ef21 data\minecraft\tags\item\logs_that_burn.json
+25b2ec6fbd9fdddaff74be747f8ec50eeaf94351 data\minecraft\tags\item\planks.json
 a38a0e04eddaf58bd3a13fed14e537c6a964f258 data\minecraft\tags\item\hoes.json
 4429cd33a15f6703a353250194b52f41183132e6 data\bsmpc\tags\item\ruby_armor.json
 f8197a322823ef50094169863c6f29ef4c9d28d9 data\minecraft\tags\item\axes.json
 abb95c221bca89470605dbc19f1bad9b5dbe6d74 data\bsmpc\tags\item\ruby_variants.json
 abad3f46a6121667f164e584d642dcc7975caa48 data\minecraft\tags\item\pickaxes.json
-aa94286277215bb67075af6a4ad085b3a969bbb8 data\minecraft\tags\item\foot_armor.json
+2fc681a1ba347a15773effad34dbc6a53461d5c0 data\minecraft\tags\item\foot_armor.json
 3367f0338746ace340ea2ca9e7c79d86c470e9d3 data\minecraft\tags\item\beacon_payment_items.json
 8168d85709e99f703fdcba4009bf9c304068852c data\minecraft\tags\item\shovels.json
-9fce918ef9014996f74b2d59af57e681af6694de data\minecraft\tags\item\head_armor.json
-1c6c5e0c1f2ad2fdd5e7ac62d10d68426411205d data\minecraft\tags\item\swords.json
+6a4c98d154da91283e94f09835ac299ea1696d66 data\minecraft\tags\item\head_armor.json
+d6fdf35a1d96dbd81e07f73484f72764350531f4 data\minecraft\tags\item\swords.json
 d015674bea75f4510868b785ae54402502554663 data\bsmpc\tags\item\ruby_tools.json
-b1c66e482dba5fdeb4b1764a502693267096432f data\minecraft\tags\item\leg_armor.json
+23939003a5dcbb3e6d4dc6985e6a17cc836495e6 data\minecraft\tags\item\leg_armor.json
 ab176f62ae952f21c4951e1a81116d54c7de1a1e data\bsmpc\tags\item\ruby_items.json
-5856a540976a3212c2f38528de5bd20b2a578a72 data\minecraft\tags\item\chest_armor.json
+867098c620df03fe71981f7a5d3b3b3dd6b72f13 data\minecraft\tags\item\chest_armor.json

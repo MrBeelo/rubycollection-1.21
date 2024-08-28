@@ -157,6 +157,13 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.CS_FENCE_GATE, "Cupressus Sempervirens Saepes Porta");
         translationBuilder.add(ModBlocks.CS_DOOR, "Cupressus Sempervirens Ostium");
         translationBuilder.add(ModBlocks.CS_TRAPDOOR, "Cupressus Sempervirens Trapostium");
+        translationBuilder.add(ModItems.WARDEN_SWORD, "Warden Sword");
+        translationBuilder.add(ModItems.SNEK_HELMET, "Snek Helmet");
+        translationBuilder.add(ModItems.SNEK_CHESTPLATE, "Snek Chestplate");
+        translationBuilder.add(ModItems.SNEK_LEGGINGS, "Snek Leggings");
+        translationBuilder.add(ModItems.SNEK_BOOTS, "Snek Boots");
+        translationBuilder.add(ModItems.WARDEN_HORN, "Warden Horn");
+        translationBuilder.add(ModItems.SNEK_SCALE, "Snek Scale");
         translationBuilder.addEnchantment(ModEnchantments.BANG_EFFECT_KEY, "Bang");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");

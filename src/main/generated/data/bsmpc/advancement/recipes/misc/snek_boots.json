@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_snek_scale": {
+      "conditions": {
+        "items": [
+          {
+            "items": "bsmpc:snek_scale"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bsmpc:snek_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_snek_scale"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bsmpc:snek_boots"
+    ]
+  }
+}

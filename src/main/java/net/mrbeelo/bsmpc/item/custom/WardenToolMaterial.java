@@ -1,18 +1,19 @@
-package net.mrbeelo.bsmpc.item;
+package net.mrbeelo.bsmpc.item.custom;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.TagKey;
+import net.mrbeelo.bsmpc.item.ModItems;
 import net.mrbeelo.bsmpc.util.ModTags;
 
 //REGISTERING
 
-public enum ModToolMaterials implements ToolMaterial {
+public enum WardenToolMaterial implements ToolMaterial {
 
     //REGISTERING
 
-    RUBY(3100, 14.0F, 6.0F, ModTags.Blocks.INCORRECT_FOR_RUBY_TOOL, 15, Ingredient.ofItems(ModItems.RUBY));
+    WARDEN_HORN(4000, 12.0F, 7.0F, ModTags.Blocks.INCORRECT_FOR_WARDEN_HORN_TOOL, 15, Ingredient.ofItems(ModItems.WARDEN_HORN));
 
     //METHODS
 
@@ -23,7 +24,7 @@ public enum ModToolMaterials implements ToolMaterial {
     private final int enchantability;
     private final Ingredient repairIngredient;
 
-    ModToolMaterials(int durability, float miningSpeedMultiplier, float attackDamage, TagKey<Block> inverseTag, int enchantability, Ingredient repairIngredient) {
+    WardenToolMaterial(int durability, float miningSpeedMultiplier, float attackDamage, TagKey<Block> inverseTag, int enchantability, Ingredient repairIngredient) {
         this.durability = durability;
         this.miningSpeedMultiplier = miningSpeedMultiplier;
         this.attackDamage = attackDamage;

@@ -74,7 +74,14 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.PEDESTAL);
 
+                        entries.add(ModItems.SNEK_HELMET);
+                        entries.add(ModItems.SNEK_CHESTPLATE);
+                        entries.add(ModItems.SNEK_LEGGINGS);
+                        entries.add(ModItems.SNEK_BOOTS);
+                        entries.add(ModItems.SNEK_SCALE);
                         entries.add(ModItems.SNEK_SPAWN_EGG);
+
+                        entries.add(ModItems.POKE_BALL);
 
                         entries.add(ModItems.XO_MUSIC_DISC);
 
@@ -82,11 +89,12 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.RGB_BLOCK);
 
-                        entries.add(ModItems.POKE_BALL);
-
                         entries.add(ModBlocks.ROSE);
 
                         entries.add(ModItems.RANDOM_ARTIFACT);
+
+                        entries.add(ModItems.WARDEN_SWORD);
+                        entries.add(ModItems.WARDEN_HORN);
                     }).build());
 
     public static final ItemGroup CS_GROUP = Registry.register(Registries.ITEM_GROUP,

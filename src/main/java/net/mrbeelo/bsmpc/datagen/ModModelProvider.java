@@ -76,10 +76,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_KNOCKER, Models.HANDHELD);
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_BOOTS));
+        itemModelGenerator.registerArmor(ModItems.RUBY_HELMET);
+        itemModelGenerator.registerArmor(ModItems.RUBY_CHESTPLATE);
+        itemModelGenerator.registerArmor(ModItems.RUBY_LEGGINGS);
+        itemModelGenerator.registerArmor(ModItems.RUBY_BOOTS);
         itemModelGenerator.register(ModItems.PISTOL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BULLET, Models.GENERATED);
         itemModelGenerator.register(ModItems.DEATH_AXE, Models.HANDHELD);
@@ -89,5 +89,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModFluids.FROOTOP_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.RANDOM_ARTIFACT, Models.GENERATED);
         itemModelGenerator.register(ModItems.POKE_BALL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WARDEN_SWORD, Models.HANDHELD);
+        itemModelGenerator.registerArmor(ModItems.SNEK_HELMET);
+        itemModelGenerator.registerArmor(ModItems.SNEK_CHESTPLATE);
+        itemModelGenerator.registerArmor(ModItems.SNEK_LEGGINGS);
+        itemModelGenerator.registerArmor(ModItems.SNEK_BOOTS);
+        itemModelGenerator.register(ModItems.WARDEN_HORN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SNEK_SCALE, Models.GENERATED);
     }
 }
