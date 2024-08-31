@@ -9,4 +9,7 @@ public class ModEntityModelLayers {
 
     public static final EntityModelLayer NUKE =
             new EntityModelLayer(BsmpC.id("nuke"), "main");
+
+    public static final EntityModelLayer BLOB =
+            new EntityModelLayer(BsmpC.id("blob"), "main");
 }

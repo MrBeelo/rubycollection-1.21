@@ -44,7 +44,6 @@ public class ModItems {
     public static final DeathAxeItem DEATH_AXE = register("death_axe", new DeathAxeItem(new Item.Settings().attributeModifiers(DeathAxeItem.createAttributeModifiers(ToolMaterials.IRON, 4997, -3.5f))));
     public static final NukeButtonItem NUKE_BUTTON = register("nuke_button", new NukeButtonItem(new Item.Settings().maxCount(1)));
     public static final MBSItem MASTER_BEELO_STAFF = register("master_beelo_staff", new MBSItem(new Item.Settings().maxCount(1).component(ModDataComponentTypes.MBS_STAGE, 0)));
-    public static final Item SNEK_SPAWN_EGG = register("snek_spawn_egg", new SpawnEggItem(ModEntities.SNEK, 0x78fa40, 0x5ed32b, new Item.Settings()));
     public static final Item XO_MUSIC_DISC = register("xo_music_disc", new Item(new Item.Settings().jukeboxPlayable(ModSounds.XO_KEY)));
     public static final Item RANDOM_ARTIFACT = register("random_artifact", new RandomArtifactItem(new Item.Settings().maxCount(1)));
     public static final PokeBallItem POKE_BALL = register("poke_ball", new PokeBallItem(new Item.Settings()));
@@ -55,6 +54,8 @@ public class ModItems {
     public static final ArmorItem SNEK_LEGGINGS = register("snek_leggings", new ArmorItem(ModArmorMaterials.SNEK, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(50))));
     public static final ArmorItem SNEK_BOOTS = register("snek_boots", new ArmorItem(ModArmorMaterials.SNEK, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(50))));
     public static final Item SNEK_SCALE = register("snek_scale", new Item(new Item.Settings()));
+    public static final Item SNEK_SPAWN_EGG = register("snek_spawn_egg", new SpawnEggItem(ModEntities.SNEK, 0x78fa40, 0x5ed32b, new Item.Settings()));
+    public static final Item BLOB_SPAWN_EGG = register("blob_spawn_egg", new SpawnEggItem(ModEntities.BLOB, 0x7bd4ff, 0xffa7a4, new Item.Settings()));
 
 
     //METHODS

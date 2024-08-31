@@ -28,5 +28,9 @@ public class ModEntities {
             EntityType.Builder.create(BulletProjectileEntity::new, SpawnGroup.MISC).dimensions(0.5f, 0.5f).build()
     );
 
+    public static final EntityType<BlobEntity> BLOB = Registry.register(Registries.ENTITY_TYPE,
+            BsmpC.id("blob"),
+            EntityType.Builder.create(BlobEntity::new, SpawnGroup.CREATURE).dimensions(1f, 1.5f).build());
+
     public static void registerModEntities() {}
 }

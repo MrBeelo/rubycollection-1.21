@@ -22,8 +22,10 @@ import net.mrbeelo.bsmpc.block.entity.ModBlockEntities;
 import net.mrbeelo.bsmpc.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.mrbeelo.bsmpc.entity.ModEntities;
 import net.mrbeelo.bsmpc.entity.client.ModEntityModelLayers;
+import net.mrbeelo.bsmpc.entity.client.custom.model.BlobModel;
 import net.mrbeelo.bsmpc.entity.client.custom.model.NukeModel;
 import net.mrbeelo.bsmpc.entity.client.custom.model.SnekModel;
+import net.mrbeelo.bsmpc.entity.client.custom.renderer.BlobRenderer;
 import net.mrbeelo.bsmpc.entity.client.custom.renderer.BulletProjectileRenderer;
 import net.mrbeelo.bsmpc.entity.client.custom.renderer.NukeRenderer;
 import net.mrbeelo.bsmpc.entity.client.custom.renderer.SnekRenderer;
@@ -53,6 +55,10 @@ public class BsmpCClient implements ClientModInitializer {
 
 		EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SNEK, SnekModel::getTexturedModelData);
 		EntityRendererRegistry.register(ModEntities.SNEK, SnekRenderer::new);
+
+		EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.BLOB, BlobModel::getTexturedModelData);
+		EntityRendererRegistry.register(ModEntities.BLOB, BlobRenderer::new);
+
 		EntityRendererRegistry.register(ModEntities.POKE_BALL_PROJECTILE, FlyingItemEntityRenderer::new);
 		EntityRendererRegistry.register(ModEntities.BULLET_PROJECTILE, BulletProjectileRenderer::new);
 		EntityRendererRegistry.register(ModEntities.PURIFY_BOMB_PROJECTILE, ArrowEntityRenderer::new);

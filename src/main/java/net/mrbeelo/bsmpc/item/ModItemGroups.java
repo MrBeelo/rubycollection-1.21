@@ -95,6 +95,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.WARDEN_SWORD);
                         entries.add(ModItems.WARDEN_HORN);
+
+                        entries.add(ModItems.BLOB_SPAWN_EGG);
                     }).build());
 
     public static final ItemGroup CS_GROUP = Registry.register(Registries.ITEM_GROUP,

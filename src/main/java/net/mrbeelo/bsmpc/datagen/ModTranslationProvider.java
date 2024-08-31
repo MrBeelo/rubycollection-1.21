@@ -165,6 +165,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.SNEK_BOOTS, "Snek Boots");
         translationBuilder.add(ModItems.WARDEN_HORN, "Warden Horn");
         translationBuilder.add(ModItems.SNEK_SCALE, "Snek Scale");
+        translationBuilder.add(ModItems.BLOB_SPAWN_EGG, "Blob Spawn Egg");
         translationBuilder.addEnchantment(ModEnchantments.BANG_EFFECT_KEY, "Bang");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_FALL, "Ruby Block Fallen");
