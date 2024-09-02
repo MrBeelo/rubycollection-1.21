@@ -39,6 +39,7 @@
   "death.attack.emotional_damage.player": "Emotional Damage.",
   "effect.bsmpc.high": "High",
   "enchantment.bsmpc.thundering": "Bang",
+  "entity.bsmpc.blob": "Blob",
   "entity.bsmpc.poke_ball_projectile": "Flying Poke ball",
   "entity.bsmpc.snek": "Snek",
   "entity.minecraft.villager.rubert": "Rubert",

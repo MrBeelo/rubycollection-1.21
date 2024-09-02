@@ -142,6 +142,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ROSE, "En Rosé");
         translationBuilder.add(ModBlocks.POTTED_ROSE, "Potted Rosé");
         translationBuilder.add(ModEntities.SNEK, "Snek");
+        translationBuilder.add(ModEntities.BLOB, "Blob");
         translationBuilder.add(ModEntities.POKE_BALL_PROJECTILE, "Flying Poke ball");
         translationBuilder.add(ModBlocks.CS_LOG, "Cupressus Sempervirens Log");
         translationBuilder.add(ModBlocks.CS_WOOD, "Cupressus Sempervirens Lignum");

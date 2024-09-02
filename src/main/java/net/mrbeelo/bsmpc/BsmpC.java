@@ -3,11 +3,13 @@ package net.mrbeelo.bsmpc;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.MinecraftServer;
@@ -27,6 +29,7 @@ import net.mrbeelo.bsmpc.effect.ModEffects;
 import net.mrbeelo.bsmpc.enchantment.ModEnchantments;
 import net.mrbeelo.bsmpc.entity.ModAttributes;
 import net.mrbeelo.bsmpc.entity.ModEntities;
+import net.mrbeelo.bsmpc.event.EntityDeathListener;
 import net.mrbeelo.bsmpc.event.PlayerCopyHandler;
 import net.mrbeelo.bsmpc.fluid.ModFluids;
 import net.mrbeelo.bsmpc.item.*;
@@ -88,6 +91,7 @@ public class BsmpC implements ModInitializer {
 			}});
 
 		ServerPlayerEvents.COPY_FROM.register(new PlayerCopyHandler());
+		ServerLivingEntityEvents.AFTER_DEATH.register(new EntityDeathListener());
 
 		StrippableBlockRegistry.register(ModBlocks.CS_LOG, ModBlocks.STRIPPED_CS_LOG);
 		StrippableBlockRegistry.register(ModBlocks.CS_WOOD, ModBlocks.STRIPPED_CS_WOOD);
@@ -250,7 +254,7 @@ public class BsmpC implements ModInitializer {
 		return tags.contains(tag);
 	}
 
-	public static void scheduleTicks(ServerPlayerEntity player, int delayTicks, Runnable action) {
+	public static void scheduleTicks(PlayerEntity player, int delayTicks, Runnable action) {
 		// Use an array to hold the tick count and flag for task completion in a single scope
 		final int[] ticksRemaining = {delayTicks}; // Array to store remaining ticks
 		final boolean[] isTaskComplete = {false}; // Flag to indicate task completion
