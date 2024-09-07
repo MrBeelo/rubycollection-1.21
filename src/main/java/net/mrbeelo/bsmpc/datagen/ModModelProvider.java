@@ -97,5 +97,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.WARDEN_HORN, Models.GENERATED);
         itemModelGenerator.register(ModItems.SNEK_SCALE, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLOB_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.registerArmor(ModItems.JETPACK);
     }
 }

@@ -1,4 +1,4 @@
-// 1.21	2024-09-02T12:29:27.4512489	The BSMP Collection/Model Definitions
+// 1.21	2024-09-08T00:02:28.8156941	The BSMP Collection/Model Definitions
 429314aa8e3a708b9ecaa3163eadb85f9dead366 assets\bsmpc\models\block\cs_door_top_right_open.json
 9d8cab3ab91386bdb81bf179a5e1bfbb9eaf2249 assets\bsmpc\models\item\ruby_helmet_redstone_trim.json
 d13b57d6872fb44a90a000ecf49222bc64407824 assets\bsmpc\models\item\ruby_leggings_redstone_trim.json
@@ -8,6 +8,7 @@ e7f0bea545dd208ed358a80694a49ac7457f8bce assets\bsmpc\models\block\ruby_fence_si
 f98650ab37964e75c858e4ace565b578d4db6afa assets\bsmpc\models\block\cs_sapling.json
 6191ad44af580e3e7b306fdd0b22e0cdd1ef696b assets\bsmpc\models\block\ruby_pressure_plate.json
 46ce4913a4ccf602a31829b6631dfa6d38a4b96a assets\bsmpc\blockstates\potted_rose.json
+489af4d904a68208c0dd0cc6cee26686e024fcba assets\bsmpc\models\item\jetpack_emerald_trim.json
 8b963f5ebd1469f46f3a0713dbeef8dd693029ed assets\bsmpc\models\block\cs_trapdoor_top.json
 36adee30349e7ac38ed76aa0a70d21a083a39495 assets\bsmpc\models\block\cs_log_horizontal.json
 671db8447825887729ef496021c453e655e8bef0 assets\bsmpc\blockstates\cs_stairs.json
@@ -28,6 +29,7 @@ ad82d12bd98d571e057d6068d791f99dbae46e65 assets\bsmpc\models\item\snek_helmet_ne
 cdb94929eed0a7d4f28b211a0dad1feea0282ebc assets\bsmpc\models\item\ruby_leggings_iron_trim.json
 0071b2d1839c3cc8b6d80372ae3217a0b2b7a465 assets\bsmpc\models\block\cs_door_bottom_left.json
 7f45e50b1d0fc808773eec37c8c8f3492752aec8 assets\bsmpc\models\item\snek_helmet_redstone_trim.json
+207cead5b478448e4c9a9f96be1320d8e446de3d assets\bsmpc\models\item\jetpack_gold_trim.json
 a22b78afa250f7d6858bd0dee7682faf34dc59e5 assets\bsmpc\models\item\ruby_button.json
 b0d475fbddfb099c36f30b90ea5dde42f10aa817 assets\bsmpc\models\block\ruby_stairs.json
 3bcfdda5d686361563b022c41266ed792cb4e489 assets\bsmpc\models\item\snek_boots_amethyst_trim.json
@@ -43,6 +45,7 @@ bc43f673a72e8333d9e3101ea596b17bc9c7cd25 assets\bsmpc\models\item\cs_sapling.jso
 e4069cfd2c6ccbaa75d89f7af03e4aefe4337350 assets\bsmpc\models\item\ruby_shard.json
 25efaa114cca95f9726819fb810ae96d662cb616 assets\bsmpc\models\item\snek_chestplate_lapis_trim.json
 50aabdd18d372c3f91626ebf7662d163de230a27 assets\bsmpc\models\item\smooth_quartz_ruby_upgrader.json
+a99b31497a0850a5f62804d2e8c0e7914620fbc2 assets\bsmpc\models\item\jetpack.json
 5f2194ea9a73216653c9ef9fbdfd75bcd44b7e51 assets\bsmpc\models\block\cs_stairs_inner.json
 c1ae482ca299801c36177b5f48699f8b272a5ed9 assets\bsmpc\models\block\ruby_door_top_right.json
 6c2b166631c7599dbd990357e266f42f721f9072 assets\bsmpc\models\block\ruby_wall_post.json
@@ -55,6 +58,7 @@ e0b7882bb89fb3694a3f243a7a3d949be6758b9f assets\bsmpc\models\item\snek_boots_lap
 55dcc0f5a3c384ded331c15630b04193b72f4677 assets\bsmpc\models\item\cs_log.json
 a73f493034c323362b64cdb8e074cc1b205f3c80 assets\bsmpc\models\item\ruby_wall.json
 6057ed2115edb462ded1743e422587e62df54690 assets\bsmpc\models\item\ruby_axe.json
+87b974cd06474382507b4b770b6376e3d80eea98 assets\bsmpc\models\item\jetpack_diamond_trim.json
 a29e179c2527b3fb85348508ef9380a82776359d assets\bsmpc\models\item\cs_planks.json
 e1eae34256d22486b5054fdf9594157fd763fb3f assets\bsmpc\models\block\cs_fence_gate.json
 9b8eaacc8d60a65fad82aecfb3668dde684317c1 assets\bsmpc\models\block\cs_stairs_outer.json
@@ -75,8 +79,8 @@ ce58e56cb1b66a44b63341ed11e7c7db128d2894 assets\bsmpc\models\item\ruby_chestplat
 9d44109c433eb31e01e2c87e20a248099db28081 assets\bsmpc\models\item\ruby_boots.json
 0365764a3e7d800315b315a8620bc2df8ecccf44 assets\bsmpc\models\item\ruby_shovel.json
 1706218b71167f132bd7dc3d47db7b9212afb7ae assets\bsmpc\models\item\ruby_chestplate.json
-60dec32b4791927faaf2a4e923694b2d8643c29d assets\bsmpc\models\item\snek_chestplate.json
 d5f8841230d2c335bf4654074f775a0384fe9b8b assets\bsmpc\models\item\snek_leggings.json
+60dec32b4791927faaf2a4e923694b2d8643c29d assets\bsmpc\models\item\snek_chestplate.json
 e1ab4a8574058ce9ca31f30865a76c9ca5c625c8 assets\bsmpc\models\item\snek_chestplate_gold_trim.json
 b4a51279baf6c5ffb71a1432b783c4bb058797c4 assets\bsmpc\models\item\packed_iron_block.json
 72088ae057758713be2099368dea5fcf3a53017b assets\bsmpc\models\item\snek_boots_gold_trim.json
@@ -90,8 +94,8 @@ dce7eeb3074651bcea30eb834c4d30ebdcf4683f assets\bsmpc\models\item\snek_leggings_
 fc82c8148332f69c6b48e3f62fad0471968d80a1 assets\bsmpc\models\item\snek_helmet_gold_trim.json
 b7f5a860d90a661a4e1a5fcd1a08a95042711710 assets\bsmpc\models\block\ruby_block.json
 731218bc286db56537493baebf5aecd119ea4e99 assets\bsmpc\models\block\ruby_trapdoor_open.json
-a121b1bf8f78b0b7d84c6ac3042f79dff35421a6 assets\bsmpc\models\block\ruby_button_inventory.json
 0e91ebdfdbf967647f5d3cab2250961423a78230 assets\bsmpc\models\item\ruby_ore.json
+a121b1bf8f78b0b7d84c6ac3042f79dff35421a6 assets\bsmpc\models\block\ruby_button_inventory.json
 12c5f86c6feb3ea215ec35dde7d5eaf31ed94195 assets\bsmpc\blockstates\end_ruby_ore.json
 026fb9aa3816c2678f6c684ae0251b7eed440cb1 assets\bsmpc\models\block\nether_ruby_ore.json
 3015aca6d2f0a8afa295266e360e8149777c187a assets\bsmpc\models\item\ruby_helmet_lapis_trim.json
@@ -121,6 +125,7 @@ a6e1e48c32149b4df5e3582db0dae67724e98938 assets\bsmpc\models\item\pistol.json
 1a4a7db02c56953d31a4a5df7f06fccb67c476f8 assets\bsmpc\models\item\snek_boots_copper_trim.json
 74f33600956fe21ef82ffe707c1b1c04f128c42b assets\bsmpc\models\block\cs_planks.json
 63167f80b57f4b448d274499a9bd025cace5c31d assets\bsmpc\blockstates\cs_trapdoor.json
+7ef921e37df5a2cdd0d1ffec36964cf574e22da5 assets\bsmpc\models\item\jetpack_iron_trim.json
 d5db45d9b51333314833662382695c4e3cc76136 assets\bsmpc\models\item\ruby_boots_iron_trim.json
 22ea5753d99bacf398ed377b7aee66686ad95f13 assets\bsmpc\models\block\ruby_wall_inventory.json
 c8087441144729e4c3b5836e76ac1ec7940edcfa assets\bsmpc\models\item\ruby_chestplate_quartz_trim.json
@@ -151,6 +156,7 @@ f182314e2e988bd2c161e41e9fc2066ec7d050ae assets\bsmpc\models\item\ruby_helmet_em
 e7707aa2a61f0bd9ef89c76ab9bdcbfbcce20904 assets\bsmpc\models\item\snek_leggings_diamond_trim.json
 6faa677db3953cfd535e1c52cd5b7b2cf42331d9 assets\bsmpc\blockstates\nether_ruby_ore.json
 343fa97ac36bd4f8187da49db5ae437bffb61170 assets\bsmpc\models\item\cs_fence_gate.json
+a04fc7071753108c33f874c8b065624261181d63 assets\bsmpc\models\item\jetpack_amethyst_trim.json
 9988241f3ad11d7bfc7e86a6d4bca91322988af3 assets\bsmpc\models\block\ruby_door_bottom_left_open.json
 29ed15425f17173a37c5fb8ec3cbb83be138319f assets\bsmpc\models\item\snek_chestplate_diamond_trim.json
 773e05c01ef29fd2ef1901db6194bb55f7928812 assets\bsmpc\models\block\end_ruby_ore.json
@@ -162,8 +168,8 @@ b339571ed95d9c7a81f58a4337f4ff928a092c82 assets\bsmpc\models\item\cs_door.json
 cd97169f6f5c7b13914141cd106bd6b9bc68f9ab assets\bsmpc\blockstates\packed_iron_block.json
 fd9c8767f7b90d3bc3ee1404541bfc7a4572ef7c assets\bsmpc\models\item\snek_helmet_emerald_trim.json
 936bcbdbb90a15e21ec4b24a36e2c427702e0112 assets\bsmpc\models\item\snek_leggings_copper_trim.json
-e52d9a78a8c25bcccec15c233a282f93b4a5c0d7 assets\bsmpc\models\item\xo_music_disc.json
 792f2cc3dc39bb9511b80e992a72ea4d0e7f8a0d assets\bsmpc\models\item\ruby.json
+e52d9a78a8c25bcccec15c233a282f93b4a5c0d7 assets\bsmpc\models\item\xo_music_disc.json
 18fb49e4f30683460a6118d2eb7c86cae88c4873 assets\bsmpc\models\item\ruby_boots_copper_trim.json
 d598361685a42c0474d880fbd414f0cf12352b85 assets\bsmpc\blockstates\cs_fence.json
 74d350fd4045834773f840936e6e54f6d066ac99 assets\bsmpc\models\item\deepslate_ruby_ore.json
@@ -183,6 +189,8 @@ ace4f1ae58b0971b4499ec3d93d9824b1240309c assets\bsmpc\models\block\cs_door_top_r
 1eabe58367032a9bbfe07320bb0118b0c1c61ef7 assets\bsmpc\models\item\ruby_leggings_quartz_trim.json
 925d2a547b3b37d9a5d21d066336666492b076dd assets\bsmpc\models\block\cs_slab.json
 fa583cb2106f3506b04b3a463c35181f27e8b073 assets\bsmpc\models\item\snek_boots_iron_trim.json
+972801ef3e60a07e04d02bddd360137aba3542e1 assets\bsmpc\models\item\jetpack_quartz_trim.json
+33dbfc27240443380f36128c29013a32059ab1ed assets\bsmpc\models\item\jetpack_redstone_trim.json
 b0053c0fde5669bc201c674ddeb9376433b7a6bc assets\bsmpc\models\block\ruby_fence_gate.json
 ca3179dedb14c3cfd31d4c5aaaefa1fdd19d0931 assets\bsmpc\models\item\snek_leggings_emerald_trim.json
 79067d991701bf364c3322a104194a41087510cf assets\bsmpc\models\item\snek_helmet_quartz_trim.json
@@ -195,8 +203,8 @@ e783a84f0420963916d7b67842537550d5caed98 assets\bsmpc\models\block\cs_leaves.jso
 7cebb23c63910aa93035502311546466db036325 assets\bsmpc\models\item\ruby_chestplate_amethyst_trim.json
 73f2ade4b0909b0a6a12a56161ab9167a72a26b5 assets\bsmpc\models\item\ruby_hoe.json
 9f2584769f681b0e0daa62c782bc73f4379153fc assets\bsmpc\models\block\kokaina_crop_stage2.json
-d9a9e09ab28bee4f212250672febf883d6e39c3f assets\bsmpc\blockstates\ruby_block.json
 52b632c5bfcda2c211984867c062dcc896ae3b4e assets\bsmpc\blockstates\ruby_fence_gate.json
+d9a9e09ab28bee4f212250672febf883d6e39c3f assets\bsmpc\blockstates\ruby_block.json
 3cd5c4a2a11ccffbecd9260cba49ae54769cba2e assets\bsmpc\models\item\ruby_chestplate_gold_trim.json
 b5deba82f9482f3899a36685151f68763c827b93 assets\bsmpc\models\block\smooth_quartz_ruby_downgrader.json
 55a9b6ec2b0c0fbf19018d6ebf5bb3ce4eef026f assets\bsmpc\blockstates\ruby_fence.json
@@ -207,8 +215,8 @@ e10dfd78b898f8662072c66ab2ed60b9f08c1496 assets\bsmpc\models\block\stripped_cs_w
 1f2ecce1b2dd1eaee24e4c19e6d73ec0cdf570f8 assets\bsmpc\models\item\ruby_leggings_diamond_trim.json
 5d84133da8c7276ecc3d809feb34fae0315dfa0a assets\bsmpc\models\item\snek_leggings_quartz_trim.json
 df0d8edaaa227f44a1e96dac162f7df62321844a assets\bsmpc\models\item\death_axe.json
-c372012f51785da6865a388ffe3f0057dd2ecfa4 assets\bsmpc\models\item\nuke_button.json
 760a603593f52bbdec2e419e5a9fd0e0eb792351 assets\bsmpc\blockstates\smooth_quartz_ruby_upgrader.json
+c372012f51785da6865a388ffe3f0057dd2ecfa4 assets\bsmpc\models\item\nuke_button.json
 390d35f70b897e12189aa6b58a11409162a331f5 assets\bsmpc\models\item\snek_leggings_lapis_trim.json
 c49478cbcc33e426a6cc87b3448a44f63a286cb0 assets\bsmpc\models\item\ruby_leggings_netherite_trim.json
 334e49f22684c43865767875cc83393cdeb2c01a assets\bsmpc\models\item\cs_slab.json
@@ -222,8 +230,10 @@ a89f32b956380436de676e74cc6cd946a17f4dd6 assets\bsmpc\models\item\snek_helmet.js
 5bd2a5b07567c1aa2410d04a7113568eb903564d assets\bsmpc\models\item\smooth_quartz_ruby_downgrader.json
 a6cd137b01a89c0cd5128c0265d8486c48161be5 assets\bsmpc\models\block\cs_fence_gate_wall_open.json
 40bc5f7ec4374010fbce40ca9677ab446cdb3093 assets\bsmpc\models\item\snek_boots_redstone_trim.json
+87ecbdfac20e28574ee8d26d46f4b88463cb7e6b assets\bsmpc\models\item\jetpack_netherite_trim.json
 3c1872eab073d7effba69b6417b4a67def4cf0a0 assets\bsmpc\models\block\cs_fence_gate_open.json
 5f2f2befbcda98b8290af48b74de37db9beb1696 assets\bsmpc\blockstates\cs_wood.json
+1e2f49d9955dbe8380c1d30373aa6647444cdb77 assets\bsmpc\models\item\jetpack_copper_trim.json
 9c3d821075155efbf0bb29a424a4cf285d098401 assets\bsmpc\models\item\ruby_helmet_netherite_trim.json
 09946c1946e180a4a3404fdbeb98c26832a90c8d assets\bsmpc\models\block\cs_door_bottom_right_open.json
 aa38ae0f2ad5ec262f5226a0bf1684d53e79530d assets\bsmpc\models\item\rgb_block.json
@@ -264,6 +274,7 @@ acfdcd7ece28d42dcb8a541b478ea2eb4d68792d assets\bsmpc\blockstates\cs_planks.json
 eecc68df40380476cebe265e9b796b65378a96b3 assets\bsmpc\models\item\ruby_block.json
 fe89b7024d4368021e428665903f993440d9f551 assets\bsmpc\models\item\ruby_leggings.json
 d05fbcbd22cbdc727814f90dcd1cd349d6de3b15 assets\bsmpc\models\item\ruby_helmet_iron_trim.json
+5b3fd81daef49e05e6835e0063d948345aa060c1 assets\bsmpc\models\item\jetpack_lapis_trim.json
 a4f0c4e1542866a8131309b09a41eacd5452f447 assets\bsmpc\models\block\cs_door_top_left_open.json
 e70148f2c6fbd6945638fa18d80799131d494e43 assets\bsmpc\models\block\cs_door_bottom_left_open.json
 db591f93fc96853e9df6e7b491e589753ee1e086 assets\bsmpc\models\block\ruby_button_pressed.json

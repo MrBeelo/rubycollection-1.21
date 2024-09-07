@@ -36,7 +36,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.RUBY_KNOCKER);
 
         getOrCreateTagBuilder(ItemTags.HEAD_ARMOR).add(ModItems.RUBY_HELMET).add(ModItems.SNEK_HELMET);
-        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR).add(ModItems.RUBY_CHESTPLATE).add(ModItems.SNEK_CHESTPLATE);
+        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR).add(ModItems.RUBY_CHESTPLATE).add(ModItems.SNEK_CHESTPLATE).add(ModItems.JETPACK);
         getOrCreateTagBuilder(ItemTags.LEG_ARMOR).add(ModItems.RUBY_LEGGINGS).add(ModItems.SNEK_LEGGINGS);
         getOrCreateTagBuilder(ItemTags.FOOT_ARMOR).add(ModItems.RUBY_BOOTS).add(ModItems.SNEK_BOOTS);
 

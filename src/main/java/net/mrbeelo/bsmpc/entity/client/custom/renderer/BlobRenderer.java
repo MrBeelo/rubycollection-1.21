@@ -26,6 +26,9 @@ public class BlobRenderer extends MobEntityRenderer<BlobEntity, BlobModel> {
 
     @Override
     public void render(BlobEntity entity, float yaw, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
+        if(entity.isBaby()) {
+            matrices.scale(0.5f, 0.5f, 0.5f);
+        }
         super.render(entity, yaw, tickDelta, matrices, vertexConsumers, light);
     }
 }

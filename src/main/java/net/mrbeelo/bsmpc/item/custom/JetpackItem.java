@@ -28,7 +28,7 @@ public class JetpackItem extends ArmorItem {
             if (player.getInventory().getArmorStack(2).getItem() instanceof JetpackItem) {
                 player.sendMessage(Text.of("Boost left: " + boostTime), true);
                 if (player.isSneaking() && !player.isOnGround() && boostTime > 0) {
-                    player.setVelocity(player.getVelocity().x, player.getVelocity().y + 0.15, player.getVelocity().z);
+                    player.setVelocity(player.getVelocity().x, player.getVelocity().y + 0.1, player.getVelocity().z);
                     player.velocityModified = true;
                     boostTime--;
                     player.getInventory().getArmorStack(2).damage(1, serverWorld, player, item ->

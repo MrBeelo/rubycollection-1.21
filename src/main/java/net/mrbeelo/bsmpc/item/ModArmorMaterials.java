@@ -44,6 +44,16 @@ public class ModArmorMaterials {
             0.3F,
             false);
 
+    public static final RegistryEntry<ArmorMaterial> JETPACK = register("jetpack", Map.of(
+                    ArmorItem.Type.CHESTPLATE, 1
+            ),
+            0,
+            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
+            () -> Ingredient.ofItems(ModItems.RUBY),
+            1,
+            0F,
+            false);
+
     //METHODS
 
     public static RegistryEntry<ArmorMaterial> register(String id, Map<ArmorItem.Type, Integer> defencePoints,
