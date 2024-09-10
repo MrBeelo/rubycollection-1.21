@@ -56,6 +56,7 @@ public class ModItems {
     public static final Item SNEK_SCALE = register("snek_scale", new Item(new Item.Settings()));
     public static final Item SNEK_SPAWN_EGG = register("snek_spawn_egg", new SpawnEggItem(ModEntities.SNEK, 0x78fa40, 0x5ed32b, new Item.Settings()));
     public static final Item BLOB_SPAWN_EGG = register("blob_spawn_egg", new SpawnEggItem(ModEntities.BLOB, 0x7bd4ff, 0xffa7a4, new Item.Settings()));
+    public static final Item PYRO_SPAWN_EGG = register("pyro_spawn_egg", new SpawnEggItem(ModEntities.PYRO, 0x3e3e42, 0xd21129, new Item.Settings()));
     public static final JetpackItem JETPACK = register("jetpack", new JetpackItem(ModArmorMaterials.JETPACK, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(20000)));
 
 

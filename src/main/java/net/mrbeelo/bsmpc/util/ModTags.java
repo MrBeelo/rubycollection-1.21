@@ -1,6 +1,7 @@
 package net.mrbeelo.bsmpc.util;
 
 import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.item.Item;
@@ -25,5 +26,9 @@ public class ModTags {
         public static final TagKey<Item> RUBY_TOOLS = TagKey.of(RegistryKeys.ITEM, BsmpC.id("ruby_tools"));
         public static final TagKey<Item> RUBY_ARMOR = TagKey.of(RegistryKeys.ITEM, BsmpC.id("ruby_armor"));
         public static final TagKey<Item> RUBY_VARIANTS = TagKey.of(RegistryKeys.ITEM, BsmpC.id("ruby_variants"));
+    }
+
+    public static class EntityTypes {
+        public static final TagKey<EntityType<?>> LAZER = TagKey.of(RegistryKeys.ENTITY_TYPE, BsmpC.id("lazer"));
     }
 }

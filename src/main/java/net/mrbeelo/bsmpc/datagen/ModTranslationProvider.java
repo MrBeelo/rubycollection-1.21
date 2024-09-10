@@ -143,6 +143,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.POTTED_ROSE, "Potted Rosé");
         translationBuilder.add(ModEntities.SNEK, "Snek");
         translationBuilder.add(ModEntities.BLOB, "Blob");
+        translationBuilder.add(ModEntities.PYRO, "Pyroraptor");
         translationBuilder.add(ModEntities.POKE_BALL_PROJECTILE, "Flying Poke ball");
         translationBuilder.add(ModBlocks.CS_LOG, "Cupressus Sempervirens Log");
         translationBuilder.add(ModBlocks.CS_WOOD, "Cupressus Sempervirens Lignum");
@@ -167,6 +168,7 @@ public class ModTranslationProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.WARDEN_HORN, "Warden Horn");
         translationBuilder.add(ModItems.SNEK_SCALE, "Snek Scale");
         translationBuilder.add(ModItems.BLOB_SPAWN_EGG, "Blob Spawn Egg");
+        translationBuilder.add(ModItems.PYRO_SPAWN_EGG, "Pyroraptor Spawn Egg");
         translationBuilder.add(ModItems.JETPACK, "Jetpack");
         translationBuilder.addEnchantment(ModEnchantments.BANG_EFFECT_KEY, "Bang");
         addSoundEvent(translationBuilder, ModSounds.RUBY_BLOCK_BREAK, "Ruby Block Broken");

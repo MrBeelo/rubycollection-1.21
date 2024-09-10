@@ -15,6 +15,7 @@ import net.minecraft.client.particle.EndRodParticle;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.entity.ArrowEntityRenderer;
+import net.minecraft.client.render.entity.EmptyEntityRenderer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.world.biome.FoliageColors;
 import net.mrbeelo.bsmpc.block.ModBlocks;
@@ -24,8 +25,10 @@ import net.mrbeelo.bsmpc.entity.ModEntities;
 import net.mrbeelo.bsmpc.entity.client.ModEntityModelLayers;
 import net.mrbeelo.bsmpc.entity.client.custom.model.BlobModel;
 import net.mrbeelo.bsmpc.entity.client.custom.model.NukeModel;
+import net.mrbeelo.bsmpc.entity.client.custom.model.PyroModel;
 import net.mrbeelo.bsmpc.entity.client.custom.model.SnekModel;
 import net.mrbeelo.bsmpc.entity.client.custom.renderer.BlobRenderer;
+import net.mrbeelo.bsmpc.entity.client.custom.renderer.PyroRenderer;
 import net.mrbeelo.bsmpc.entity.client.custom.renderer.BulletProjectileRenderer;
 import net.mrbeelo.bsmpc.entity.client.custom.renderer.NukeRenderer;
 import net.mrbeelo.bsmpc.entity.client.custom.renderer.SnekRenderer;
@@ -59,9 +62,13 @@ public class BsmpCClient implements ClientModInitializer {
 		EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.BLOB, BlobModel::getTexturedModelData);
 		EntityRendererRegistry.register(ModEntities.BLOB, BlobRenderer::new);
 
+		EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.PYRO, PyroModel::getTexturedModelData);
+		EntityRendererRegistry.register(ModEntities.PYRO, PyroRenderer::new);
+
 		EntityRendererRegistry.register(ModEntities.POKE_BALL_PROJECTILE, FlyingItemEntityRenderer::new);
 		EntityRendererRegistry.register(ModEntities.BULLET_PROJECTILE, BulletProjectileRenderer::new);
 		EntityRendererRegistry.register(ModEntities.PURIFY_BOMB_PROJECTILE, ArrowEntityRenderer::new);
+		EntityRendererRegistry.register(ModEntities.LAZER, EmptyEntityRenderer::new);
 
 		FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_FROOTOP, ModFluids.FLOWING_FROOTOP,
 				SimpleFluidRenderHandler.coloredWater(0xFFFFA500));

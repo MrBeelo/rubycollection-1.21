@@ -32,5 +32,13 @@ public class ModEntities {
             BsmpC.id("blob"),
             EntityType.Builder.create(BlobEntity::new, SpawnGroup.CREATURE).dimensions(1f, 1.5f).build());
 
+    public static final EntityType<LazerEntity> LAZER = Registry.register(Registries.ENTITY_TYPE,
+            BsmpC.id("lazer"),
+            EntityType.Builder.create(LazerEntity::new, SpawnGroup.MISC).dimensions(1f, 1f).build());
+
+    public static final EntityType<PyroEntity> PYRO = Registry.register(Registries.ENTITY_TYPE,
+            BsmpC.id("pyro"),
+            EntityType.Builder.create(PyroEntity::new, SpawnGroup.CREATURE).dimensions(1.2f, 1.0f).build());
+
     public static void registerModEntities() {}
 }

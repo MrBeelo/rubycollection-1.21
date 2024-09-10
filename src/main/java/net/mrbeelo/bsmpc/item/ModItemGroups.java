@@ -98,6 +98,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.BLOB_SPAWN_EGG);
 
+                        entries.add(ModItems.PYRO_SPAWN_EGG);
+
                         entries.add(ModItems.JETPACK);
                     }).build());
 
