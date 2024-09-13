@@ -277,6 +277,26 @@ public class BsmpC implements ModInitializer {
             });
 		 */
 	}
+
+	public static boolean isMoving(Entity entity) {
+        return entity.getVelocity().x != 0 || entity.getVelocity().y != 0 || entity.getVelocity().z != 0;
+	}
+
+	public static boolean isMovingHorizontally(Entity entity) {
+		return entity.getVelocity().x != 0 || entity.getVelocity().z != 0;
+	}
+
+	public static boolean isMovingVertically(Entity entity) {
+		return entity.getVelocity().y != 0;
+	}
+
+	public boolean isPlayerWalking(PlayerEntity player) {
+		return isMovingHorizontally(player) && player.isOnGround() && !isPlayerFlying(player) && !player.isSprinting();
+	}
+
+	public boolean isPlayerFlying(PlayerEntity player) {
+		return player.getAbilities().flying;
+	}
 }
 
 //UPDATE CHECK 19
